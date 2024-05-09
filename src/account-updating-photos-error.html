@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Личный кабинет</title>
+</head>
+
+<body>
+
+    <partial src="header-account.html"></partial>
+    <div class="wrapper account-wrapper">
+        <div class="container pt-60 pt-md-40">
+
+            <div class="account-content mb-60">
+                <h1 class="mb-40 mb-md-20">Изменение паспортных данных</h1>
+
+                
+                <form action="" class="update-photos-form">
+
+                    <p class="text-center text-20 mb-40">Некоторые файлы не прошли проверку. Пожалуйста, загрузите их еще раз. Сделайте фото согласно примеру. Убедитесь, что данные на фото легко считываются.</p>
+
+                    <div class="update-photos mb-40">
+                        <div class="update-photos__item">
+                            <div class="update-photos__top">
+                                <div class="update-photos__image">
+                                    <img src="images/passport-selfie.png" alt="">
+                                </div>
+                                <div class="update-photos__description">
+                                    Селфи с паспортом
+                                </div>
+                            </div>
+                            
+
+                            <label class="btn btn-rounded btn-black btn-transparent">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить файл</span>
+                            </label>
+                        </div>
+                        <div class="update-photos__item">
+
+                            <div class="update-photos__top">
+                                <div class="update-photos__image">
+                                    <img src="images/passport-photo.png" alt="">
+                                </div>
+                                <div class="update-photos__description">
+                                    Разворот паспорта с вашей фотографией и ФИО
+                                </div>
+                            </div>
+                            
+
+                            <label class="btn btn-rounded btn-black btn-transparent">
+                                <input type="file" name="file">
+                                <span class="file-name">Прикрепить файл</span>
+                            </label>
+                        </div>
+                        
+
+                    </div>
+                    
+                    <a href="account-updating.html" class="btn js-form-btn">Сохранить</a>
+
+                </form>
+                
+
+            </div>
+
+
+            <div class="notification error">
+                <span>Не все поля заполнены</span>
+                <img src="images/buttons/account-menu-close.svg" alt="ошибка">
+            </div>
+
+        </div>
+    </div>
+
+
+    <partial src="footer.html"></partial>
+</body>
+
+</html>

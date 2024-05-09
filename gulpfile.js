@@ -95,7 +95,6 @@ function cleanBuild() {
     return gulp.src('build/*', {read: false})
         .pipe(clean());
 }
-
 export const del = cleanBuild;
 export const serve = gulp.parallel(html, css, js, img, fonts, watchFiles, serveTask);
 export default gulp.series(cleanBuild, html, css, js, img, fonts);

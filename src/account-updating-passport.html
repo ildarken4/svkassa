@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Личный кабинет</title>
+</head>
+
+<body>
+
+    <partial src="header-account.html"></partial>
+    <div class="wrapper account-wrapper">
+        <div class="container pt-60 pt-md-40">
+
+            <div class="account-content mb-60">
+                <h1 class="mb-40 mb-md-20">Изменение занятости</h1>
+
+                <div class="account-updating">
+                    <form action="">
+
+                        <div class="form-item">
+                            <div class="form-item__label">Серия и номер паспорта<span class="text-ruby">*</span></div>
+                            <div class="form-input">
+                                <input type="text" id="passport-number" placeholder="Введите серию и номер паспорта"
+                                    required>
+                            </div>
+                            <div class="input-error">Обязательное поле</div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-item__label">Кем выдан<span class="text-ruby">*</span></div>
+                            <div class="form-input">
+                                <input type="text" id="passport-issued" placeholder="Введите название" required>
+                            </div>
+                            <div class="input-error">Обязательное поле</div>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-item">
+                                <div class="form-item__label">Дата выдачи<span class="text-ruby">*</span></div>
+                                <div class="form-input">
+                                    <input type="date" id="passport-date" placeholder="ДД.ММ.ГГ" required>
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <div class="form-item">
+                                <div class="form-item__label">Код подразделения<span class="text-ruby">*</span></div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-code" placeholder="Введите код подразделения"
+                                        required>
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-item__label">Место рождения<span class="text-ruby">*</span></div>
+                            <div class="form-input">
+                                <input type="text" id="passport-birthplace" placeholder="Введите место рождения"
+                                    required>
+                            </div>
+                            <div class="input-error">Обязательное поле</div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-item__label">Адрес регистрации<span class="text-ruby">*</span></div>
+                            <div class="form-input">
+                                <input type="text" id="passport-address" placeholder="Введите адрес регистрации"
+                                    required>
+                            </div>
+                            <div class="input-error">Обязательное поле</div>
+                        </div>
+
+                        <label for="same-address">
+                            <input type="checkbox" id="same-address">
+                            <span class="custom-checkbox"></span>
+                            <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
+                        </label>
+
+                        <div class="form-item fact-address mt-10 mt-md-10 mb-40">
+                            <div class="form-item__label">Адрес фактического места жительства<span
+                                    class="text-ruby">*</span></div>
+                            <div class="form-input">
+                                <input type="text" id="fact-address" placeholder="Введите адрес фактического проживания"
+                                    required>
+                            </div>
+                            <div class="input-error">Обязательное поле</div>
+                        </div>
+
+
+                        <div class="form-row gap-20 mt-20">
+                            <a href="account-updating.html" class="btn btn-dashed mb-40 mb-sm-20">
+                                <img src="images/buttons/left-arrow.svg" alt="стрелка">
+                                Назад
+                            </a>
+                            <a href="account-updating-photos.html" class="btn js-form-btn">Сохранить</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="notification error">
+                <span>Не все поля заполнены</span>
+                <img src="images/buttons/account-menu-close.svg" alt="ошибка">
+            </div>
+
+        </div>
+    </div>
+
+
+    <partial src="footer.html"></partial>
+</body>
+
+</html>

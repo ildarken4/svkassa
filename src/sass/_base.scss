@@ -1,12 +1,26 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+  font-family: 'Inter';
+  src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
 }
 
 @font-face {
-  font-family: 'MontserratAlternates';
-  src: url("../fonts/MontserratAlternates-Bold.ttf");
+  font-family: 'Sansation';
+  src: url('../fonts/Sansation-Regular.ttf') format('truetype');
+  font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('../fonts/Sansation-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('../fonts/Sansation-Light.ttf') format('truetype');
+  font-weight: lighter;
+}
+
 
 // Общие стили
 
@@ -16,39 +30,25 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: $white;
   overflow-x: hidden;
   position: relative;
   width: 100vw;
-  height: 100%;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19.2px;
+  line-height: 20.8px;
   color: $text-black;
 }
 
-h6 {
-  font-size: 16px;
-  line-height: 20.8px;
-  font-weight: 600;
-}
-
-h4 {
-  font-size: 21px;
-  line-height: 27.3px;
+h2 {
+  font-family: 'Sansation', serif;
+  font-size: 36px;
   font-weight: 700;
-}
+  text-transform: uppercase;
+  color: $darkruby;
 
-a {
-  transition: color $transition_04;
-  &.text-green {
-    &:hover {
-      color: $darkgreen;
-    }
-  }
 }
-
 @media (max-width: 992px) {
   .container{
       max-width: 768px;
@@ -57,7 +57,7 @@ a {
 
 @media (min-width: 992px) {
   .container, .container-sm, .container-md, .container-lg {
-      max-width: 1140px;
+      max-width: 1500px;
   }
 }
 
@@ -67,6 +67,9 @@ a {
   margin: 0;
 }
 
+.wrapper {
+  min-height: 60vh;
+}
 
 .for-desktop {
 
@@ -82,64 +85,65 @@ a {
 
 
 // Цвет фона
+.bg-ruby {
+  background-color: $ruby;
+}
 .bg-green {
   background-color: $green;
 }
-.bg-lightgreen {
-  background-color: $lightgreen;
-}
-.bg-blue {
-  background-color: $blue;
-}
-
-// Цвет текста
 .bg-lightgrey {
   background-color: $lightgrey;
 }
-.text-white {
-  color: $white;
+.bg-white {
+  background-color: $white;
 }
-.text-green {
-  color: $green;
+
+// Цвет текста
+
+.text-darkruby {
+  color: $darkruby;
 }
-.text-lightgreen {
-  color: $lightgreen;
-}
-.text-red {
-  color: $text-red;
+.text-ruby {
+  color: $ruby;
 }
 .text-grey {
   color: $grey;
 }
-.text-darkgrey {
-  color: $darkgrey;
+.text-red {
+  color: $text-red;
 }
-.text-blue {
-  color: $blue;
+.text-green {
+  color: $darkgreen !important;
 }
 
 // Размер текста
 .text-12 {
   font-size: 12px;
-  line-height: 14.4px;
+  line-height: 12px;
 }
 .text-14 {
   font-size: 14px;
+  line-height: 14px;
+}
+.text-16 {
+  font-size: 16px;
+  line-height: 20.8px;
 }
 .text-18 {
-  font-size: 18px !important;
-  line-height: 21.6px !important;
+  font-size: 18px;
+  line-height: 18px;
 }
-.text-21 {
-  font-size: 21px;
-  line-height: 21px;
+.text-20 {
+  font-size: 20px;
+  line-height: 22px !important;
 }
-.text-26 {
-  font-size: 26px !important;
-  line-height: 30px !important;
+.text-24 {
+  font-size: 24px;
+  line-height: 24px;
 }
-.text-500 {
-  font-weight: 500;
+.text-40 {
+  font-size: 40px;
+  line-height: 40px;
 }
 .text-600 {
   font-weight: 600;
@@ -152,15 +156,18 @@ a {
 .text-left {
   text-align: left;
 }
+.uppercase {
+  text-transform: uppercase;
+}
 
 // Колонки
 .custom-column {
   width: 100%;
   max-width: 666px;
 
-  &__big {
+  &-big {
     width: 100%;
-    max-width: 763px;
+    max-width: 960px;
   }
 
 }
@@ -171,240 +178,7 @@ a {
   min-height: 100vh;
 }
 
-// для всех шагов contact-info(1,2,3,4)
-.registration-card {
-  border-radius: 30px;
-  padding: 40px 30px;
 
-  @include media-breakpoint-down(sm) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-}
-
-// для verification.html
-.verification-card {
-  border-radius: 30px;
-}
-
-// для contact-info-4.html
-.result-card {
-  border-radius: 20px;
-  padding: 30px 20px;
-
-  &__item {
-    flex: none;
-    margin-right: 40px;
-  }
-
-  .result-number {
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 27px;
-
-  }
-}
-
-// Страница approval.html
-.approval-image {
-  position: relative;
-  &__content {
-    width: 289px;
-    height: 289px;
-    background-color: $smoky-white;
-    border-radius: 50%;
-    overflow: hidden;
-    padding: 40px;
-  }
-
-  &__message {
-    width: 290px;
-    background-color: $white;
-    position: absolute;
-    top: -4px;
-    left: 70%;
-    padding: 18px;
-    border-radius: 30px 30px 30px 0px;
-    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
-    // анимация (Ильдар)
-    transition: all $transition_04;
-    animation: fadeFromTop 1s;
-
-    @include media-breakpoint-down(md) {
-      top: -60px;
-      left: 0;
-    }
-  }
-}
-
-@keyframes fadeFromTop {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-// Оценка сервиса (звезды)
-.rating {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-    cursor: pointer;
-
-    svg path {
-      transition: all $transition_04;
-    }
-
-    &.active {
-      svg path {
-        fill: $green;
-      }
-    }
-  }
-}
-
-// rate.html
-
-.tips {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__item {
-    background-color: $grey_4;
-    border-radius: 10px;
-    padding: 8px 12px;
-    font-weight: 500;
-    transition: all $transition_04;
-    cursor: pointer;
-    @include media-breakpoint-down(sm) {
-      font-size: 12px;
-      padding: 8px;
-    }
-
-    &.active {
-      background-color: $green;
-      color: $white;
-    }
-
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-
-    &:hover {
-      background-color: $green;
-      color: $white;
-    }
-  }
-}
-
-.thanks-image {
-  width: 90px;
-  height: 90px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-// Сообщение в нижнем углу
-.corner-tip {
-  position: absolute;
-  bottom: 4vw;
-  right: 4vw;
-
-  &__image {
-    width: 200px;
-    height: 200px;
-    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    
-    @include media-breakpoint-down(sm) {
-      width: 140px;
-      height: 140px;
-    }
-  }
-
-  &__message {
-    position: absolute;
-    z-index: 0;
-    bottom: 90%;
-    right: 50%;
-    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
-    padding: 20px 40px 40px 40px;
-    width: 680px;
-    border-radius: 30px 30px 0 30px;
-    background-color: $white;
-    transition: all .3s ease;
-    transform: translateY(20px);
-    opacity: 0;
-    @include media-breakpoint-down(lg) {
-      max-width: 400px;
-      right: 20%;
-      padding: 20px;
-    }
-    @include media-breakpoint-down(sm) {
-      max-width: 280px;
-      right: 10%;
-    }
-
-    &.show {
-      transform: translateY(0);
-      opacity: 1;
-      transition: all 1s ease;
-    }
-  }
-  &__title {
-    color: $green;
-    font-size: 26px;
-    line-height: 31.2px;
-    font-weight: 700;
-    @include media-breakpoint-down(lg) {
-      font-size: 21px;
-      line-height: 24px;
-    }
-    @include media-breakpoint-down(sm) {
-      font-size: 18px;
-      line-height: 22.2px;
-    }
-
-  }
-  &__text{
-    font-size: 21px;
-    line-height: 24px;
-    @include media-breakpoint-down(lg) {
-      font-size: 16px;
-      line-height: 18px;
-    }
-    @include media-breakpoint-down(sm) {
-      font-size: 12px;
-      line-height: 14.2px;
-    }
-  }
-  &__close {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-
-.toolbar {
-  display: none !important;
-}
 // @include media-breakpoint-down(lg) {
 
 // }

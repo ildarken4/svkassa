@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Личный кабинет</title>
+</head>
+<body>
+
+<partial src="header-account.html"></partial>
+<div class="wrapper account-wrapper">
+    <div class="container pt-60 pt-md-40">
+        
+        <div class="account-content mb-60">
+            <h1 class="mb-40 mb-md-20">Мои карты</h1>
+
+            <div class="d-flex justify-content-center">
+                <div class="bank-cards-list">
+                    <div class="bank-cards-list__item bank-card">
+                        <div class="bank-card__top">
+                            <div class="bank-card__state main-card">Основная</div>
+                            <div class="bank-card__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <rect x="1" y="0.5" width="23" height="23" rx="11.5" stroke="#151515"/>
+                                    <path d="M18.5 18L12.5 12M12.5 12L6.5 6M12.5 12L18.5 6M12.5 12L6.5 18" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bank-card__number">
+                            2200 **** **** 2525
+                        </div>
+    
+                        <div class="bank-card__autopay">
+                            <label class="checkbox-switch">
+                                <input type="checkbox" checked>
+                                <span class="checkbox-switch-mask"></span>
+                                <span class="ml-10">Автоплатёж</span>
+                            </label>
+                        </div>
+    
+                    </div>
+                    <div class="bank-cards-list__item bank-card">
+                        <div class="bank-card__top">
+                            <div class="bank-card__state">Сделать основной</div>
+                            <div class="bank-card__delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <rect x="1" y="0.5" width="23" height="23" rx="11.5" stroke="#151515"/>
+                                    <path d="M18.5 18L12.5 12M12.5 12L6.5 6M12.5 12L18.5 6M12.5 12L6.5 18" stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bank-card__number">
+                            2200 **** **** 2525
+                        </div>
+    
+                        <div class="bank-card__autopay">
+                            <label class="checkbox-switch">
+                                <input type="checkbox">
+                                <span class="checkbox-switch-mask"></span>
+                                <span class="ml-10">Автоплатёж</span>
+                            </label>
+                        </div>
+    
+                    </div>
+                    <div class="bank-cards-list__item add-card">
+                        Добавить карту
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <partial src="account-menu.html"></partial>
+
+    </div>
+</div>
+
+
+<partial src="footer.html"></partial>
+</body>
+</html>

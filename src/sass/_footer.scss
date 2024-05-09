@@ -1,43 +1,64 @@
 .footer {
-    background-color: $green;
-    padding: 40px 0;
+    &-wrapper {
+      width: 100%;
+      border-radius: 90px 90px 0px 0px;
+      border: 1px solid $grey;
+      background-color: $lightgrey;
+      padding: 40px 50px;
 
-    &-top {
-      color: $white;
-      padding-bottom: 50px;
-      border-bottom: 1px solid $white;
-    }
-
-    &-menu {
-      h5 {
-        margin-bottom: 20px;
+      @include media-breakpoint-down(lg) {
+        padding: 40px 8px;
+        border-radius: 45px 45px 0px 0px;
       }
-      li {
-        margin-bottom: 10px;
 
-        a {
-          img {
-            margin-right: 5px;
-          }
-        }
+    }
+
+    &__top {
+      padding-bottom: 40px;
+      border-bottom: 1px solid $text-black;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__contacts {
+      a {
+        display: block;
+        color: $text-black;
+        font-size: 32px;
+        line-height: 39px;
+        font-weight: 700;
       }
     }
 
-
-    &-bottom {
-      padding-top: 50px;
-    }
-
-
-
-    @include media-breakpoint-down(sm) {
-        &-top {
+    @include media-breakpoint-down(lg) {
+        &__top {
             flex-direction: column;
             align-items: flex-start;
+
+            .logo img {
+              width: 200px;
+            }
+        }
+        &__bottom .row {
+          flex-direction: column-reverse;
+        }
+        &__contacts {
+          .for-devices {
+            font-family: 'Inter';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+          }
+          a {
+            font-size: 21px;
+            line-height: 24px;
+          }
         }
     }
     a {
-        color: $white;
         display: flex;
         align-items: center;
         transition: color $transition_04;
@@ -51,14 +72,20 @@
         }
   
         &:hover {
-          color: $lightgreen;
+          // color: $lightgreen;
   
           svg path {
-            fill: $lightgreen;
+            // fill: $lightgreen;
           }
         }
     }
     .mfa-logo {
         max-width: 300px;
+    }
+    &__mob-logo {
+      text-align: center;
+       img {
+        max-width: 400px;
+       }
     }
 }

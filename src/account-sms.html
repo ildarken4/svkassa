@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Личный кабинет</title>
+</head>
+
+<body onload="startEmailTimer()">
+
+    <partial src="header-account.html"></partial>
+    <div class="wrapper account-wrapper">
+        <div class="container pt-60 pt-md-40">
+
+            <div class="account-content mb-60">
+                <h1 class="mb-40 mb-md-20">Введите код из смс</h1>
+
+               <div class="account-flow">
+                    <p class="account-flow__text mb-20">SMS с кодом подтверждения отправлен на указанный номер.</p>
+                    <p class="account-flow__text mb-40 text-ruby">+7 (912)345-67-89</p>
+
+                    <form action="">
+                        <div class="form-item mb-40">
+                            <div class="form-input">
+                                <input type="text" id="sms-code" placeholder="Введите код" required>
+                            </div>
+                            <div class="input-error">Обязательное поле</div>
+                        </div>
+
+                        <div class="popup-timer mb-20">59 секунд</div>
+
+                        <div class="resend mb-40 btn-disabled popup-email-button">Отправить ещё раз</div>
+
+                        <a href="flow-considering.html" class="btn js-form-btn">Далее</a>
+                    </form>
+               </div>
+                
+
+            </div>
+
+            <div class="notification error">
+                <span>Не все поля заполнены</span>
+                <img src="images/buttons/account-menu-close.svg" alt="ошибка">
+            </div>
+        </div>
+    </div>
+
+
+    <partial src="footer.html"></partial>
+</body>
+
+</html>

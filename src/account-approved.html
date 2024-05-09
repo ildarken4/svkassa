@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Личный кабинет</title>
+</head>
+
+<body>
+
+    <partial src="header-account.html"></partial>
+    <div class="wrapper account-wrapper">
+        <div class="container pt-60 pt-md-40">
+
+            <div class="account-content mb-60">
+                <h1 class="mb-40 mb-sm-20">
+                    Заем одобрен!
+                </h1>
+
+                <div class="flow-info">
+                    <div class="flow-info__img">
+                        <img src="images/icons/approved=3d.png" width="100%" alt="одобрение">
+                    </div>
+                    <p class="flow-info__text text-grey mb-40">Для подтверждения займа, ознакомьтесь с документами и <span class="text-ruby">введите код из СМС.</span> </p>
+                    
+                    <div class="flow-card">
+                        <div class="flow-card__item">
+                            <div class="flow-card__title">Заявка принята:</div>
+                            <div class="flow-card__data"><span>01.02.2024</span> в <span>10:55</span></div>
+                        </div>
+                        <div class="flow-card__item">
+                            <div class="flow-card__title">Дата выдачи займа:</div>
+                            <div class="flow-card__data">01.02.2024</div>
+                        </div>
+                        <div class="flow-card__item">
+                            <div class="flow-card__title">Сумма займа:</div>
+                            <div class="flow-card__data">21 000 ₽</div>
+                        </div>
+                        <div class="flow-card__item">
+                            <div class="flow-card__title">Погасить не позже:</div>
+                            <div class="flow-card__data">15.02.2024</div>
+                        </div>
+                        <div class="flow-card__item mb-40">
+                            <div class="flow-card__title">Статус займа:</div>
+                            <div class="flow-card__data text-ruby">Ожидает подтверждения</div>
+                        </div>
+
+                        <form action="">
+                            <div class="form-item mb-40">
+                                <div class="form-input">
+                                    <input type="text" id="sms-code" placeholder="Введите код">
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+                        
+                            <a href="flow-considering.html" class="btn next-step mb-40">Подтвердить займ</a>
+
+                            <div class="d-flex mb-16">
+                                <label for="rules" class="">
+                                    <input type="checkbox" id="rules">
+                                    <span class="custom-checkbox"></span>
+                                    <span>Я ознакомлен и согласен со&nbsp;<a class="show-rules text-ruby underlined">следующим</a> </span>
+                                </label>
+                            </div>
+                            
+                            <div class="hidden-checkbox">
+                                <label for="agreement-personal" class="mb-10">
+                                    <input type="checkbox" id="agreement-personal" checked>
+                                    <span class="custom-checkbox"></span>
+                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных
+                                            данных</a> </span>
+                                </label>
+                            
+                                <label for="agreement-sign">
+                                    <input type="checkbox" id="agreement-sign" checked>
+                                    <span class="custom-checkbox"></span>
+                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной
+                                            подписи</a> </span>
+                                </label>
+                                <div class="hide-rules mt-20">Свернуть</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <partial src="footer.html"></partial>
+</body>
+
+</html>

@@ -1,809 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <partial src="head.html"></partial>
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>FinFresh – Главная страница</title>
+    <title>CreditBooster – Главная страница</title>
 </head>
-
 <body>
 
-    <partial src="header.html"></partial>
-    <div class="wrapper">
-        <section class="hero">
-            <div class="container">
-                <div class="row">
-                    <div class="hero__left col-lg-7">
-                        <div class="">
-                            <h1 class="text-white">
-                                Первый заём&nbsp;– бесплатно!
-                            </h1>
-                            <div class="hero__info">
-                                До 30 000 ₽, до 30 дней — без процентов*
-                            </div>
-                        </div>
-                        <div class="hero__image">
-                            <div class="hero__circle">
-                                <img src="images/hero__image.png" width="100%" alt="Аватар компании ФинФреш">
-                            </div>
-                            <div class="hero__message">
-                                <div class="text-green text-600 mb-12 mb-sm-8">Привет! Я – Фреш</div>
-                                <span class="text-500">Ура! <br> Вместе мы сможем преодолеть любые финансовые
-                                    сложности!</span>
-                            </div>
-                            <div class="hero__decorative first">Онлайн</div>
-                            <div class="hero__decorative second">За 10 минут</div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-lg-5 col-md-12 p-sm-0">
-                        <form class="calculator pt-sm-20" action="">
-                            <h4 class="text-center mb-16">Какая сумма вам необходима?</h4>
-                            <div class="calculator__card mb-12">
-                                <div class="title">Сумма</div>
-                                <div class="range-slider sum-slider">
-                                    <div class="data"><span class="data__number result-sum"><output name="ageOutputName"
-                                            id="sum-output"></output></span></div>
-
-                                    <input type="range" class="styled-slider slider-progress sum-input" id="sum-input"
-                                        min="1500" max="30000" value="5000" step="500" />
-                                    <div class="range-slider__values">
-                                        <span class="minimum-scale">1 500 ₽</span>
-                                        <span class="maximum-scale">30 000 ₽</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calculator__card mb-20">
-                                <div class="title">Срок кредитования</div>
-                                
-
-                                <div class="range-slider term-slider">
-                                    <div class="data"><span class="data__number calc-days"><output name="ageOutputName"
-                                            id="term-output"></output></span></div>
-                                    
-
-                                    <input type="range" class="styled-slider slider-progress term-input" id="term-input"
-                                        min="5" max="30" value="21" />
-                                    <div class="range-slider__values">
-                                        <span class="minimum-scale">5 дней</span>
-                                        <span class="maximum-scale">30 дней</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="calculator-result mb-12">
-                                <div class="result-top d-flex gap-40 gap-sm-20">
-                                    <div class="result-item">
-                                        <span class="mb-8">Вы берете:</span>
-                                        <div class="result-number result-sum">15 000 ₽</div>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="mb-8">Включительно до:</span>
-                                        <div class="result-number result-date">12.09.23</div>
-                                    </div>
-                                </div>
-                                <div class="mt-20">
-                                    <span>Вы возвращаете:</span>
-                                    <div class="result-number d-flex align-items-center mt-4 mb-4">
-                                        <div class="result-total mr-8">15 000 ₽</div>
-                                        <div class="result-percent">0%</div>
-                                    </div>
-                                    <span class="text-12">Если погасите платеж до <span
-                                            class="result-date">12.09.23</span> </span>
-                                </div>
-                            </div>
-
-
-                            <button class="btn bg-green calculator-submit">Получить льготный период</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="learn pt-60 pb-60">
-            <div class="container tabs">
-
-                <div class="row">
-                    <h2 class="section-subtitle">Как пользоваться</h2>
-                </div>
-
-                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="get-tab">Получить</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pay-tab">Погасить</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="prolongation-tab">Продлить</button>
-                    </li>
-                </ul>
-                <div class="tab-content pt-40" id="myTabContent">
-                    <div class="tab-pane fade show active" id="get" aria-labelledby="get-tab">
-
-                        <div class="row justify-content-between mb-80">
-                            <div class="col-lg-4 col-md-4 mb-md-40">
-                                <div class="learn__card">
-                                    <div
-                                        class="learn__image mb-16 bg-green d-flex align-items-center justify-content-center">
-                                        <img src="images/icons/monitor.svg" alt="иконка монитор">
-                                    </div>
-
-                                    <h4>Оформляете заявку на&nbsp;сайте</h4>
-                                    <div class="learn__text text-grey text-500">нужен только паспорт</div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-4 col-md-4 mb-md-40">
-                                <div class="learn__card">
-                                    <div
-                                        class="learn__image mb-16 bg-green d-flex align-items-center justify-content-center">
-                                        <img src="images/icons/sand_clock.svg" alt="иконка песочные часы">
-                                    </div>
-
-                                    <h4>Дожидаетесь одобрения
-                                        заявки</h4>
-                                    <div class="learn__text text-grey text-500">не дольше 10 минут</div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-4 col-md-4 mb-md-40">
-                                <div class="learn__card">
-                                    <div
-                                        class="learn__image mb-16 bg-green d-flex align-items-center justify-content-center">
-                                        <img src="images/icons/money.svg" alt="иконка деньги">
-                                    </div>
-
-                                    <h4>Получаете деньги на&nbsp;карту или счет</h4>
-                                    <div class="learn__text text-grey text-500">выбранным способом</div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="d-flex justify-content-center">
-                            <div class="mr-32 mr-sm-10">
-                                <img src="images/footer/cards-visa.svg" alt="карта виза">
-                            </div>
-                            <div class="mr-32 mr-sm-10">
-                                <img src="images/footer/cards-mastercard.svg" alt="карта мастеркард">
-                            </div>
-                            <div class="mr-32 mr-sm-10">
-                                <img src="images/footer/cards-maestro.svg" alt="карта маэстро">
-                            </div>
-                            <div class="">
-                                <img src="images/footer/cards-mir.svg" alt="карта мир">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="tab-pane fade" id="profile" aria-labelledby="pay-tab">
-
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 mb-md-40">
-                                <div class="learn__card">
-                                    <div
-                                        class="learn__image mb-16 bg-green d-flex align-items-center justify-content-center">
-                                        <img src="images/icons/account-enter.svg" alt="вход">
-                                    </div>
-                                    <h4>В личном кабинете</h4>
-                                    <div class="learn__text text-grey text-500">картами Visa, Mastercard, Мир</div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-4 col-md-4 mb-md-40">
-                                <div class="learn__card">
-                                    <div
-                                        class="learn__image mb-16 bg-green d-flex align-items-center justify-content-center">
-                                        <img src="images/icons/bank.svg" alt="банк">
-                                    </div>
-                                    <h4>Банковский перевод</h4>
-                                    <div class="learn__text text-grey text-500">из любого удобного банка</div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-4 col-md-4 mb-md-40">
-                                <div class="learn__card">
-                                    <div
-                                        class="learn__image mb-16 bg-green d-flex align-items-center justify-content-center">
-                                        <img src="images/icons/post-office.svg" alt="почтовый офис">
-                                    </div>
-                                    <h4>Почта России</h4>
-                                    <div class="learn__text text-grey text-500">наличными в отделениях Почты России без
-                                        комиссии</div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile" aria-labelledby="prolongation-tab">
-
-                        <div class="text-21 text-center text-600 mb-4 mb-md-20">Вы можете перенести дату платежа, оплатив только
-                            проценты</div class="text-20">
-
-                        <div class="extend-scheme">
-                            <picture>
-                                <source media="(min-width: 992px)" srcset="images/extend.svg">
-                                <source media="(max-width: 991px)" srcset="images/extend-devices.svg">
-                                <img src="images/extend.svg" alt="схема переноса платежа">
-                            </picture>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="mb-140">
-            <div class="container pt-40">
-                <div class="row">
-                    <h2 class="section-subtitle">Преимущества FinFresh</h2>
-                </div>
-
-                <div class="advantages-slider swiper-container">
-                    <div class="advantages swiper-wrapper">
-                        
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__1.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Сайт доступен <br> с любого устройства</div>
-                                <div class="advantage__description">А это значит, что вы можете взять займ, даже не имея
-                                    под рукой персонального компьютера</div>
-                            </div>
-                        </div>
-                    
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__5.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Возможность взять займ в любое время суток</div>
-                                <div class="advantage__description">позволяет не ждать до утра – вы можете зять займ в
-                                    любое время дня и ночи</div>
-                            </div>
-                        </div>
-                    
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__2.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Заполнение заявки всего за 10 минут</div>
-                                <div class="advantage__description">Удобный обновленный интерфейс позволяет легко и
-                                    быстро пройти заполнение заявки в несколько шагов</div>
-                            </div>
-                        </div>
-                    
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__6.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Решение по займу принимается моментально</div>
-                                <div class="advantage__description">и в автоматическом режиме. Не нужно ждать пока люди
-                                    сверят информацию</div>
-                            </div>
-                        </div>
-                    
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__3.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Доверие к постоянным клиентам</div>
-                                <div class="advantage__description">нашего сервиса – максимальная сумма займа
-                                    увеличивается по мере пользования системой</div>
-                            </div>
-                        </div>
-                    
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__7.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Перечисление денег на любой счет</div>
-                                <div class="advantage__description">первый и любой займ на Visa, Mastercard, Мир</div>
-                            </div>
-                        </div>
-                    
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__4.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Конфиденциальность и сохранность</div>
-                                <div class="advantage__description">ваших данных гарантируется вам на протяжении всего
-                                    срока использования сервиса</div>
-                            </div>
-                        </div>
-                    
-                        <div class="advantage swiper-slide">
-                            <div class="advantage__image">
-                                <img src="images/icons/advantage__8.svg" width="100%" alt="">
-                            </div>
-                            <div class="advantage__text">
-                                <div class="advantage__title">Займы доступны по всей России</div>
-                                <div class="advantage__description">из любого города или населенного пункта. Всё, что
-                                    вам нужно – доступ к интернету</div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="swiper-pagination for-devices"></div>
-                </div>
+<partial src="header.html"></partial>
+<div class="wrapper">
+  <section class="hero">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-darkruby uppercase">
+                Быстрые <br> займы онлайн
+            </h1>
+            <div class="hero__left col-lg-6 mb-md-60">
+                
+                <img src="images/hero__image.png" width="100%" alt="изображение главной страницы">
                 
             </div>
-        </section>
-    </div>
-
-
-
-
-    <!-- Модалки -->
-
-
-    <div class="modal" id="callback-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <h4 class="mb-40 text-center">Обратный звонок</h4>
-
-            <p class="text-center mb-20">Укажите ваш номер, и мы перезвоним вам в течение 15 минут</p>
-
-            <form action="">
-
-                <div class="form-item mb-32">
-                    <div class="form-input required">
-                        <input type="tel" id="reg-phone" placeholder="+7" required>
-                    </div>
-                    <div class="input-error">Ошибка при отправке формы</div>
-                </div>
-
-                <button class="btn js-form-btn bg-green mb-10 btn-disabled"><a href="#">Отправить</a></button>
-            </form>
-
-        </div>
-    </div>
-
-
-    <div class="modal" id="contract-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <h4 class="mb-40 text-center">Платеж по займу</h4>
-
-            <p class="text-center mb-20">Для оплаты укажите номер телефона и дату рождения, которые вы указывали в
-                заявке на займ.</p>
-
-            <!-- Если заёмщик не найден - текст выше меняется на сообщение ниже (скрыто классом d-none) -->
-            <p class="text-center text-red d-none mb-20">Заёмщик с такими данными не найден. Проверьте, возможно в
-                номере телефона или дате рождения допущена ошибка.Если считаете, что ошибки нет, попробуйте оплатить,
-                выполнив вход в <a href="" class="underlined text-red">Личный кабинет</a> или позвоните на бесплатный
-                номер <a href="tel:88005555555" class="text-red">8 (800) 555 55 55</a></p>
-
-            <form action="">
-
-                <div class="form-item mb-32">
-                    <div class="form-input required">
-                        <input type="tel" id="pay-phone" placeholder="+7" required>
-                    </div>
-                </div>
-
-                <div class="form-item mb-32">
-                    <div class="form-input required">
-                        <input type="date" id="reg-date" placeholder="Введите дату рождения" required>
-                    </div>
-                </div>
-
-                <button class="btn js-form-btn bg-green mb-10 btn-disabled"
-                    onclick=" event.preventDefault() ;changeModal('contract-modal', 'payment-modal')"><a
-                        href="#">Отправить</a></button>
-            </form>
-
-        </div>
-    </div>
-
-    <div class="modal" id="payment-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <h4 class="mb-40 text-center">Погасить займ</h4>
-
-
-
-            <form action="">
-
-                <div class="d-flex gap-20 mb-20 js-checkbox-btns">
-                    <div class="btn bg-green">Частично</div>
-                    <div class="btn btn-transparent">Полностью</div>
-                </div>
-
-                <div class="text-center text-600 text-14 mb-20">
-                    Выберите договор для оплаты
-                </div>
-                <div class="form-input">
-                    <label for="pay-contract-1" class="text-14 mr-10">
-                        <input type="radio" id="pay-contract-1" name="pay-contract" checked required
-                            value="pay-contract-1">
-                        <span class="custom-radio"></span>
-                        <span class="mt-4">Договор № <span>12345678</span> от <span>14.06.23</span></span>
-                    </label>
-                </div>
-                <div class="form-input mb-20">
-                    <label for="pay-contract-2" class="text-14">
-                        <input type="radio" id="pay-contract-2" name="pay-contract" required value="pay-contract-2">
-                        <span class="custom-radio"></span>
-                        <span class="mt-4">Договор № <span>12345678</span> от <span>14.06.23</span></span>
-                    </label>
-                </div>
-                <div class="form-item mb-32">
-                    <div class="form-input required">
-                        <input type="text" id="pay-sum" class="js-check-fill input-sum" placeholder="Введите сумму"
-                            required>
-                    </div>
-                    <div class="input-error">Обязательное поле</div>
-                </div>
-
-                <button class="btn js-form-btn bg-green mb-10 btn-disabled"
-                    onclick="changeModal('payment-modal', 'payment-failed-modal')">Отправить</button>
-            </form>
-
-        </div>
-    </div>
-
-
-    <div class="modal" id="payment-failed-modal">
-        <div class="popup custom-column text-center">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <div class="popup__image mb-20">
-                <img src="images/frog_not-avaliable.png" width="100%" alt="Фреш">
-            </div>
-
-            <h4 class="mb-40 text-center">Платеж не проведен</h4>
-
-            <button class="btn mb-10 "
-                onclick="changeModal('payment-failed-modal', 'payment-unavaliable-modal')">Попробовать снова</button>
-
-        </div>
-    </div>
-
-    <div class="modal" id="payment-unavaliable-modal">
-        <div class="popup custom-column text-center">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <div class="popup__image mb-20">
-                <img src="images/frog_not-avaliable.png" width="100%" alt="Фреш">
-            </div>
-
-            <h4 class="mb-40 text-center">Сервис недоступен</h4>
-
-            <p class="mb-30">В настоящщее время мы не можем принять ваш платеж. Сообщите об ошибке администратору и мы
-                примем необходимые меры.</p>
-
-            <button class="btn mb-10 "
-                onclick="changeModal('payment-unavaliable-modal', 'payment-success-modal')">Попробовать снова</button>
-
-        </div>
-    </div>
-
-    <div class="modal" id="payment-success-modal">
-        <div class="popup custom-column text-center">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <div class="popup__image mb-20">
-                <img src="images/frog_thanks.png" width="100%" alt="Фреш">
-            </div>
-
-            <h4 class="mb-40 text-center">Платеж успешно внесен</h4>
-
-            <a class="btn mb-10 " href="account-single-loan.html">Перейти в Личный кабинет</a>
-
-        </div>
-    </div>
-
-
-
-    <div class="modal" id="login-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <h4 class="mb-40 text-center">Войти в личный кабинет</h4>
-
-
-            <!-- Если заёмщик не найден - сообщение ниже (скрыто классом d-none) -->
-            <p class="text-center text-red d-none mb-20">Заёмщик с такими данными не найден. Проверьте, возможно в
-                номере телефона или дате рождения допущена ошибка.Если считаете, что ошибки нет, попробуйте оплатить,
-                выполнив вход в <a href="" class="underlined text-red">Личный кабинет</a> или позвоните на бесплатный
-                номер <a href="tel:88005555555" class="text-red">8 (800) 555 55 55</a></p>
-
-            <form action="">
-                <a href="#" class="btn btn-big btn-tinkoff mb-20">
-                    Войти с Тинькофф
-                    <img src="images/buttons/tinkoff.png" width="38px" alt="логотип Тинькофф ID">
-                </a>
-
-                <p class="text-center mb-20">Или укажите ваш номер телефона</p>
-
-                <div class="form-item mb-32">
-                    <div class="form-input required">
-                        <input type="tel" id="login-phone" placeholder="+7" required>
-                    </div>
-                </div>
-
-                <button class="btn js-form-btn bg-green mb-10 btn-disabled"
-                    onclick=" event.preventDefault() ;changeModal('login-modal', 'login-password-modal')"><a
-                        href="#">Войти</a></button>
-            </form>
-
-        </div>
-    </div>
-
-
-    <div class="modal" id="login-sms-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <h4 class="mb-40 text-center">Войти в личный кабинет</h4>
-
-            <form action="">
-
-                <p class="text-center mb-20">Смс с кодом подтверждения отправлен на указанный номер</p>
-
-                <p class="text-center text-green text-600 mb-20">+7 (915) 444 44 55</p>
-
-                <div class="form-item mb-32">
-                    <div class="form-input">
-                        <input type="number" id="login-sms" placeholder="Введите код" required>
-                    </div>
-                </div>
-
-                <button class="btn js-form-btn bg-green mb-10 btn-disabled"><a
-                        href="account-single-loan.html">Войти</a></button>
-            </form>
-
-        </div>
-    </div>
-
-
-
-    <div class="modal" id="login-password-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <h4 class="mb-40 text-center">Войти в личный кабинет</h4>
-
-            <form action="">
-
-                <p class="text-center mb-20">Введите ваш пароль</p>
-
-                <!-- Если пароль не подошел - сообщение ниже (скрыто классом d-none) -->
-                <p class="text-center text-red d-none mb-20">Неверный пароль, попробуйте еще раз.</p>
-
-
-                <div class="form-item mb-32">
-                    <div class="form-input">
-                        <input type="password" id="login-password" placeholder="Ваш пароль" required>
-                    </div>
-                </div>
-
-                <div class="text-center text-600 mb-20"
-                    onclick=" event.preventDefault() ;changeModal('login-password-modal', 'login-email-modal'); startEmailTimer()">
-                    <a href="" class="underlined text-green">Забыл пароль</a></div>
-
-                <button class="btn js-form-btn bg-green mb-10 btn-disabled"><a
-                        href="account-single-loan.html">Войти</a></button>
-            </form>
-
-        </div>
-    </div>
-
-
-    <div class="modal" id="login-email-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <form action="">
-
-                <p class="text-center mb-20">Письмо со ссылкой для восстановления пароля отправлено на вашу почту.</p>
-
-
-                <p class="text-center text-green text-600 mb-20">i******4@gmail.com</p>
-
-                <div class="text-center text-green text-600 mb-20"
-                    onclick=" event.preventDefault() ;changeModal('login-email-modal', 'login-new-password-modal')"><a
-                        href="" class="underlined text-green">У меня нет к ней доступа</a></div>
-
-                <div class="popup-timer text-center text-grey text-600 mb-20">
-                    59 секунд
-                </div>
-
-                <button class="btn js-form-btn bg-green mb-10 btn-disabled popup-email-button"
-                    onclick="startEmailTimer()">Отправить ещё раз</button>
-                <button class="btn mb-10 "
-                    onclick=" event.preventDefault() ;changeModal('login-email-modal', 'login-password-modal')">Назад</button>
-            </form>
-
-        </div>
-    </div>
-
-
-    <div class="modal" id="login-new-password-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
-            </div>
-
-            <h4 class="mb-20 text-center">Восстановление пароля</h4>
-
-            <form action="">
-
-                <p class="text-center mb-20">Придумайте новый пароль</p>
-
-                <div class="form-item">
-                    <div class="form-input mb-30 js-hinted-input">
-                        <input type="password" id="new-password" autocomplete="false" required
-                            placeholder="Пароль для входа в личный кабинет">
-                        <div class="input-hint">
-                            <div class="input-hint__title">Пароль должен содержать</div>
-                            <div class="input-hint__text text-14">
-                                - 8 символов латинского алфавита (A-z)
-                            </div>
-                            <div class="input-hint__text text-14">
-                                - цифры (0-9)
+            
+            <div class="hero__right col-lg-6 col-md-12 p-sm-0">
+                <form class="calculator pt-sm-20" action="">
+                    <div class="calculator__card mb-12">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="title">Сумма</div>
+                            <div class="data"><span class="data__number result-sum">15 000</span></div>
+                        </div>
+                        
+                        <div class="range-slider sum-slider">
+                            
+                            <input type="range" class="styled-slider slider-progress" id="sum-input" min="1500" max="30000" value="10000" step="500"/>
+                            <div class="range-slider__values">
+                                <span class="minimum-scale">1 500 ₽</span>
+                                <span class="maximum-scale">30 000 ₽</span>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-item">
-                    <div class="form-input mb-30">
-                        <input type="password" id="confirm-password" autocomplete="false" required
-                            placeholder="Подтвердите пароль">
+                    <div class="calculator__card mb-20">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="title">Срок</div>
+                            <div class="data"><span class="data__number calc-days">20</span></div>
+                        </div>
+                        
+                        <div class="range-slider term-slider">
+                            
+                            <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21"/>
+                            <div class="range-slider__values">
+                                <span class="minimum-scale">5 дней</span>
+                                <span class="maximum-scale">30 дней</span>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="calculator-result d-flex justify-content-between mb-12">
+                        <div class="result-item">
+                            <div class="result-head mb-10">Сумма займа:</div>
+                            <div class="result-number result-sum">15 000 ₽</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-head mb-10">Срок займа до:</div>
+                            <div class="result-number result-date">12.09.23</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-head mb-10">К возврату:</div>
+                            <div class="result-number result-sum mr-8">15 000 ₽</div>
+                        </div>
+                    </div>
+
+                    <div class="calculator__phone mb-40">
+                        <div class="text-500 text-24 mb-15 mb-md-5">Ваш номер телефона:</div>
+                        <div class="form-input calculator-input">
+                            <input type="tel" id="calculator-phone" placeholder="Введите ваш номер" required>
+                        </div>
+                        <div class="input-error">Ошибка</div>
+                    </div>
+                    
+                    <button class="btn mb-20">Получить заём</button>
+
+                    <div class="d-flex mb-16">
+                        <label for="rules" class="">
+                            <input type="checkbox" id="rules" required>
+                            <span class="custom-checkbox"></span>
+                            <span>Я ознакомлен и согласен со&nbsp;<a class="show-rules text-ruby underlined">следующим</a> </span>
+                        </label>
+                    </div>
+
+                    <div class="hidden-checkbox">
+                        <label for="agreement-personal" class="mb-10">
+                            <input type="checkbox" id="agreement-personal" checked>
+                            <span class="custom-checkbox"></span>
+                            <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных данных</a> </span>
+                        </label>
+                        
+                        <label for="agreement-sign">
+                            <input type="checkbox" id="agreement-sign" checked>
+                            <span class="custom-checkbox"></span>
+                            <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной подписи</a> </span>
+                        </label>
+                        <div class="hide-rules mt-20">Свернуть</div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="learn pt-60 pt-md-0 pb-60 pb-md-25">
+    <div class="container tabs">
+        <ul class="nav nav-tabs" id="learn-tab">
+            <li class="nav-item mr-30 mr-md-0">
+                <button class="nav-link active" id="home-tab">Как получить займ</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="profile-tab">Как погасить займ</button>
+            </li>
+        </ul>
+        <div class="tab-content pt-48 pt-md-0" id="learn-tabs">
+            <div class="tab-pane fade active" id="home" aria-labelledby="home-tab">
+                
+                <div class="row justify-content-center learn__cards pl-100 pr-100 pl-md-0 pr-md-0">
+                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
+                        <h4 class="">Заполните заявку</h4>
+                        <div class="learn__text text-grey">Укажите нужную вам сумму и срок с&nbsp;помощью кредитного калькулятора. Затем нажмите кнопку «Получить заём»</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
+                        <h4 class="">Дождитесь решения</h4>
+                        <div class="learn__text text-grey">Наши специалисты примут решение&nbsp;о&nbsp;выдаче займа в течение 15&nbsp;минут</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
+                        <h4 class="">Получите деньги</h4>
+                        <div class="learn__text text-grey">Подтвердите договор с помощью SMS&nbsp;кода, и сразу же получите деньги&nbsp;на&nbsp;карту.</div>
                     </div>
                 </div>
 
-                <div class="input-error mb-20">Пароли не совпадают</div>
-
-                <button class="btn js-password-button js-form-btn bg-green mb-10 btn-disabled"
-                    onclick=" event.preventDefault() ;changeModal('login-new-password-modal', 'login-password-modal')">Готово</button>
-            </form>
-
-        </div>
-    </div>
-
-
-    <!-- Зарегистрированный пользователь нажал “Получить заём” -->
-
-    <div class="modal" id="signed-user-modal">
-        <div class="popup popup-small">
-            <div class="close-button d-flex justify-content-end mb-10">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    onclick="closeModal()">
-                    <path
-                        d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z"
-                        fill="#555555" />
-                </svg>
             </div>
-
-            <h4 class="mb-20 text-center">Получить заём</h4>
-
-            <p class="text-center mb-20">По указанному номеру уже зарегистрирован личный кабинет</p>
-
-            <button class="btn js-form-btn bg-green mb-10"
-                onclick="event.preventDefault(); changeModal('signed-user-modal', 'login-modal')"><a
-                    href="account-single-loan.html">Войти</a></button>
-            <button class="btn mb-10 "
-                onclick=" event.preventDefault() ;changeModal('signed-user-modal', 'payment-modal')">Внести
-                платеж</button>
-
+            <div class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                
+                <div class="row justify-content-center learn__cards pl-100 pr-100 pl-md-0 pr-md-0">
+                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
+                        <h4 class="">Дождитесь решения</h4>
+                        <div class="learn__text text-grey">Наши специалисты примут решение&nbsp;о&nbsp;выдаче займа в течение 15&nbsp;минут</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
+                        <h4 class="">Получите деньги</h4>
+                        <div class="learn__text text-grey">Подтвердите договор с помощью SMS&nbsp;кода, и сразу же получите деньги&nbsp;на&nbsp;карту.</div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
+                        <h4 class="">Заполните заявку</h4>
+                        <div class="learn__text text-grey">Укажите нужную вам сумму и срок с&nbsp;помощью кредитного калькулятора. Затем нажмите кнопку «Получить заём»</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+  </section>
 
-    <partial src="main-footer.html"></partial>
+  <section class="pt-75 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="about col-lg-6 offset-lg-3 text-center mb-50">
+                <h2 class="mb-20">О компании Легкозайм</h2>
+                <div class="text-grey text-500 mb-40">
+                    Онлайн-займы — это микрокредиты на сумму от 1000 до 30 000 сроком от 1 до 16 дней c процентной ставкой от 0% до 1% в день. Заёмщик получает деньги на свою карту сразу после одобрения заявки, поданной онлайн на сайте. 
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-rounded btn-transparent" onclick="openModal('conditions-modal')">Условия займа</button>
+                </div>
+            </div>
+        </div>
+        
+        <partial src="main-info-desktop.html"></partial>
+        <partial src="main-info-mob.html"></partial>
+        
+        
+    </div>
+  </section>
+
+  <section class="contacts pb-150">
+    <div class="container">
+        <h2 class="mb-20 text-center">Остались вопросы?</h2>
+        <div class="text-center text-grey mb-50 mb-md-20">Свяжитесь с нами</div>
+        <div class="d-flex justify-content-center">
+            <div class="custom-column-big d-flex">
+                <div class="contacts__card">
+                    <div class="d-flex justify-content-between">
+                        <div class="uppercase">Телефон</div>
+                        <div class="">
+                            <img src="images/icons/Communication/Phone.svg" alt="">
+                        </div>
+                    </div>
+                    <a href="tel:+79123456789" class="text-ruby text-24">+7 (912) 345-67-89</a>
+                </div>
+                <div class="contacts__card">
+                    <div class="d-flex justify-content-between">
+                        <div class="uppercase">Почта</div>
+                        <div class="">
+                            <img src="images/icons/Communication/Mail.svg" alt="">
+                        </div>
+                    </div>
+                    <a href="mailto:info@creditboost.com" class="text-ruby uppercase text-24">info@creditboost.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+</div>
+
+<div class="modal" id="conditions-modal">
+    <div class="popup">
+        <div class="popup__top mb-40 mb-md-20">
+            <div class="popup__title">
+                Условия займа
+            </div>
+            <div class="btn btn-rounded btn-transparent for-desktop" onclick="closeModal()">
+                Закрыть
+            </div>
+            <div class="close-popup for-devices" onclick="closeModal()">
+                <img src="images/icons/cross-mobile.svg" alt="">
+            </div>
+        </div>
+        
+        <div class="popup__content mb-100">
+            <ul>
+                <li class="d-flex mb-20">
+                    <span>1.&nbsp;</span>
+                    <span>Укажите нужную вам сумму и срок с помощью кредитного калькулятора. <br> Затем нажмите кнопку «Получить заём»</span>
+                </li>
+                <li class="d-flex mb-20">
+                    <span>2.&nbsp;</span>
+                    <span>Наши специалисты примут решение о выдаче займа в течение 15 минут</span>
+                </li>
+                <li class="d-flex ">
+                    <span>3.&nbsp;</span>
+                    <span>Подтвердите договор с помощью SMS кода, и сразу же получите деньги на карту</span>
+                </li>
+            </ul>
+            <button class="btn mb-20 mt-40 for-devices">Получить заём</button>
+        </div>
+    </div>
+</div>
+
+<partial src="main-footer.html"></partial>
 </body>
-
 </html>

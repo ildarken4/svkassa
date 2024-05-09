@@ -1,39 +1,60 @@
 .header {
   width: 100%;
   position: relative;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  z-index: 200;
 
-  &__top {
-    padding: 18px 0;
+  &-content {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: $lightgrey;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .mob-login-btn {
+    display: none;
+  }
+  
+  @media (max-width:1120px) {
+    .login-btn {
+      display: none;
+    }
+    .mob-login-btn {
+      display: block;
+    }
+  }
+  
 
-    a {
-      color: $white;
-      display: flex;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: .5;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
       align-items: center;
-      transition: color $transition_04;
-
-      svg {
-        margin-right: 8px;
-
-        path {
-          transition: all $transition_04;
-        }
+      gap: 20px;
+      .login-btn {
+        display: block;
       }
-
-      &:hover {
-        color: $lightgreen;
-
-        svg path {
-          fill: $lightgreen;
+      .header__buttons {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+          width: 280px;
+          margin-bottom: 20px;
         }
       }
     }
-  }
 
-  &__bottom {
-    padding: 10px 0;
-  }
-
-  nav {
     ul li:not(:first-child) {
       margin-left: 20px;
       
@@ -45,28 +66,10 @@
       color: $text-black;
       display: flex;
       align-items: center;
+      font-size: 12px;
+      text-transform: uppercase;
       font-weight: 600;
       transition: color $transition_04;
-
-      @media (max-width: 1080px) {
-        font-size: 14px;
-      }
-
-      svg {
-        margin-right: 8px;
-
-        path {
-          transition: all $transition_04;
-        }
-      }
-
-      &:hover {
-        color: $green;
-
-        svg path {
-          fill: $green;
-        }
-      }
     }
 
     @include media-breakpoint-down(lg) {
@@ -76,8 +79,9 @@
       top: -105vh;
       left: 0;
       opacity: 0;
-      background-color: $green;
-      color: $white;
+      background-color: $lightgrey;
+      color: $ruby;
+      font-weight: bold;
       z-index: 2000;
       display: flex;
       align-items: center;
@@ -92,9 +96,10 @@
             margin-right: 0;
           }
           a {
-            font-size: 21px;
+            font-size: 20px;
             line-height: 24px;
-            color: $white;
+            font-weight: 400;
+            color: $text-black;
             @include media-breakpoint-down(sm) {
               font-size: 17px;
             }
@@ -103,10 +108,10 @@
             }
 
             &:hover {
-              color: $lightgreen;
+              // color: $lightgreen;
       
               svg path {
-                fill: $lightgreen;
+                // fill: $lightgreen;
               }
             }
           }
@@ -118,39 +123,67 @@
         transition: all 0.6s ease;
       }
     }
-
+    
   }
-  &__psk {
+  &__contacts {
+    text-align: right;
+
+    a {
+      font-weight: 700;
+      line-height: 16px;
+      color: $text-black;
+    }
+
+    @media(max-width:1280px) {
+      display: none;
+    }
     @include media-breakpoint-down(lg) {
-      font-size: 12px;
+      display: block;
+      margin-bottom: 120px;
+      &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+      a {
+        font-size: 20px !important;
+      }
     }
   }
-  &-user {
+  &__buttons {
     display: flex;
     align-items: center;
-    color: $white;
-    font-size: 16px;
-    font-weight: 600;
-
-    &__name {
-      margin-right: 10px;
+    justify-content: space-between;
+  }
+  .btn {
+    width: fit-content;
+    margin: 0;
+  }
+  @include media-breakpoint-down(lg) {
+    .logo {
+      max-width: 105px;
     }
-    &__img {
-      flex: none;
-      background-color: $lightgreen;
-      border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      line-height: 16px;
-      font-weight: 600;
-      color: $green;
+    .logout-btn {
+      span {
+        display: none;
+      }
     }
+  }
 
+  &-account {
+    background-color: $white;
+    border-bottom: 1px solid $darkgrey;
+    padding: 0;
 
+    .header-content {
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .header__nav {
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -158,24 +191,23 @@
   position: relative;
   z-index: 2100;
   &__line {
-    height: 3px;
-    width: 35px;
-    background-color: $green;
+    height: 2px;
+    width: 20px;
+    background-color: $ruby;
     transition: all $transition_04;
 
     &:not(:last-child) {
-      margin-bottom: 6px;
+      margin-bottom: 3px;
     }
   }
   &.active {
     .mob-nav-toggler__line {
       margin: 0;
-      background-color: $white;
       &:first-child {
         transform: rotate(-45deg) translateY(2px);
       }
       &:last-child {
-        transform: rotate(45deg) translateY(-2px);
+        transform: rotate(45deg) translateY(-1.5px);
       }
       &:nth-child(2) {
         max-height: 0;

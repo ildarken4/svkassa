@@ -1,11 +1,11 @@
 label {
+  font-family: 'Inter', serif;
   display: flex;
   align-items: flex-start;
   font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
 
-  @include media-breakpoint-down(sm) {
-    font-size: 14px;
-  }
   a {
     text-decoration: underline;
   }
@@ -20,18 +20,6 @@ label {
     display: block;
   }
 }
-
-.input-error {
-  color: $text-red;
-  font-size: 14px;
-  font-weight: 600;
-  display: none;
-
-  &.active {
-    display: block;
-  }
-}
-
 .form-input {
   position: relative;
   margin-bottom: 10px;
@@ -39,13 +27,14 @@ label {
   align-items: center;
   width: 100%;
 
-  input:not([type="checkbox"]):not([type="radio"]:not([type="range"])) {
-    background-color: $white;
-    width: calc(100% - 11px);
-    height: 50px;
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="password"]) {
+    font-family: 'Inter', serif;
+    width: 100%;
+    height: 60px;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 14px;
+    background-color: $lightgrey;
 
     &.verify-input {
       height: 60px;
@@ -55,10 +44,7 @@ label {
       line-height: 27.3px;
       font-weight: 700;
     }
-    
-    &.error {
-      border: 1px solid $text-red;
-    }
+
     
   }
 
@@ -73,19 +59,36 @@ label {
       right: -2px;
       width: 11px;
       height: 21px;
-      color: $text-red;
+      // color: $text-red;
       font-size: 21px;
       line-height: 25.2px;
       font-weight: 500;
     }
   }
 
-   .input-hint {
+  input[type="password"],
+  input.password-input{
+    width: 100%;
+    height: 60px;
+    padding: 16px;
+    border-radius: 5px !important;
+    font-size: 14px;
+    font-family: 'Inter', serif;
+    background-color: $grey_015 !important;
+  }
+
+  .show-password {
+    position: absolute;
+    right: 60px;
+    cursor: pointer;
+  }
+
+  .input-hint {
     position: absolute;
     top: 100%;
     padding: 20px;
     display: none;
-    width: calc(100% - 11px);
+    width: 100%;
     background-color: $lightgrey;
     border-radius: 0px 0px 5px 5px;
     border: 1px solid #CCC;
@@ -123,9 +126,14 @@ input[type="radio"] {
   display: none;
 }
 
+.checkbox-circle-wrapper {
+
+}
+
 .custom-checkbox {
   display: inline-block;
   position: relative;
+  top: -4px;
   cursor: pointer;
 }
 
@@ -134,11 +142,11 @@ input[type="radio"] {
   position: relative;
   top: 0;
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  background-image: url('../images/icons/checkbox_big_empty.svg');
+  width: 28px;
+  height: 28px;
   border-radius: 3px;
-  margin-right: 7px;
-  border: 2px solid $darkgrey;
+  margin-right: 6px;
   transition: all $transition_04;
 }
 
@@ -147,9 +155,9 @@ input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('../images/icons/check_box.svg');
-  width: 18px;
-  height: 18px;
+  background-image: url('../images/icons/checkbox_big_checked.svg');
+  width: 28px;
+  height: 28px;
   visibility: hidden;
 }
 
@@ -173,7 +181,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   height: 20px;
   border-radius: 3px;
   margin-right: 4px;
-  border: 2px solid $darkgrey;
+  // border: 2px solid $darkgrey;
   border-radius: 50%;
 }
 
@@ -182,7 +190,7 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
   position: absolute;
   top: 9px;
   left: 5px;
-  background-color: $green;
+  // background-color: $green;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -190,9 +198,6 @@ input[type="checkbox"]:checked + .custom-checkbox::after {
 }
 
 input[type="radio"]:checked {
-  & + .custom-radio::before {
-    border-color: $green;
-  }
   & + .custom-radio::after {
     visibility: visible;
   }
@@ -208,66 +213,105 @@ input[type="radio"]:checked {
 .short-field {
   max-width: 145px;
 }
-textarea {
-  width: 100%;
-  background-color: $white;
-  border-radius: 12px;
-  border: none;
-  padding: 20px;
+
+.account-body__card {
+  input[type="text"] {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(---Dark_Gray, #A3A3A3);
+    font-family: 'Inter';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: $text-black;
+
+    @include media-breakpoint-down(lg) {
+      height: 50px;
+      padding: 10px;
+      font-size: 24px;
+    }
+  }
 }
-input[type="file"] {
+
+
+// чекбокс - switch
+
+.checkbox-switch {
+	display: flex;
+  align-items: center; 
+	line-height: 21.6px;
+	position: relative;
+	font-size: 18px;
+	user-select: none;	
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+}
+.checkbox-switch .checkbox-switch-mask {
+	position: relative;	
+	display: inline-block;
+	box-sizing: border-box;			
+	width: 40px;	
+	height: 21px;
+	border-radius: 25%/50%;	
+	vertical-align: top;
+	background: $darkgrey;
+	transition: all $transition_04;
+}
+.checkbox-switch .checkbox-switch-mask:before {
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 1px;	
+	display: inline-block;
+	width: 19px;	
+	height: 19px;
+	border-radius: 50%;
+	background: white;
+	transition: all $transition_04;
+}
+.checkbox-switch input[type=checkbox] {
+	display: block;	
+	width: 0;
+	height: 0;	
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.checkbox-switch input[type=checkbox]:checked + .checkbox-switch-mask {
+	background: $ruby;
+}
+.checkbox-switch input[type=checkbox]:checked + .checkbox-switch-mask:before {
+	transform:translateX(19px);
+}
+ 
+/* Hover */
+.checkbox-switch input[type="checkbox"] + .checkbox-switch-mask {
+	cursor: pointer;
+}
+ 
+/* Focus */
+.checkbox-switch.focused .checkbox-switch-mask:before {
+	box-shadow: inset 0px 0px 4px #ff5623;
+}
+
+input.error {
+  border: 1px solid rgba(255, 0, 0, 0.40);
+}
+.input-error {
   display: none;
-}
-
-.custom-file-input {
-  padding: 20px;
-  border: 2px dashed $grey;
-  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  color: $text-red;
   
-  p {
-    max-width: 95%;
-    font-size: 12px;
-    font-weight: 600;
-  }
-
-  .choose-file {
-    color: $green;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: underline;
-    cursor: pointer;
-    transition: all $transition_04;
-
-    &:hover {
-      color: $text-black;
-    }
-  }
-  .loaded-files {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    &__item {
-      width: 62px;
-      height: 62px;
-      border-radius: 10px;
-      margin-top: 16px;
-      margin-right: 8px;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-}
-// стиль для ios
-input[type="date"] {
-  
-  @include media-breakpoint-down(sm) {
-    min-width: calc(100% - 24px);
+  &.active {
+    display: block;
   }
 }
 
@@ -276,15 +320,16 @@ input[type="date"] {
   width: 100%;
 
   &__head {
-     background-color: $white;
-    width: calc(100% - 11px);
-    height: 50px;
-    padding: 16px;
-    border-radius: 12px;
-    font-size: 14px;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    background-color: $lightgrey;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid $lightgrey;
     cursor: pointer;
 
     &.selected {
@@ -305,7 +350,7 @@ input[type="date"] {
     position: absolute;
     top: 100%;
     left: 0;
-    width: calc(100% - 11px);
+    width: 100%;
     height: fit-content;
     max-height: 0;
     border-radius: 0 0 10px 10px;
@@ -315,12 +360,19 @@ input[type="date"] {
     overflow: hidden;
     z-index: 200;
 
+    &.columned {
+      column-count: 2;
+      column-gap: 20px;
+      @include media-breakpoint-down(md) {
+        column-count: 1;
+      }
+    }
+
     .custom-option {
-      font-size: 14px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding: 16px;
+      padding: 10px 40px;
       transition: all $transition_04;
       break-inside: avoid;
       cursor: pointer;
@@ -356,19 +408,100 @@ input[type="date"] {
   &.active {
     .custom-select__head {
       border-radius: 10px 10px 0 0;
+      border: 1px solid $darkgrey;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
       svg {
         transform: rotate(180deg);
-      }
-
-      @include media-breakpoint-down(md) {
-        font-size: 16px;
       }
     }
 
     .custom-select__options {
       max-height: 500px;
     }
+  }
+}
+
+::placeholder {
+  color: $darkgrey;
+}
+
+input[type="date"]{
+  color: $darkgrey;
+}
+
+input[type="date"].selected-date {
+  color: $text-black;
+}
+
+// кастомный input radio
+
+.radio-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  input[type="radio"] {
+      display: none;
+  }
+
+  input[type="radio"]:checked+.custom-radio::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $ruby;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.custom-option-radio:hover .custom-radio::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: $grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.custom-select__options .custom-option-radio:hover {
+  background-color: transparent;
+}
+.custom-select__options .custom-option-radio[selected] {
+  background-color: transparent;
+}
+.custom-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $text-black;
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.radio-circle {
+  background-color: transparent;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-name {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.form-item {
+  &__label {
+    margin-bottom: 5px;
   }
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Личный кабинет</title>
+</head>
+<body>
+
+<partial src="header-account.html"></partial>
+<div class="wrapper account-wrapper">
+    <div class="container pt-60 pt-md-40">
+        <div class="account-top">
+            <div class="mb-10 account-top__greeting">Добро пожаловать, <strong class="username text-black">Иванов Иван Иванович</strong></div>
+            <div class="account-top__title mb-20">У вас есть активный заем</div>
+            <div class="account-top__overdue mb-20">Платеж просрочен на <span>19</span> дней</div>
+            <div class="account-top__buttons">
+                <button class="btn btn-small bg-lightgrey">
+                    Задайте пароль
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z" fill="#151515"/>
+                    </svg>
+                </button>
+                <button class="btn btn-small bg-lightgrey">
+                    Подтвердите почту
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z" fill="#151515"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="account-body pt-20 mb-60">
+            <div class="row mob-reverse p-0">
+                <div class="col-lg-6 col-md-6 pl-0 pr-md-10 pr-sm-0">
+                    <div class="account-body__card loan-info">
+                        <div class="loan-info__item">
+                            <div class="info-title">Номер договора</div>
+                            <div class="info-data">№<span>12435445</span></div>
+                        </div>
+                        <div class="loan-info__item">
+                            <div class="info-title">Общая сумма долга</div>
+                            <div class="info-data">21 000 руб.</span></div>
+                        </div>
+                        <div class="loan-info__item">
+                            <div class="info-title">Очередной платеж</div>
+                            <div class="info-data">2 100 руб.</span></div>
+                        </div>
+                        <div class="loan-info__item">
+                            <div class="info-title">Рекомендованная дата платежа</div>
+                            <div class="info-data">03.03.23</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 pr-0 pl-md-10 pl-sm-0">
+                    <div class="account-body__card d-flex flex-column align-items-center justify-content-center">
+                        <form action="" class="payment-form">
+                            <input type="text" class="mb-10 account-pay" placeholder="Введите сумму">
+                            <button class="btn mb-30">Оплатить</button>
+                            <div class="text-ruby account-body__link schedule-btn">
+                                График платежей
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                    <path d="M4.5 20.5L20.5 4.5M20.5 4.5V20.5M20.5 4.5H4.5" stroke="#CD2759" stroke-width="2"/>
+                                </svg>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <partial src="account-menu.html"></partial>
+    </div>
+
+    <partial src="schedule-modal.html"></partial>
+</div>
+
+
+<partial src="footer.html"></partial>
+</body>
+</html>

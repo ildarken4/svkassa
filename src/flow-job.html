@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Получить заём</title>
+</head>
+
+<body>
+
+    <partial src="header-flow.html"></partial>
+    <div class="wrapper pt-60 pt-sm-50">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="flow-wrapper pb-150">
+                    <h1 class="flow-title mb-40 mb-sm-20">
+                        Займ предварительно одобрен!
+                    </h1>
+
+                    <div class="flow-greeting mb-40 mb-sm-20">
+                        <div class="flow-greeting__text">
+                            Ваши данные под надежной защитой!
+                        </div>
+                        <div class="flow-greeting__image">
+                            <img src="images/icons/lock-3d.png" width="100%" alt="защита">
+                        </div>
+                    </div>
+
+                    <div class="flow-forms">
+
+                        <div class="probability">
+                            <div class="probability__top">
+                                <div class="">Вероятность одобрения</div>
+                                <div class="probability__percent"><span>85</span>%</div>
+                            </div>
+                            <div class="probability-scale">
+                                <div class="probability-scale__wrapper">
+                                    <div class="probability-scale__fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-forms__title">
+                            <h2>Место работы</h2>
+                            <div class="flow-forms__steps">
+                                Шаг 4 из 5
+                            </div>
+                        </div>
+                        <form action="">
+                            <div class="form-item">
+                                <div class="form-item__label">Вид занятости</div>
+                            
+                            
+                                <div class="custom-select">
+                                    <div class="custom-select__head">
+                                        <div class="custom-select__result">
+                                            Выберите занятость
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
+                                            <path d="M6 9L0.803847 -2.51247e-08L11.1962 8.834e-07L6 9Z" fill="#A3A3A3" />
+                                        </svg>
+                                    </div>
+                                    <div class="custom-select__options columned">
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-tk" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value">Работаю по ТК</span>
+                                                <input type="radio" name="job-status" id="job-tk">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-gph" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value">Работаю по ГПХ</span>
+                                                <input type="radio" name="job-status" id="job-gph">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-official" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value">Работаю официально</span>
+                                                <input type="radio" name="job-status" id="job-official">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-self-employed" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value">Самозанятый</span>
+                                                <input type="radio" name="job-status" id="job-self-employed">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-contract" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value">Служу по контракту</span>
+                                                <input type="radio" name="job-status" id="job-contract">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-individual" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value">Индивидуальный предприниматель</span>
+                                                <input type="radio" name="job-status" id="job-individual">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-retiree" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value job-retiree">Пенсионер</span>
+                                                <input type="radio" name="job-status" id="job-retiree">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                        <div class="custom-option custom-option-radio">
+                                            <label for="job-unemployed" class="radio-wrapper justify-content-between">
+                                                <span class="custom-select__value">Безработный</span>
+                                                <input type="radio" name="job-status" id="job-unemployed">
+                                                <span class="custom-radio"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-item retiree-hide">
+                                <div class="form-item__label">Ваша должность<span class="text-ruby">*</span></div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-issued" placeholder="Введите должность">
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <div class="form-item retiree-hide">
+                                <div class="form-item__label">Наименование работодателя<span class="text-ruby">*</span>
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-number" placeholder="Введите наименование">
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+                            
+                            <div class="form-item retiree-hide">
+                                <div class="form-item__label">Адрес работодателя<span class="text-ruby">*</span></div>
+                                <div class="form-input">
+                                    <input type="text" id="passport-issued" placeholder="Введите адрес работодателя">
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <div class="form-item retiree-hide">
+                                <div class="form-item__label">Рабочий телефон<span class="text-ruby">*</span></div>
+                                <div class="form-input">
+                                    <input type="tel" id="passport-address" placeholder="Введите рабочий телефон">
+                                </div>
+                                <div class="input-error">Обязательное поле</div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <div class="form-item__label">Ежемесячный доход<span class="text-ruby">*</span></div>
+                                    <div class="form-input">
+                                        <input type="text" id="contact-income" class="input-sum" placeholder="Введите ваш ежемесячный доход">
+                                    </div>
+                                    <div class="input-error">Обязательное поле</div>
+                                </div>
+                            
+                                <div class="form-item">
+                                    <div class="form-item__label">Ежемесячный расход<span class="text-ruby">*</span></div>
+                                    <div class="form-input">
+                                        <input type="text" id="contact-expenses" class="input-sum" placeholder="Введите ваш ежемесячный расход">
+                                    </div>
+                                    <div class="input-error">Обязательное поле</div>
+                                </div>
+                            </div>
+
+                            <a href="flow-add-card.html" class="btn"> <span class="for-desktop">Перейти&nbsp;</span> к
+                                следующему шагу</a>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <partial src="main-footer.html"></partial>
+</body>
+
+</html>
