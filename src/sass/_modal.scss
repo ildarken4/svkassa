@@ -1,0 +1,61 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $black_02;
+    z-index: 2500;
+    @include media-breakpoint-down(sm) {
+        align-items: flex-start;
+    }
+
+    &.active {
+        display: flex;
+    }
+    
+    .popup {
+        padding: 40px;
+        background-color: $lightgrey;
+        border-radius: 20px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        @include media-breakpoint-down(sm) {
+            margin-top: 30px;
+            padding: 15px;
+            width: 94%;
+        }
+
+        &-small {
+            width: 100%;
+            max-width: 444px;
+             @include media-breakpoint-down(sm) {
+                width: 94%;
+            }
+        }
+        .close-button {
+            svg {
+                cursor: pointer;
+                
+                path {
+                    transition: all $transition_04;
+                }
+            }
+
+            &:hover {
+                svg path {
+                    fill: $green;
+                }
+            }
+        }
+        &__image {
+            width: 100%;
+            max-width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

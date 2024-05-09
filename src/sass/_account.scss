@@ -1,0 +1,1088 @@
+.account {
+    &-title {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    &-sections {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+
+        &__item {
+            padding: 10px 20px;
+            background-color: $grey;
+            color: $white;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all $transition_04;
+
+            &:hover {
+                background-color: $green;
+                color: $white;
+            }
+
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+            &.active {
+                background-color: $green;
+                &:hover {
+                    filter: brightness(0.95)
+                }
+            }
+        }
+    }
+    &-main {
+        border-radius: 30px;
+        padding: 40px;
+        max-width: 982px;
+        background-color: $lightgrey;
+
+        @include media-breakpoint-down(md) {
+            padding: 15px;
+        }
+
+        .calculator {
+            width: 490px;
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
+        }
+        .avaliable-card {
+            border-radius: 10px;
+            background-color: $white;
+            padding: 20px;
+            height: fit-content;
+
+            &__title {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 23px;
+            }
+        }
+
+        &__right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+                flex-direction: row-reverse;
+                gap: 20px;
+            }
+            @include media-breakpoint-down(md) {
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+        }
+    }
+    &-content {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &.active {
+            display: flex;
+        }
+    }
+    &-banner {
+        max-width: 370px;
+        @include media-breakpoint-down(lg) {
+            max-width: 50%;
+            margin-left: 20px;
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &-banner {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+.list-settings {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        background-color: $white;
+        border: 1px solid $green;
+        border-radius: 0 0 27px 27px;
+        top: 24px;
+        left: 0px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all $transition_04;
+
+        &.active {
+            max-height: 500px;
+        }
+    }
+    &__item {
+        border-radius: 80px;
+        color: $green;
+        font-weight: 600;
+        border: 1px solid $green;
+        padding: 13px 20px;
+        transition: all $transition_04;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 12px;
+            padding: 6px 30px;
+            border: none;
+            border-radius: 0;
+            text-align: left;
+            
+            &:hover {
+                background-color: $lightgrey;
+            }
+
+            &:first-child {
+                padding-top: 32px;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 8px;
+        }
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+        &.active {
+            background-color: $green;
+            color: $white;
+            @include media-breakpoint-down(lg) {
+                background-color: $white;
+                color: $text-black;
+            }
+            &:hover {
+                filter: brightness(0.95);
+                @include media-breakpoint-down(lg) {
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+.settings-select-wrapper {
+    width: 100%;
+    position: relative;
+}
+.settings-select {
+    border-radius: 80px;
+    color: $white;
+    background-color: $green;
+    font-weight: 600;
+    padding: 13px 20px;
+    transition: all $transition_04;
+    width: 100%;
+    position: relative;
+    z-index: 10; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 13px 30px;
+
+    .select-arrow {
+        transition: all $transition_04;
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
+}
+.promo-tab:not(.active) {
+    display: none;
+}
+.loans {
+    &-item {
+        background-color: $lightgrey;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .loan-info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+        }
+
+        &__number {
+            font-size: 21px;
+            line-height: 24.5px;
+            font-weight: 600;
+        }
+    }
+    .loan-buttons {
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include media-breakpoint-down(md) {
+            align-items: flex-end;
+
+        }
+        
+        &__item {
+            background-color: $grey_4;
+            cursor: pointer;
+            transition: all $transition_04;
+            padding: 12px 10px;
+            border-radius: 110px;
+            
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 12px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 12px;
+                @include media-breakpoint-down(md) {
+                    margin-right: 0;
+                }
+            }
+            &:hover {
+                background-color: $lightgreen;
+
+            }
+        }
+    }
+    .loan-percent {
+        background-color: $cyan;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        padding: 2px 8px;
+        color: $white;
+        border-radius: 4px;
+    }
+}
+
+.extention {
+    &-main {
+        background-color: $lightgrey;
+        padding: 40px;
+        border-radius: 30px;
+        @include media-breakpoint-down(md) {
+            padding: 20px;
+        }
+    }
+}
+
+.full-cost {
+    position: relative;
+    margin-right: 12px;
+    font-weight: 700;
+
+    .strike {
+        position: absolute;
+        left: calc(50% - 32px);
+        top: calc(100% - 12px);
+        width: 45px;
+        height: 2px;
+        transform: rotate(125deg);
+        background-color: $text-black;
+    }
+}
+.promo-cost {
+    color: $green;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.statement {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    line-height: 11px;
+    border-radius: 80px;
+    width: fit-content;
+    padding: 0 5px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    &__circle {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+
+    }
+
+    &.active {
+        background-color: $green;
+        color: $white;
+        font-weight: 600;
+        .statement__circle {
+            background-color: $lightgreen;
+        }
+    }
+
+    &.considering {
+        background-color: $lightgreen;
+        color: $text-black;
+        .statement__circle {
+            background-color: $white;
+        }
+    }
+
+    &.denied {
+        background-color: $text-red;
+        color: $white;
+        font-weight: 600;
+        .statement__circle {
+            background-color: $white;
+        }
+    }
+
+    &.repaid {
+        background-color: $grey_4;
+        color: $text-black;
+        .statement__circle {
+            background-color: $darkgrey;
+        }
+    }
+    &.waiting {
+        color: $white;
+        font-weight: 600;
+        background-color: rgba(41, 187, 207, 1);
+
+        .statement__circle {
+            background-color: $white;
+        }
+    }
+}
+
+.loan {
+    &-name:not(h4) {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    &-details {
+
+		&__title {
+            font-size: 21px;
+            font-weight: 600;
+		}
+
+		&__list {
+            margin-bottom: 40px;
+		}
+
+		&__item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            
+		}
+
+		&__name {
+            font-weight: 600;
+		}
+
+		&__data {
+            text-align: right;
+		}
+        .btn {
+            width: fit-content;
+            padding: 16px 40px;
+            margin-left: 0;
+        }
+    }
+    &-history {
+        .loans-item {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 0;
+        }
+        @include media-breakpoint-down(lg) {
+            .loans-item {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+                width: 100%;
+                max-width: calc(50% - 10px);
+            }
+        }
+        @include media-breakpoint-down(md) {
+            .loans-item {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .btn {
+            max-width: 400px;
+            @include media-breakpoint-down(md) {
+                max-width: 100%;
+            }
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .loan-history .loan-details__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+.payment-card {
+    border-radius: 24px;
+    background-color: $lightgrey;
+    padding: 30px;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+        padding: 30px 16px 16px;
+    }
+
+    &.overdue {
+        background-color: $white;
+        border: 1px solid $text-red;
+    }
+
+    &__top {
+        display: flex;
+        gap: 20px;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .date {
+            font-size: 20px;
+            font-weight: 600;
+            margin-right: 10px;
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__state {
+        font-size: 12px;
+        border-radius: 24px;
+        padding: 4px 8px;
+        font-weight: 600;
+
+
+        &.overdue {
+            background-color: $red_08;
+            color: $text-red;
+        }
+
+        &.warning {
+            background-color: $golden_08;
+            color: $golden;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__item {
+        padding: 16px;
+        background-color: $grey_4;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 32%;
+
+        @include media-breakpoint-down(md) {
+            max-width: 100%;
+        }
+    }
+
+    &__data {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__name {
+        font-size: 11px;
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+    }
+
+    &__banner {
+        display: flex;
+        align-items: flex-end;
+        padding: 16px 20px 0;
+        background-color: $lightgreen;
+        border-radius: 16px;
+        img {
+            max-width: 86px;
+        }
+        p {
+            padding-bottom: 16px;
+            font-size: 14px;
+            text-align: right;
+        }
+        @include media-breakpoint-down(md) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+
+    .btn {
+        max-width: 200px;
+        margin: 0;
+    }
+}
+
+.modal {
+    .schedule {
+        &-popup {
+            width: 100%;
+            max-width: 990px;
+            padding: 30px;
+
+            @include media-breakpoint-down(md) {
+                padding: 16px;
+            }
+        }
+        &-wrapper {
+            background-color: $white;
+            border-radius: 45px 45px 0px 0px;
+            width: 100%;
+            height: 100%;
+            padding: 48px 40px 0 40px;
+
+            @include media-breakpoint-down(md) {
+                background-color: $lightgrey;
+                border-radius: 0;
+                padding: 24px 0 0;
+            }
+        }
+        &-top {
+            width: 100%;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 32px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid $grey;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+
+            @include media-breakpoint-down(md) {
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19.2px;
+                padding-bottom: 22px;
+
+                .schedule-close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+        &-body {
+            max-height: 50vh;
+            overflow: scroll;
+            
+            @include media-breakpoint-down(lg) {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                max-height: 65vh;
+            }
+
+        }
+        &-head {
+            background-color: $lightgreen;
+
+            @include media-breakpoint-down(lg) {
+                &.schedule-row {
+                    display: none;
+                }
+            }
+        }
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 17px;
+
+            @include media-breakpoint-down(lg) {
+                border-radius: 5px;
+                background: $white;
+                box-shadow: 0px 4px 10px 0px rgba(204, 204, 204, 0.50);
+                flex-direction: column;
+                padding: 20px;
+                gap: 11px;
+                align-items: flex-start;
+                flex-basis: calc(50% - 10px);
+
+                .date {
+                    color: $green;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 24px;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                flex-basis: 100%;
+            }
+
+            &__item {
+                flex: none;
+                width: 20%;
+                @include media-breakpoint-down(lg) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    font-weight: 600;
+
+                }
+                &:last-child {
+                    text-align: right;
+                    white-space: nowrap;
+                    @include media-breakpoint-down(lg) {
+                        flex-basis: 13%;
+                    }
+                }
+            }
+            &:nth-child(odd):not(:first-child) {
+                background-color: $white;
+            }
+            &__name {
+                display: none;
+
+                @include media-breakpoint-down(lg) {
+                    display: block;
+                    font-size: 14px;
+                    color: $grey;
+                    font-weight: 400 !important;
+                }
+            }
+            .pay-sum.paid {
+                color: $green;
+            }
+        }
+    }
+}
+
+.info-banner {
+    background-color: $lightgreen;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+
+    &__icon {
+        flex: none;
+        width: 24px;
+        height: 24px;
+        background-color: $green;
+        border-radius: 50%;
+        color: $white;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+.personal {
+    &-card {
+        padding: 30px 20px;
+        background-color: $lightgrey;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-bottom: 30px;
+
+		&__title {
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+		}
+
+		&__item {
+            margin-bottom: 20px;
+		}
+
+		&__name {
+            color: $grey;
+            margin-bottom: 5px;
+		}
+
+        &__edit {
+            color: $green;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+		form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 680px;
+            gap: 20px;
+            height: fit-content;
+            max-height: 0;
+            overflow: hidden;
+            transition: all $transition_04;
+
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+
+                input {
+                    width: 100% !important;
+                }
+                .btn {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            &.active {
+                max-height: 200px;
+                padding-top: 20px;
+            }
+
+            .form-input {
+                margin-bottom: 0;
+            }
+		}
+    }
+}
+
+.appeals-list {
+    position: relative;
+    background-color: $lightgrey;
+    padding: 30px;
+    border-radius: 20px;
+    @include media-breakpoint-down(md) {
+        padding: 15px;
+    }
+}
+.appeal-card {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 20px 20px 16px;
+    @include media-breakpoint-down(md) {
+        padding: 15px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+            align-items: flex-start;
+        }
+    }
+
+    &__number {
+        font-size: 21px;
+        font-weight: 600;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .statement {
+            margin-left: 10px;
+            @include media-breakpoint-down(md) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__details {
+        color: $green;
+        font-weight: 600;
+        text-decoration: underline;
+        text-align: right;
+        cursor: pointer;
+
+         @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+    }
+
+    &__info {
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 10px;
+    }
+
+    &__name,
+    &__data {
+        white-space: nowrap;
+    }
+
+    &__line {
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px dashed $grey;
+        margin: 0 8px 3px;
+    }
+
+}
+
+.appeal-details {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: $lightgrey;
+
+    &.decision {
+        background-color: $lightgreen;
+    }
+
+    &__title {
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__decision {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 41px;
+            margin-right: 10px;
+        }
+        .file-name {
+            font-weight: 600;
+            text-decoration: underline;
+            color: $text-black;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+    }
+
+    &__files {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+    }
+
+    &__file {
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-description {
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 31px;
+            margin-right: 10px;
+        }
+
+        &__text {
+            max-width: 330px;
+        }
+    }
+    .promocode {
+        width: 250px;
+    }
+    &-field {
+        background-color: $lightgrey;
+        width: 100%;
+        padding: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0 12px 12px 0;
+        margin-right: 24px;
+    }
+}
+
+.copy-btn {
+    transition: all $transition_04;
+    cursor: pointer;
+    &:hover {
+        filter: opacity(.8);
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include media-breakpoint-down(lg) {
+        justify-content: flex-start;
+    }
+    &__item {
+        background-color: $lightgrey;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        flex: none;
+        margin-right: 10px;
+        @include media-breakpoint-down(md) {
+            height: 40px;
+            width: 40px;
+        }
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.invite-banner {
+    padding: 70px 0 40px 40px;
+    background-color: $lightgrey;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+        flex-direction: column-reverse;
+        padding: 30px 0;
+
+    }
+     @include media-breakpoint-down(md) {
+        flex-direction: column-reverse;
+        padding: 15px 0;
+        
+    }
+
+    &__text {
+        margin-right: 40px;
+        @include media-breakpoint-down(lg) {
+            padding: 0 30px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 0 15px;
+        }
+    }
+
+    &__title {
+        color: $green;
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 21px;
+            line-height: 24px;
+        }
+    }
+
+    &__description {
+        font-size: 21px;
+        line-height: 26px;
+        font-weight: 600;
+         @include media-breakpoint-down(lg) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+
+    &__image {
+        flex: none;
+        width: 40%;
+         @include media-breakpoint-down(lg) {
+            width: 60%;
+            margin-bottom: 40px;
+        }
+    }
+}
+.invite-card {
+    background-color: $lightgrey;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 225px;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(md) {
+        height: 180px;
+    }
+
+    &__text {
+        font-weight: 600;
+    }
+}
+.text-green {
+}
+

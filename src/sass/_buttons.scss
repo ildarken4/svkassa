@@ -1,0 +1,160 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    max-width: 666px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $text-black;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: underline;
+    text-align: center;
+    transition: all $transition_04;
+    border: 1px solid $green;
+    color: $green;
+    cursor: pointer;
+
+    a {
+        color: $green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    &:hover {
+        color: $darkgreen;
+        border-color: $darkgreen;
+    }
+
+    img {
+        margin-left: 6px;
+    }
+
+    &-small {
+        width: fit-content;
+        padding: 16px 33px;
+        flex: none;
+    }
+    
+    &-fullwidth {
+        max-width: 100%;
+    }
+    &-big {
+        height: 60px;
+        border-radius: 5px;
+        max-width: 350px;
+        text-decoration: none;
+        padding: 0 10px;
+    }
+
+    &-tinkoff {
+        color: rgba(0,0,0,.8);
+        font-weight: 500;
+        border: none;
+        background-color: rgba(255,221,45, 1);
+
+        &:hover {
+            background-color: rgba(254, 221, 44, .8);
+            color: $text-black;
+        }
+    }
+    &-gosuslugi {
+        font-weight: 500;
+        border: 1px solid rgba(21, 103, 173, 1);
+        &:hover {
+            background-color: rgba(21, 103, 173, .1);
+        }
+    }
+
+    &-disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+
+    &-back {
+        font-weight: 600;
+        transition: color $transition_04;
+        cursor: pointer;
+
+        svg {
+            margin-top: -2px;
+            margin-right: 6px;
+            path {
+                transition: all $transition_04;
+            }
+        } 
+
+        &.text-blue {
+            &:hover {
+                color: $lightblue;
+    
+                svg path {
+                    fill: $lightblue;
+                }
+            }
+        }
+
+        &.text-green {
+            &:hover {
+                color: $darkgreen;
+    
+                svg path {
+                    fill: $darkgreen;
+                }
+            }
+        }
+    }
+
+    &.bg-green {
+        color: $white;
+
+        a {
+            color: $white;
+        }
+    
+        &:hover {
+            background-color: $darkgreen;
+        }
+    }
+    &.bg-blue {
+        color: $white;
+        border: none;
+
+        &:hover {
+            filter: brightness(.9);
+        }
+    }
+    .btn-preloader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__circle {
+            margin-right: 16px;
+            .circle {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 3px solid $white;
+                border-top: 3px solid transparent;
+                animation: rotate 2s linear infinite;
+            }
+
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+}

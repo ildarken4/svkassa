@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>FinFresh – Личный кабинет</title>
+</head>
+<body>
+
+<partial src="header-account.html"></partial>
+<div class="wrapper">
+    
+    <section class="account-head mb-40">
+        <div class="container pt-20">
+            <div class="account-title mb-40">
+                Личный кабинет
+            </div>
+            <div class="account-sections mb-20">
+                <a href="account-single-loan.html" class="account-sections__item active">
+                    Мои займы
+                </a>
+                <a href="account-loan-history.html" class="account-sections__item">
+                    История займов
+                </a>
+                <a href="account-personal-information.html" class="account-sections__item">
+                    Личная информация
+                </a>
+                <a href="account-appeals.html" class="account-sections__item">
+                    Мои обращения
+                </a>
+                <a href="account-offer.html" class="account-sections__item">
+                    Специальные предложения
+                </a>
+                <a href="account-invite.html" class="account-sections__item">
+                    Приведи друга
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="loan mb-80">
+        <div class="container">
+
+            <div class="row mb-md-40">
+                <div class="col-lg-5">
+                    <a href="account-single-loan.html" class="btn-back text-black d-flex align-items-center gap-10 mb-40">
+                        <img src="images/icons/arrow-back.svg"  alt="">
+                        <span>Вернуться к займам</span>
+                    </a>
+
+                    <div class="d-flex align-items-center mb-40">
+                        <div class="loan-name mr-20">№1651516</div>
+                        <div class="statement active">
+                            <div class="statement__circle"></div>
+                            Активный
+                        </div>
+                    </div>
+
+                    <div class="loan-details mb-30">
+                        <div class="loan-details__title mb-40">Детали займа</div>
+
+                        <div class="loan-details__list">
+                            <div class="loan-details__item">
+                                <div class="loan-details__name">
+                                    Дата заключения
+                                </div>
+                                <div class="loan-details__data">
+                                    27.06.23
+                                </div>
+                            </div>
+                            <div class="loan-details__item">
+                                <div class="loan-details__name">
+                                    Дата окончания
+                                </div>
+                                <div class="loan-details__data">
+                                    27.06.23
+                                </div>
+                            </div>
+                            <div class="loan-details__item">
+                                <div class="loan-details__name">
+                                    Сумма займа
+                                </div>
+                                <div class="loan-details__data">
+                                    250 000 ₽
+                                </div>
+                            </div>
+                            <div class="loan-details__item">
+                                <div class="loan-details__name">
+                                    Сумма к погашению
+                                </div>
+                                <div class="loan-details__data">
+                                    350 000 ₽
+                                </div>
+                            </div>
+                            <div class="loan-details__item">
+                                <div class="loan-details__name">
+                                    Ставка
+                                </div>
+                                <div class="loan-details__data">
+                                    8,5 % ежемесячно
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="schedule-btn text-green text-600 underlined mb-40" onclick="openModal('schedule-modal')">График платежей</div>
+
+                        <div class="btn bg-green mb-20">Смотреть договор</div>
+                        <div class="btn">Подать обращение</div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-lg-7">
+                    <div class="payment-card overdue">
+                        <div class="payment-card__top mb-40">
+                            <div class="payment-card__title">
+                                <div class="payment-card__date">
+                                    <div class="date">22 октября 2022</div>
+                                    <div class="payment-card__state overdue">Просрочен</div>
+                                </div>
+                                <div class="text-14 text-grey">Дата следующего платежа</div>
+                            </div>
+                            <div class="btn bg-green">Внести платеж</div>
+                        </div>
+                        <div class="payment-card__info mb-20">
+                            <div class="payment-card__item">
+                                <div class="payment-card__data">30 000 ₽</div>
+                                <div class="payment-card__name">Следующий платеж</div>
+                            </div>
+                            <div class="payment-card__item">
+                                <div class="payment-card__data">280 000 ₽</div>
+                                <div class="payment-card__name">Основной долг</div>
+                            </div>
+                            <div class="payment-card__item">
+                                <div class="payment-card__data">12 000 ₽</div>
+                                <div class="payment-card__name">Долг по процентам</div>
+                            </div>
+                        </div>
+                        <div class="payment-card__banner">
+                            <img src="images/account-banner-frog.png" width="100%" alt="Фреш">
+                            <p>
+                                Регулярные платежи повышают Ваш кредитный лимит и улучшают Вашу кредитную историю
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="payment-card">
+                        <div class="payment-card__top mb-40">
+                            <div class="payment-card__title">
+                                <div class="payment-card__date">
+                                    <div class="date">22 октября 2022</div>
+                                    <div class="payment-card__state warning">Осталось <span>5</span> дн.</div>
+                                </div>
+                                <div class="text-14 text-grey">Дата следующего платежа</div>
+                            </div>
+                            <div class="btn bg-green">Внести платеж</div>
+                        </div>
+                        <div class="payment-card__info mb-20">
+                            <div class="payment-card__item">
+                                <div class="payment-card__data">30 000 ₽</div>
+                                <div class="payment-card__name">Следующий платеж</div>
+                            </div>
+                            <div class="payment-card__item">
+                                <div class="payment-card__data">280 000 ₽</div>
+                                <div class="payment-card__name">Основной долг</div>
+                            </div>
+                            <div class="payment-card__item">
+                                <div class="payment-card__data">12 000 ₽</div>
+                                <div class="payment-card__name">Долг по процентам</div>
+                            </div>
+                        </div>
+                        <div class="payment-card__banner">
+                            <img src="images/account-banner-frog.png" width="100%" alt="Фреш">
+                            <p>
+                                Регулярные платежи повышают Ваш кредитный лимит и улучшают Вашу кредитную историю
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="loan-history">
+                        <div class="loan-details__title mb-40">История</div>
+
+                        <div class="loan-details__list">
+                            <div class="loan-details__item">
+                                <div class="loan-details__name">
+                                    Внесен платеж на сумму 21 000 ₽
+                                </div>
+                                <div class="loan-details__data">
+                                    27.06.23
+                                </div>
+                            </div>
+                            <div class="loan-details__item">
+                                <div class="loan-details__name">
+                                    Займ одобрен
+                                </div>
+                                <div class="loan-details__data">
+                                    27.06.23
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+               
+        </div>
+    </section>
+
+</div>
+
+<div class="modal" id="schedule-modal">
+    <div class="popup schedule-popup">
+        <div class="close-button d-flex justify-content-end mb-10">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="closeModal()">
+                <path d="M1.4 10.0004L0 8.60039L3.6 5.00039L0 1.42539L1.4 0.0253906L5 3.62539L8.575 0.0253906L9.975 1.42539L6.375 5.00039L9.975 8.60039L8.575 10.0004L5 6.40039L1.4 10.0004Z" fill="#555555"/>
+            </svg>
+        </div>
+
+        <h4 class="mb-40 text-center">График платежей</h4>
+
+        <div class="schedule-body">
+                <div class="schedule-row schedule-head">
+                    <div class="schedule-row__item">Дата платежа</div>
+                    <div class="schedule-row__item">Сумма платежа</div>
+                    <div class="schedule-row__item">Проценты</div>
+                    <div class="schedule-row__item">Тело кредита</div>
+                    <div class="schedule-row__item">Долг на конец месяца</div>
+                </div>
+                <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">260 000 ₽</div>
+                    </div>
+                </div>
+
+                 <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">260 000 ₽</div>
+                    </div>
+                </div>
+
+                 <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">260 000 ₽</div>
+                    </div>
+                </div>
+
+                 <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">260 000 ₽</div>
+                    </div>
+                </div>
+
+                 <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+
+                 <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="schedule-row__item date">
+                        <div class="schedule-row__data">27.06.2024</div>
+                    </div>
+                    <div class="schedule-row__item sum">
+                        <div class="schedule-row__name">
+                            Сумма платежа
+                        </div>
+                        <div class="schedule-row__data"><span>15 000</span> ₽</div>
+
+                    </div>
+                    <div class="schedule-row__item overdue">
+                        <div class="schedule-row__name">
+                            Проценты
+                        </div>
+                        <div class="schedule-row__data">3 000 ₽ </div>
+                    </div>
+                    <div class="schedule-row__item">
+                        <div class="schedule-row__name">
+                            Тело кредита
+                        </div>
+                        <div class="schedule-row__data">12 000 ₽</div>
+                    </div>
+                    <div class="schedule-row__item pay-sum paid">
+                        <div class="schedule-row__name">
+                            Долг на конец месяца
+                        </div>
+                        <div class="schedule-row__data">Оплачено</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<partial src="footer.html"></partial>
+</body>
+</html>

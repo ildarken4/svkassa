@@ -1,0 +1,81 @@
+$space_amounts: (0, 4, 8, 10, 12, 16, 20, 24, 28, 30, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200);
+
+$sides: (
+        "": "all",
+        "t": "top",
+        "b": "bottom",
+        "l": "left",
+        "r": "right",
+);
+
+@each $space in $space_amounts {
+  @each $prefix, $value in $sides {
+    $property: if($prefix == '', '', -#{$value});
+    .m#{$prefix}-#{$space} {
+      margin#{$property}: #{$space}px !important;
+    }
+    .p#{$prefix}-#{$space} {
+      padding#{$property}: #{$space}px !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  @each $space in $space_amounts {
+    @each $prefix, $value in $sides {
+      $property: if($prefix == '', '', -#{$value});
+      .m#{$prefix}-md-#{$space} {
+        margin#{$property}: #{$space}px !important;
+      }
+      .p#{$prefix}-md-#{$space} {
+        padding#{$property}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  @each $space in $space_amounts {
+    @each $prefix, $value in $sides {
+      $property: if($prefix == '', '', -#{$value});
+      .m#{$prefix}-sm-#{$space} {
+        margin#{$property}: #{$space}px !important;
+      }
+      .p#{$prefix}-sm-#{$space} {
+        padding#{$property}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+@each $space in $space_amounts {
+  .gap-#{$space} {
+    gap: #{$space}px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  @each $space in $space_amounts {
+    .gap-lg-#{$space} {
+      gap: #{$space}px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  @each $space in $space_amounts {
+    .gap-md-#{$space} {
+      gap: #{$space}px;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  @each $space in $space_amounts {
+    .gap-sm-#{$space} {
+      gap: #{$space}px;
+    }
+  }
+}
+

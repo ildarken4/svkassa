@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>FinFresh – Личный кабинет</title>
+</head>
+<body>
+
+<partial src="header-account.html"></partial>
+<div class="wrapper">
+    
+    <section class="account-head mb-40">
+        <div class="container pt-20">
+            <div class="account-title mb-40">
+                Личный кабинет
+            </div>
+            <div class="account-sections mb-20">
+                <a href="account-single-loan.html" class="account-sections__item">
+                    Мои займы
+                </a>
+                <a href="account-loan-history.html" class="account-sections__item">
+                    История займов
+                </a>
+                <a href="account-personal-information.html" class="account-sections__item">
+                    Личная информация
+                </a>
+                <a href="account-appeals.html" class="account-sections__item active">
+                    Мои обращения
+                </a>
+                <a href="account-offer.html" class="account-sections__item">
+                    Специальные предложения
+                </a>
+                <a href="account-invite.html" class="account-sections__item">
+                    Приведи друга
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="loan mb-80">
+        <div class="container">
+
+            <div class="row mb-md-40">
+                <div class="col-lg-4 mb-md-40">
+                    <div class="btn bg-green btn-small ml-0 mb-40">Добавить обращение</div>
+                    <div class="loan-details__title mb-20">Мои обращения</div>
+
+                    <div class="appeal-filter">
+                        <div class="form-input">
+                            <label for="appeal-filter-1" class="text-14 mr-10">
+                                <input type="radio" id="appeal-filter-1" name="appeal-filter" checked required value="1">
+                                <span class="custom-radio"></span>
+                                <span class="mt-4">Финансовые обращения</span>
+                            </label>
+                        </div>
+                        <div class="form-input">
+                            <label for="appeal-filter-2" class="text-14 mr-10">
+                                <input type="radio" id="appeal-filter-2" name="appeal-filter" required value="2">
+                                <span class="custom-radio"></span>
+                                <span class="mt-4">Официальные уведомления</span>
+                            </label>
+                        </div>
+                        <div class="form-input">
+                            <label for="appeal-filter-3" class="text-14 mr-10">
+                                <input type="radio" id="appeal-filter-3" name="appeal-filter" required value="3">
+                                <span class="custom-radio"></span>
+                                <span class="mt-4">Справки и документы</span>
+                            </label>
+                        </div>
+                        <div class="form-input">
+                            <label for="appeal-filter-4" class="text-14 mr-10">
+                                <input type="radio" id="appeal-filter-4" name="appeal-filter" required value="4">
+                                <span class="custom-radio"></span>
+                                <span class="mt-4">Жалобы</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-8">
+                    <div class="appeals-list">
+                        <div class="settings-select-wrapper">
+                            <div class="settings-select for-devices mb-40">
+                                <div class="selected-value">
+                                    Все обращения
+                                </div>
+                                <div class="select-arrow">
+                                    <img src="images/icons/arrow_down_white.svg" alt="стрелка">
+                                </div>
+                            </div>
+                            <div class="list-settings mb-20">
+                                <div class="list-settings__item active">Все обращения</div>
+                                <div class="list-settings__item">В работе</div>
+                                <div class="list-settings__item">Завершенные</div>
+                            </div>
+                        </div>
+                        
+                        <div class="appeal-card mb-20">
+                            <div class="appeal-card__top mb-20">
+                                <div class="appeal-card__number">
+                                    <span>№ 315453</span>
+                                    <div class="statement active">
+                                        <div class="statement__circle"></div>
+                                        В работе
+                                    </div>
+                                </div>
+                                <a href="account-appeal-active.html" class="appeal-card__details">
+                                    Детали обращения
+                                </a>
+                            </div>
+
+                            <div class="appeal-card__info">
+                                <div class="appeal-card__item">
+                                    <div class="appeal-card__name">Договор</div>
+                                    <div class="appeal-card__line"></div>
+                                    <div class="appeal-card__data">№ 6165159</div>
+                                </div>
+                                <div class="appeal-card__item">
+                                    <div class="appeal-card__name">Дата обращения</div>
+                                    <div class="appeal-card__line"></div>
+                                    <div class="appeal-card__data">27.06.24</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appeal-card">
+                            <div class="appeal-card__top mb-20">
+                                <div class="appeal-card__number">
+                                    <span>№ 315453</span>
+                                    <div class="statement repaid">
+                                        <div class="statement__circle"></div>
+                                        Завершенное
+
+                                    </div>
+                                </div>
+                                <a href="account-appeal-solved.html" class="appeal-card__details">
+                                    Детали обращения
+                                </a>
+                            </div>
+
+                            <div class="appeal-card__info">
+                                <div class="appeal-card__item">
+                                    <div class="appeal-card__name">Договор</div>
+                                    <div class="appeal-card__line"></div>
+                                    <div class="appeal-card__data">№ 6165159</div>
+                                </div>
+                                <div class="appeal-card__item">
+                                    <div class="appeal-card__name">Дата обращения</div>
+                                    <div class="appeal-card__line"></div>
+                                    <div class="appeal-card__data">27.06.24</div>
+                                </div>
+                                <div class="appeal-card__item">
+                                    <div class="appeal-card__name">Дата решения</div>
+                                    <div class="appeal-card__line"></div>
+                                    <div class="appeal-card__data">27.06.24</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+</div>
+
+
+
+<partial src="footer.html"></partial>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Контактная информация - Шаг 1</title>
+</head>
+<body>
+
+<partial src="header.html"></partial>
+<div class="wrapper">
+  
+  <div class="container mt-40">
+    <div class="d-flex justify-content-center">
+
+        <!-- Шаги -->
+        <div class="steps custom-column mb-30">
+            <div class="d-flex justify-content-center mb-30">
+                <div class="step mr-md-0">
+                    <div class="step__number bg-lightgrey text-dark-grey active">
+                        1
+                    </div>
+                    <div class="step__text mt-8 text-green">
+                        Контактная информация
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number bg-lightgrey text-dark-grey">
+                        2
+                    </div>
+                    <div class="step__text mt-8 text-green for-desktop">
+                        Паспорт и&nbsp;адрес
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number bg-lightgrey text-dark-grey">
+                        3
+                    </div>
+                    <div class="step__text mt-8 text-green for-desktop">
+                        Общие сведения
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number bg-lightgrey text-dark-grey">
+                        4
+                    </div>
+                    <div class="step__text mt-8 text-green for-desktop">
+                        Банковская карта
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Шкала шагов -->
+            <div class="steps-scale bg-lightgrey">
+                <div class="steps-scale__inner bg-green text-white" style="width: 25%;">
+                    <span class="steps-scale__value">20</span>%
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <!-- Блок регистрации -->
+        <div class="registration-card custom-column bg-lightgrey mb-80">
+            <div class="text-center mb-20">
+                <h4>Укажите ваши данные</h4>
+                <div class="text-red text-14 mt-4">
+                    *Обязательно для заполнения
+                </div>
+            </div>
+        
+            <div class="external-registration d-flex flex-column align-items-center mb-20">
+                <a href="#" class="btn btn-big btn-tinkoff mb-10">
+                    Регистрация с Тинькофф
+                    <img src="images/buttons/tinkoff.png" width="38px" alt="логотип Тинькофф ID">
+                </a>
+                <a href="#" class="btn btn-big btn-gosuslugi text-black">
+                    Регистрация через Госуслуги
+                    <img src="images/buttons/gosuslugi.png" width="46px" alt="логотип Госуслуги">
+                </a>
+            </div>
+        
+            <div class="registration-form">
+                <form class="registration" action="">
+                    <h6 class="mb-20">Личные данные</h6>
+                    <div class="form-input required">
+                        <input type="text" id="reg-surname" required placeholder="Фамилия">
+                    </div>
+                    <div class="form-input required">
+                        <input type="text" id="reg-name" required placeholder="Имя">
+                    </div>
+                    <div class="form-input">
+                        <input type="text" id="reg-patronymic" placeholder="Отчество">
+                    </div>
+                    <div class="form-input mt-20">
+                        <label for="no-patronymic">
+                            <input type="checkbox" id="no-patronymic">
+                            <span class="custom-checkbox"></span>
+                            Нет отчества
+                        </label>
+                    </div>
+        
+                    <div class="text-14 d-flex align-items-center">Пол<span class="text-red text-21">*</span></div>
+        
+                    <div class="form-input mb-20">
+                        <label for="reg-male" class="text-14 mr-10">
+                            <input type="radio" id="reg-male" name="reg-gender" required value="male">
+                            <span class="custom-radio"></span>
+                            <span class="mt-4">Мужской</span>
+                        </label>
+                        <label for="reg-female" class="text-14">
+                            <input type="radio" id="reg-female" name="reg-gender" required value="female">
+                            <span class="custom-radio"></span>
+                            <span class="mt-4">Женский</span>
+                        </label>
+                    </div>
+        
+                    <div class="form-input required mb-32">
+                        <input type="tel" id="reg-phone" placeholder="+7" required>
+                    </div>
+        
+                    <div class="form-input mb-32">
+                        <label for="reg-agree-terms">
+                            <input type="checkbox" id="reg-agree-terms" required>
+                            <span class="custom-checkbox"></span>
+                            <span>Я ознакомлен и согласен с&nbsp;<a href="#" class="text-green text-600">Правилами и условиями</a>
+                            </span>
+                        </label>
+                    </div>
+        
+                    <div class="form-btns d-flex flex-column align-items-center">
+                        <button class="btn btn-submit bg-green mb-10 js-form-btn btn-disabled"><a href="flow-passport.html">Следующий шаг</a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<partial src="footer.html"></partial>
+</body>
+</html>

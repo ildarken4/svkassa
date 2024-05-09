@@ -1,0 +1,31 @@
+
+
+// bootstrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/utilities/api";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/nav";
+
+@import "normalize";
+@import "mixins";
+@import "variables";
+@import "swiper";
+
+@import "base";
+@import "header";
+@import "footer";
+@import "forms";
+@import "buttons";
+@import "modal";
+@import "range";
+@import "main-page";
+@import "account";
+@import "flow";

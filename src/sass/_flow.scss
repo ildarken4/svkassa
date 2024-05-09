@@ -1,0 +1,125 @@
+.steps {
+    .step {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 100px;
+        
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 8px;
+            }
+        }
+    
+        &__number {
+            width: fit-content;
+            padding: 8px 22px;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 600;
+            border-radius: 100px;
+    
+            &.active {
+                background-color: $green;
+                color: $white;
+            }
+    
+        }
+        &__text {
+            text-align: center;
+        }
+    }
+}
+
+.steps-scale {
+    height: 25px;
+    overflow: hidden;
+    border-radius: 20px;
+    &__inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width $transition_04;
+    }
+}
+
+.statement-card {
+    margin-bottom: 80vh;
+}
+.show-rules {
+    cursor: pointer;
+}
+.hidden-checkboxes {
+    overflow: hidden;
+    height: 0;
+
+    &.active {
+        height: fit-content;
+    }
+}
+
+.flow-considering {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+     @include media-breakpoint-down(sm) {
+        flex-direction: column-reverse;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__circle {
+        margin-left: 20px;
+        width: 40px;
+        height: 40px;
+         @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .circle {
+            height: 40px;
+            width: 40px;
+            border: 5px solid $green;
+            border-radius: 50%;
+            border-top: 5px solid transparent;
+            animation: rotate 3s linear infinite;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Начальный угол вращения */
+    }
+    to {
+        transform: rotate(360deg); /* Конечный угол вращения */
+    }
+}
+
+.flow-loan-info {
+    width: 100%;
+
+    &__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+    }
+    &__title {
+        max-width: 50%;
+    }
+    &__data {
+        font-weight: 600;
+        text-align: right;
+    }
+}

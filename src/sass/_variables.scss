@@ -1,0 +1,47 @@
+// Theme colors
+$white: rgba(255, 255, 255, 1);
+$smoky-white: rgba(242, 242, 230, 1);
+$text-black: rgba(33, 37, 41, 1);
+$black_02: rgba(33, 37, 41, .2);
+
+$text-red: rgba(246, 78, 90, 1);
+$red_08: rgba(246, 78, 90, .08);
+
+$green: rgba(2, 142, 127, 1);
+$lightgreen: rgba(220, 248, 214, 1);
+$darkgreen: rgba(6, 116, 104, 1);
+
+$golden: rgba(211, 152, 36, 1);
+$golden_08: rgba(211, 152, 36, .08);
+
+$dark-greenish-blue: rgba(0, 68, 71, 1);
+
+$blue: rgba(0, 83, 181, 1);
+$lightblue: rgba(0, 83, 181, .7);
+$cyan: rgba(41, 187, 207, 1);
+$cyan_03: rgba(23, 206, 231, 0.3);
+
+
+$grey: rgba(119, 125, 146, 1);
+$lightgrey: rgba(245, 245, 245, 1);
+$darkgrey: rgba(85, 85, 85, 1);
+$grey_4: rgba(229, 231, 236, 1);
+
+// Transitions
+$transition_04: 0.4s ease; 
+
+// Grid
+$grid-gutter-width: 24px;
+$container-max-widths: (
+        md: 991px,
+        lg: 1128px,
+
+);
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1240px,
+        xxl: 1400px
+);
