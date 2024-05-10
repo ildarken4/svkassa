@@ -6,7 +6,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-family: 'Sansation', serif;
+        font-family: 'Roboto', serif;
         font-size: 20px;
         font-weight: 600;
         line-height: 20px;
@@ -36,20 +36,22 @@ input[type=range].styled-slider:focus {
 /*webkit*/
 input[type=range].styled-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 24px;
-    height: 24px;
-    background-color: $white;
+    width: 14px;
+    height: 14px;
+    background-color: $blue;
     background-position:center;
-    border: 3px solid $ruby;
+    border: 7px solid $blue_034;
     border-radius: 50%;
     position: relative;
-    top: -7px;
+    top: -5px;
     cursor: pointer;
     transition: all $transition_04;
+    box-shadow: 0px 0px 0px 7px rgba(0, 204, 250, 0.34);
+
 }
 
 input[type=range].styled-slider::-webkit-slider-runnable-track {
-    height: 10px;
+    height: 4px;
     border-radius: 16px;
     background: $lightgrey;
     box-shadow: none;
@@ -64,41 +66,29 @@ input[type=range].styled-slider:active::-webkit-slider-runnable-track {
     border-color: $lightgrey;
 }
 
-input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
-    background: linear-gradient($ruby,$ruby) 0/var(--sx) 100% no-repeat, $lightgrey;
-}
-
-input[type=range].styled-slider.slider-progress:hover::-webkit-slider-runnable-track {
-    background: linear-gradient($ruby,$ruby) 0/var(--sx) 100% no-repeat, $lightgrey;
-}
-
-input[type=range].styled-slider.slider-progress:active::-webkit-slider-runnable-track {
-    background: linear-gradient($ruby,$ruby) 0/var(--sx) 100% no-repeat, $lightgrey;
-}
-
 /*mozilla*/
 input[type=range].styled-slider::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     background-color: $white;
-    border: 3px solid $ruby;
+    border: 7px solid $blue_034;
     border-radius: 50%;
     cursor: pointer;
 }
 
 input[type=range].styled-slider::-moz-range-track {
-    height: 10px;
+    height: 4px;
     border-radius: 16px;
     background: $lightgrey;
     box-shadow: none;
 }
 
 input[type=range].styled-slider::-moz-range-thumb:hover {
-    background: $ruby;
+    background: $blue;
 }
 
 input[type=range].styled-slider::-moz-range-thumb:active {
-    background: $ruby;
+    background: $blue;
 }
 
 input[type=range].styled-slider:active::-moz-range-track {
@@ -106,15 +96,15 @@ input[type=range].styled-slider:active::-moz-range-track {
 }
 
 input[type=range].styled-slider.slider-progress::-moz-range-track {
-    background: linear-gradient($ruby,$ruby) 0/var(--sx) 100% no-repeat, #efefef;
+    background: linear-gradient($blue,$blue) 0/var(--sx) 100% no-repeat, #efefef;
 }
 
 input[type=range].styled-slider.slider-progress:hover::-moz-range-track {
-    background: linear-gradient($ruby,$ruby) 0/var(--sx) 100% no-repeat, #e5e5e5;
+    background: linear-gradient($blue,$blue) 0/var(--sx) 100% no-repeat, #e5e5e5;
 }
 
 input[type=range].styled-slider.slider-progress:active::-moz-range-track {
-    background: linear-gradient($ruby,$ruby) 0/var(--sx) 100% no-repeat, #f5f5f5;
+    background: linear-gradient($blue,$blue) 0/var(--sx) 100% no-repeat, #f5f5f5;
 }
 
 /*ms*/
@@ -132,7 +122,7 @@ input[type=range].styled-slider::-ms-thumb {
     width: 2em;
     height: 2em;
     border-radius: 1em;
-    background: $ruby;
+    background: $blue;
     border: none;
     box-shadow: 0 0 2px black;
     margin-top: 0;
@@ -148,5 +138,5 @@ input[type=range].styled-slider::-ms-track {
 }
 
 input[type=range].styled-slider::-ms-thumb:hover {
-    background: $ruby;
+    background: $blue;
 }

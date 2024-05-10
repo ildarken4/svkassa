@@ -6,14 +6,13 @@
     padding: 0 30px;
     height: 70px;
     border-radius: 10px;
-    font-family: 'Sansation', serif;
+    font-family: 'Roboto', serif;
     font-size: 22px;
-    text-transform: uppercase;
     line-height: 22px;
     font-weight: 700;
     text-align: center;
     transition: all $transition_04;
-    background-color: $ruby;
+    background-color: $blue;
     color: $white;
     white-space: nowrap;
     display: flex;
@@ -49,31 +48,31 @@
 
     &-transparent {
         background-color: transparent;
-        color: $ruby;
-        border: 2px solid $ruby;
+        color: $blue;
+        border: 2px solid $blue;
         svg {
             path {
                 transition: all $transition_04;
             }
         }
         &:hover {
-            color: $darkruby;
-            border-color: $darkruby;
+            color: $darkblue;
+            border-color: $darkblue;
 
             svg {
                 path {
-                    stroke: $darkruby;
+                    stroke: $darkblue;
                 }
             }
         }
     }
     &-small {
-        height: 60px;
+        height: 48px;
         width: 282px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: 'Inter';
+        font-family: Roboto;
         font-size: 20px;
         font-weight: 600;
         text-transform: none;
@@ -88,8 +87,8 @@
         background-color: transparent;
 
         &:hover {
-            border-color: $ruby;
-            color: $ruby;
+            border-color: $blue;
+            color: $blue;
         }
     }
     &-green {
@@ -110,9 +109,9 @@
             transition: all $transition_04;
         }
         &:hover {
-            color: $ruby;
+            color: $blue;
             svg path {
-                fill: $ruby;
+                fill: $blue;
             }
         }
     }
@@ -132,7 +131,7 @@
         background: $lightgrey;
         color: $text-black;
         text-transform: none;
-        font-family: 'Inter';
+        font-family: Roboto;
         display: flex;
         align-items: center;
 

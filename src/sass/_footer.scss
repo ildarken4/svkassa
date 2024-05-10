@@ -2,8 +2,7 @@
     &-wrapper {
       width: 100%;
       border-radius: 90px 90px 0px 0px;
-      border: 1px solid $grey;
-      background-color: $lightgrey;
+      background-color: $darkblue-bg;
       padding: 40px 50px;
 
       @include media-breakpoint-down(lg) {
@@ -14,19 +13,40 @@
     }
 
     &__top {
+      color: $white;
       padding-bottom: 40px;
-      border-bottom: 1px solid $text-black;
+      border-bottom: 1px solid $grey;
       display: flex;
       justify-content: space-between;
+      .logo {
+        &__text {
+          margin-left: 18px;
+        }
+        &__title {
+          color: $white;
+          font-size: 21px;
+          font-weight: 700;
+          margin-bottom: 4px;
+        }
+        &__description {
+          max-height: 14px;
+          white-space: nowrap;
+          font-size: 12px;
+          line-height: 12px;
+          color: $white;
+          padding-left: 15px;
+          border-left: 1px solid $blue;
+        }
+      }
     }
 
     &__contacts {
       a {
         display: block;
-        color: $text-black;
+        color: $white;
         font-size: 32px;
         line-height: 39px;
-        font-weight: 700;
+        font-weight: 500;
       }
     }
 
@@ -39,12 +59,12 @@
               width: 200px;
             }
         }
-        &__bottom .row {
+        &__body .row {
           flex-direction: column-reverse;
         }
         &__contacts {
           .for-devices {
-            font-family: 'Inter';
+            font-family: Roboto;
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
@@ -88,4 +108,50 @@
         max-width: 400px;
        }
     }
+}
+.footer-menu {
+
+		&__title {
+      color: $white;
+      font-size: 22px;
+      margin-bottom: 20px;
+      font-weight: 700;
+		}
+
+		&__item {
+      font-size: 16px;
+      margin-bottom: 10px;
+
+      a {
+        color: $grey;
+        display: block;
+        transition: all $transition_04;
+
+        img {
+          margin-left: 4px;
+          margin-bottom: 4px;
+          transition: all $transition_04;
+        }
+
+        &:hover {
+          color: $white;
+
+          img {
+            filter: brightness(150%)
+          }
+        }
+      }
+		}
+}
+.footer-bottom {
+  background-color: #00101F;
+  color: $white;
+  padding: 12px;
+  margin-bottom: -2px;
+
+  &__line {
+    width: 100%;
+    max-width: 338px;
+    border-bottom: 1px solid $grey;
+  }
 }

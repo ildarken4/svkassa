@@ -4,7 +4,7 @@
 <head>
     <partial src="head.html"></partial>
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>CreditBooster – Получить заём</title>
+    <title>СверхКасса – Получить заём</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
             <div class="d-flex justify-content-center">
                 <div class="flow-wrapper pb-150">
                     <h1 class="flow-title mb-40 mb-sm-20">
-                        Займ предварительно одобрен!
+                        Заполните анкету
                     </h1>
 
                     <div class="flow-forms">
@@ -23,78 +23,78 @@
                         <form class="calculator" action="">
                             <div class="calculator__card mb-12">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <div class="title">Сумма</div>
-                                    <div class="data"><span class="data__number result-sum">15 000</span></div>
+                                    <div class="title">Выберите сумму</div>
+                                    <div class="data"><span class="data__number result-sum">15 000</span> <span>руб.</span></div>
                                 </div>
                         
                                 <div class="range-slider sum-slider">
                         
-                                    <input type="range" class="styled-slider slider-progress" id="sum-input" min="1500" max="30000"
-                                        value="10000" step="500" />
+                                    <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000" max="300000"
+                                        value="80000" step="1000" />
                                     <div class="range-slider__values">
-                                        <span class="minimum-scale">1 500 ₽</span>
-                                        <span class="maximum-scale">30 000 ₽</span>
+                                        <span class="minimum-scale">10 000</span>
+                                        <span class="maximum-scale">300 000</span>
                                     </div>
                                 </div>
                             </div>
                         
                             <div class="calculator__card mb-40">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <div class="title">Срок</div>
-                                    <div class="data"><span class="data__number calc-days">20</span></div>
+                                    <div class="title">Выберите срок</div>
+                                    <div class="data"><span class="data__number calc-days">20</span> <span>мес.</span></div>
                                 </div>
                         
                                 <div class="range-slider term-slider">
                         
                                     <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21" />
                                     <div class="range-slider__values">
-                                        <span class="minimum-scale">5 дней</span>
-                                        <span class="maximum-scale">30 дней</span>
+                                        <span class="minimum-scale">6 месяцев</span>
+                                        <span class="maximum-scale">36 месяцев</span>
                                     </div>
                                 </div>
                             </div>
                         
-                            <div class="calculator-result d-flex justify-content-between">
+                            <div class="calculator-result">
                                 <div class="result-item">
-                                    <div class="result-head mb-10">Сумма займа:</div>
-                                    <div class="result-number result-sum">15 000 ₽</div>
+                                    <div class="result-head mb-10">Ежемесячный платеж</div>
+                                    <div class="result-number"> <span class="result-monthly">15 000 </span> руб.</div>
                                 </div>
                                 <div class="result-item">
-                                    <div class="result-head mb-10">Срок займа до:</div>
-                                    <div class="result-number result-date">12.09.23</div>
-                                </div>
-                                <div class="result-item">
-                                    <div class="result-head mb-10">К возврату:</div>
-                                    <div class="result-number result-sum mr-8">15 000 ₽</div>
+                                    <div class="result-head mb-10">Сумма займа</div>
+                                    <div class="result-number mr-8"> <span class="result-sum">15 000 </span> руб.</div>
                                 </div>
                             </div>
 
-                            <div class="btn next-step btn-disabled mb-40" onclick="openModal('sms-modal')">Завершить оформление</div>
+                            <div class="btn next-step btn-disabled mb-40" onclick="openModal('sms-modal'); startEmailTimer()">Завершить оформление</div>
 
-                            <div class="d-flex mb-16">
-                                <label for="rules" class="">
-                                    <input type="checkbox" id="rules">
-                                    <span class="custom-checkbox"></span>
-                                    <span>Я ознакомлен и согласен со&nbsp;<a class="show-rules text-ruby underlined">следующим</a> </span>
-                                </label>
+                            <div class="double-checkbox">
+                                <div class="d-flex mb-16">
+                                    <label for="rules" class="">
+                                        <input type="checkbox" id="rules" checked>
+                                        <span class="custom-checkbox"></span>
+                                        <span>Я ознакомлен и согласен со&nbsp; </span>
+                                    </label>
+                                    <a class="show-rules text-blue text-600 underlined">следующим</a>
+                                </div>
+                                
+                                <div class="hidden-checkbox">
+                                    <label for="agreement-personal" class="mb-10">
+                                        <input type="checkbox" id="agreement-personal" checked>
+                                        <span class="custom-checkbox"></span>
+                                        <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных
+                                                данных</a> </span>
+                                    </label>
+                                
+                                    <label for="agreement-sign">
+                                        <input type="checkbox" id="agreement-sign" checked>
+                                        <span class="custom-checkbox"></span>
+                                        <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной
+                                                подписи</a> </span>
+                                    </label>
+                                    <div class="hide-rules mt-20">Свернуть</div>
+                                </div>
                             </div>
                             
-                            <div class="hidden-checkbox">
-                                <label for="agreement-personal" class="mb-10">
-                                    <input type="checkbox" id="agreement-personal" checked>
-                                    <span class="custom-checkbox"></span>
-                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных
-                                            данных</a> </span>
-                                </label>
-                            
-                                <label for="agreement-sign">
-                                    <input type="checkbox" id="agreement-sign" checked>
-                                    <span class="custom-checkbox"></span>
-                                    <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной
-                                            подписи</a> </span>
-                                </label>
-                                <div class="hide-rules mt-20">Свернуть</div>
-                            </div>
                         </form>
                         
                     </div>
@@ -120,7 +120,7 @@
                 <p class="mb-20 text-grey">
                     SMS с кодом подтверждения отправлен на указанный номер.
                 </p>
-                <p class="mb-40 text-ruby text-600">
+                <p class="mb-40 text-darkblue text-600">
                     +7 (915) 255 25 45
                 </p>
                 <div class="d-flex justify-content-center">
@@ -131,10 +131,11 @@
                             </div>
                             <div class="input-error">Обязательное поле</div>
                         </div>
+                        
+                        <span class="popup-timer">59</span>
+                        <a class="resend underlined text-darkblue btn-disabled popup-email-button text-600 mt-20 mb-40" onclick="startEmailTimer()">Отправить ещё раз</a>
 
-                        <a class="resend underlined text-ruby text-600 mb-40">Отправить ещё раз</a>
-
-                        <a href="flow-considering.html" class="btn">Далее</a>
+                        <a href="flow-considering.html" class="btn">Подтвердить</a>
                     </form>
                 </div>
                 

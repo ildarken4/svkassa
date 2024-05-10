@@ -38,7 +38,7 @@
       position: absolute;
       top: 40px;
       left: 50px;
-      font-family: "Sansation", serif;
+      font-family: "Roboto", serif;
       font-size: 64px;
       font-weight: 700;
       line-height: 68px;
@@ -119,7 +119,7 @@
   
   .hide-rules {
     color: $grey;
-    font-family: 'Inter', serif;
+    font-family: Roboto, serif;
     font-weight: 700;
     text-align: center;
     text-decoration: underline;
@@ -133,7 +133,7 @@
 }
   
 .calculator {
-  font-family: 'Sansation', serif;
+  font-family: 'Roboto', serif;
     background-color: $white;
     padding: 40px;
     border-radius: 25px;
@@ -154,11 +154,9 @@
       }
       
       .title {
-          color: $darkruby;
-          font-family: "Sansation";
-          font-size: 24px;
-          line-height: 24px;
-          font-weight: 700;
+          color: $darkgrey;
+          font-size: 15px;
+          line-height: 15px;
           margin-bottom: 4px;
 
           @include media-breakpoint-down(md) {
@@ -166,11 +164,15 @@
           }
       }
       .data {
-        color: $ruby;
-        font-family: "Sansation";
-        font-size: 40px;
-        line-height: 40px;
-        font-weight: 700;
+        display: flex;
+        align-items: flex-start;
+        .data__number {
+          color: $darkblue;
+          font-size: 42px;
+          line-height: 40px;
+          font-weight: 500;
+          margin-right: 8px;
+        }
         @include media-breakpoint-down(md) {
           font-size: 24px;
           line-height: 24px;
@@ -178,28 +180,25 @@
       }
     }
     &-result {
-      font-size: 24px;
-      font-weight: 500;
       margin-bottom: 40px;
 
       @include media-breakpoint-down(md) {
         font-size: 12px;
         font-family: "Inter", serif;
-
-
+        
         .result-head {
           color: $grey;
         }
       }
-      
-      .result-number {
-        color: $ruby;
-        font-weight: 700;
+      .result-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
     }
     &__phone {
       @include media-breakpoint-down(md) {
-        font-family: 'Inter', serif;
+        font-family: Roboto, serif;
         font-size: 16px;
         font-weight: 600;
 
@@ -244,8 +243,8 @@
       transition: all $transition_04;
     
       &.active {
-        color: $ruby;
-        border-bottom: 2px solid $ruby;
+        color: $blue;
+        border-bottom: 2px solid $blue;
       }
     }
   }
@@ -254,8 +253,8 @@
     padding-top: 75px;
     padding-bottom: 75px;
     h4 {
-      font-family: 'Sansation', serif;
-      color: $darkruby;
+      font-family: 'Roboto', serif;
+      color: $darkblue;
       font-weight: 700;
       font-size: 24px;
       text-transform: uppercase;
@@ -322,7 +321,7 @@
           transform: rotate(90deg);
 
           path {
-            stroke: $ruby;
+            stroke: $blue;
           }
         }
       }
@@ -387,10 +386,10 @@
     }
     &:hover {
       a {
-        color: $ruby;
+        color: $blue;
       }
       svg path {
-        stroke: $ruby;
+        stroke: $blue;
       }
     }
     &.hidden {
@@ -461,7 +460,7 @@
     }
 
     a {
-      font-family: 'Sansation', serif;
+      font-family: 'Roboto', serif;
     }
   }
 }
@@ -484,11 +483,11 @@
         max-height: 1500px;
       }
       .main-info-mobile__title {
-        color: $ruby;
+        color: $blue;
         svg {
           transform: rotate(180deg);
           path {
-            stroke: $ruby;
+            stroke: $blue;
           }
     
         } 
@@ -500,7 +499,7 @@
     align-items: center;
     justify-content: space-between;
     color: $grey;
-    font-family: 'Sansation';
+    font-family: 'Roboto';
     font-size: 20px;
     font-style: normal;
     font-weight: 700;

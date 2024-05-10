@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <title>СверхКасса – Личный кабинет</title>
+    </head>
+    
+    <body>
+        <header class="header header-account">
+            <div class="container">
+                <div class="header-content"> <a href="index.html" class="logo">
+            <img src="images/Logo.svg" width="100%" alt="Логотип СверхКасса">
+          </a>
+
+                    <button class="btn btn-small btn-transparent logout-btn"> <span class="mr-10">Выйти</span>
+
+                        <svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="authorization">
+                                <path id="Vector" d="M17 15L20 12M20 12L17 9M20 12H9M20 7.24802V7.2002C20 6.08009 20 5.51962 19.782 5.0918C19.5903 4.71547 19.2845 4.40973 18.9082 4.21799C18.4804 4 17.9199 4 16.7998 4H7.1998C6.0797 4 5.52043 4 5.09261 4.21799C4.71628 4.40973 4.40952 4.71547 4.21777 5.0918C4 5.5192 4 6.07899 4 7.19691V16.8036C4 17.9215 4 18.4805 4.21777 18.9079C4.40952 19.2842 4.71628 19.5905 5.09261 19.7822C5.52001 20 6.079 20 7.19691 20H16.8031C17.921 20 18.4808 20 18.9082 19.7822C19.2845 19.5905 19.5903 19.2839 19.782 18.9076C20 18.4798 20 17.9201 20 16.8V16.75"
+                                stroke="#00CCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="wrapper account-wrapper">
+            <div class="container pt-60 pt-md-40">
+                <div class="account-top">
+                    <div class="mb-10 account-top__greeting">Добро пожаловать, <strong class="username text-black">Иванов Иван Иванович</strong>
+                    </div>
+                    <div class="account-top__title mb-20">У вас нет активного заема</div>
+                    <div class="account-top__buttons">
+                        <button class="btn btn-small bg-lightgrey">Задайте пароль
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                            viewBox="0 0 21 20" fill="none">
+                                <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z"
+                                fill="#151515" />
+                            </svg>
+                        </button>
+                        <button class="btn btn-small bg-lightgrey">Подтвердите почту
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                            viewBox="0 0 21 20" fill="none">
+                                <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z"
+                                fill="#151515" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="account-body same-cards pt-20 mb-60">
+                    <div class="row p-0">
+                        <div class="col-lg-6 col-md-6 pl-0 pr-md-10 pr-sm-0">
+                            <div class="account-body__card same-item">
+                                <form class="calculator" action="">
+                                    <div class="calculator__card mb-12">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="title">Сумма</div>
+                                            <div class="data"><span class="data__number result-sum">15 000</span>
+                                            </div>
+                                        </div>
+                                        <div class="range-slider sum-slider">
+                                            <input type="range" class="styled-slider slider-progress" id="sum-input"
+                                            min="1500" max="30000" value="10000" step="500" />
+                                            <div class="range-slider__values"> <span class="minimum-scale">1 500 ₽</span>
+ <span class="maximum-scale">30 000 ₽</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculator__card mb-40">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="title">Срок</div>
+                                            <div class="data"><span class="data__number calc-days">20</span>
+                                            </div>
+                                        </div>
+                                        <div class="range-slider term-slider">
+                                            <input type="range" class="styled-slider slider-progress" id="term-input"
+                                            min="5" max="30" value="21" />
+                                            <div class="range-slider__values"> <span class="minimum-scale">5 дней</span>
+ <span class="maximum-scale">30 дней</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calculator-result d-flex justify-content-between">
+                                        <div class="result-item">
+                                            <div class="result-head mb-10">Сумма займа:</div>
+                                            <div class="result-number result-sum">15 000 ₽</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-head mb-10">Срок займа до:</div>
+                                            <div class="result-number result-date">12.09.23</div>
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-head mb-10">К возврату:</div>
+                                            <div class="result-number result-sum mr-8">15 000 ₽</div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 pr-0 pl-md-10 pl-sm-0">
+                            <div class="account-body__card same-item d-flex flex-column align-items-center justify-content-center">
+                                <form action="" class="get-loan-form">
+                                    <div class="form-row">
+                                        <div class="form-text">Выберите карту,
+                                            <br>на&nbsp;которую <span class="text-blue">придут</span> деньги</div>
+                                        <div class="custom-select">
+                                            <div class="custom-select__head">
+                                                <div class="custom-select__result">4276********3958</div>
+                                                <svg class="ml-10" xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M19 9L12 16L5 9" stroke="#A3A3A3" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <div class="custom-select__options">
+                                                <div class="custom-option" selected>
+                                                    <div class="custom-select__value">4276********3958</div>
+                                                </div>
+                                                <div class="custom-option">
+                                                    <div class="custom-select__value">4276********3958</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mb-30">
+                                        <div class="form-text">Перед оформлением нового займа <span class="text-blue">актуализируйте </span>или
+                                            <span
+                                            class="text-blue">подтвердите&nbsp;</span>личные данные</div> <a href="#" class="btn btn-transparent btn-rounded">Проверить</a>
+
+                                        <!--
+                                        Кода данные актуализированы - кнопка выше меняется на кнопку "Готово" -->
+                                        <!-- <div href="#" class="btn btn-transparent btn-rounded btn-green">Готово</div> --></div>
+                                    <button class="btn next-step btn-disabled mb-20">Получить займ</button>
+                                    <div class="d-flex mb-16">
+                                        <label for="rules" class="">
+                                            <input type="checkbox" id="rules"> <span class="custom-checkbox"></span>
+ <span>Я ознакомлен со&nbsp;<a class="show-rules text-blue underlined">следующим</a> </span>
+
+                                        </label>
+                                    </div>
+                                    <div class="hidden-checkbox">
+                                        <label for="agreement-personal" class="mb-10">
+                                            <input type="checkbox" id="agreement-personal" checked> <span class="custom-checkbox"></span>
+ <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных данных</a> </span>
+
+                                        </label>
+                                        <label for="agreement-sign">
+                                            <input type="checkbox" id="agreement-sign" checked> <span class="custom-checkbox"></span>
+ <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной подписи</a> </span>
+
+                                        </label>
+                                        <div class="hide-rules mt-20">Свернуть</div>
+                                    </div>
+                                </form>
+                                <!-- <div class="mb-20 text-center">Выберите карту, на которую хотите получить деньги</div>
+                        <form action="" class="payment-form">
+                            <div class="custom-select mb-40">
+                                <div class="custom-select__head">
+                                    <div class="custom-select__result">
+                                        Выберите карту
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none">
+                                        <path d="M8.5 14L0.70577 0.5L16.2942 0.500002L8.5 14Z" fill="#151515"/>
+                                    </svg>
+                                </div>
+                                <div class="custom-select__options">
+                                    <div class="custom-option" selected>
+                                        <img src="images/icons/select-card.svg" alt="иконка карты">
+                                        <div class="custom-select__value">
+                                            220042******3639
+                                        </div>
+                                    </div>
+                                    <div class="custom-option">
+                                        <img src="images/icons/select-card.svg" alt="иконка карты">
+                                        <div class="custom-select__value">
+                                            220062******6544
+                                        </div>
+                                    </div>
+                                    <div class="custom-option">
+                                        <img src="images/icons/add-icon.svg" alt="иконка карты">
+                                        <div class="custom-select__value">
+                                            Добавить другую карту
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mb-20">
+                                <label for="rules">
+                                    <input type="checkbox" id="rules" required>
+                                    <span class="custom-checkbox"></span>
+                                    <span>Я ознакомлен со&nbsp;<a class="text-blue underlined">следующим</a> </span>
+                                </label>
+                            </div>
+                            
+                            <button class="btn">Получить займ</button>
+                        </form> --></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-menu-btn">Меню
+                    <img src="images/buttons/menu.svg" alt="меню">
+                </div>
+                <div class="account-menu-modal">
+                    <div class="account-menu">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 col-6"> <a href="account-loan.html" class="account-menu__item">
+
+                    <div class="account-menu__pic">
+                        <img src="images/icons/account-main.png" width="100%" alt="изображение пункта меню">
+                    </div>
+                    <div class="account-menu__title">
+                        Главная
+                    </div>
+                    
+                </a>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 col-6"> <a href="account-my-cards.html" class="account-menu__item">
+                    <div class="account-menu__pic">
+                        <img src="images/icons/account-menu_card.png" width="100%" alt="изображение пункта меню">
+                    </div>
+                    <div class="account-menu__title">
+                        Мои Карты
+                    </div>
+                </a>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 col-6"> <a href="account-history.html" class="account-menu__item">
+                    <div class="account-menu__pic">
+                        <img src="images/icons/account-menu_history.png" width="100%" alt="изображение пункта меню">
+                    </div>
+                    <div class="account-menu__title">
+                        История займов
+                    </div>
+                </a>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 col-6"> <a href="account-docs.html" class="account-menu__item">
+                    <div class="account-menu__pic">
+                        <img src="images/icons/account-menu_docs.png" width="100%" alt="изображение пункта меню">
+                    </div>
+                    <div class="account-menu__title">
+                        Документы
+                    </div>
+                </a>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 col-6"> <a href="account-files.html" class="account-menu__item">
+                    <div class="account-menu__pic">
+                        <img src="images/icons/account-menu_files.png" width="100%" alt="изображение пункта меню">
+                    </div>
+                    <div class="account-menu__title">
+                        Мои файлы
+                    </div>
+                </a>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 col-6"> <a href="account-files.html" class="account-menu__item">
+                    <div class="account-menu__pic">
+                        <img src="images/icons/my-appeals.png" width="100%" alt="изображение пункта меню">
+                    </div>
+                    <div class="account-menu__title">
+                        Мои обращения
+                    </div>
+                </a>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 col-6"> <a href="account-files.html" class="account-menu__item">
+                    <div class="account-menu__pic">
+                        <img src="images/icons/my-account.png" width="100%" alt="изображение пункта меню">
+                    </div>
+                    <div class="account-menu__title">
+                        Личный кабинет
+                    </div>
+                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-menu-btn account-menu-close">Закрыть
+                        <img src="images/buttons/account-menu-close.svg" alt="закрыть">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notification success"> <span>Данные подтверждены</span>
+
+            <img src="images/buttons/account-menu-close.svg"
+            alt="закрыть">
+        </div>
+        <footer></footer>
+        <script src="./js/swiper-bundle.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/inputmask.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+
+</html>

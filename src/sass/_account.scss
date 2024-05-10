@@ -8,7 +8,7 @@
     }
 }
 .account-top {
-    font-family: 'Sansation', serif;
+    font-family: 'Roboto', serif;
     background-color: $grey_015;
     text-align: center;
     border-radius: 10px;
@@ -20,7 +20,7 @@
 
     &__title {
         font-weight: 700;
-        color: $ruby;
+        color: $blue;
         font-size: 56px;
         line-height: 56px;
         @include media-breakpoint-down(lg) {
@@ -64,7 +64,7 @@
         background-color: $bg-red;
         border-radius: 10px;
         padding: 10px 20px;
-        font-family: 'Inter';
+        font-family: Roboto;
         font-size: 64px;
         line-height: 64px;
         font-style: normal;
@@ -132,7 +132,7 @@
                 justify-content: space-between;
                 align-items: center;
                 border-bottom: 1px solid var(---Dark_Gray, #A3A3A3);
-                font-family: 'Inter';
+                font-family: Roboto;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -210,7 +210,7 @@
             max-width: 300px;
         }
         .btn-rounded {
-            font-family: 'Inter', serif;
+            font-family: Roboto, serif;
             max-width: 300px;
         }
     }
@@ -222,7 +222,7 @@
         }
 
         .result-item {
-            font-family: 'Inter';
+            font-family: Roboto;
             font-size: 24px;
 
             @media (max-width: 1280px) {
@@ -247,7 +247,7 @@
         }
     }
     &__link {
-        font-family: 'Inter';
+        font-family: Roboto;
         margin-right: auto;
         margin-left: auto;
         width: fit-content;
@@ -273,13 +273,13 @@
         }
     
         &:hover {
-            color: $darkruby;
+            color: $darkblue;
     
             svg {
                 transform: rotate(45deg);
     
                 path {
-                    stroke: $darkruby;
+                    stroke: $darkblue;
                 }
             }
         }
@@ -318,7 +318,7 @@
         color: $white;
         border-radius: 10px;
         border: 2px solid $white;
-        background: $darkgrey;
+        background: $darkblue;
         box-shadow: 0px 4px 4px 0px rgba(204, 204, 204, 0.25);
         backdrop-filter: blur(5px);
         transition: all $transition_04;
@@ -384,7 +384,7 @@
         background-color: $white;
         border-radius: 10px;
         color: $text-black;
-        font-family: 'Inter';
+        font-family: Roboto;
         font-size: 24px;
         font-weight: 600;
         padding: 10px;
@@ -397,7 +397,7 @@
             margin-bottom: 10px;
         }
         &:hover {
-            color: $ruby;
+            color: $blue;
         }
         &.not-selected {
             filter: brightness(.8);
@@ -451,13 +451,13 @@
     }
 
     h1 {
-        font-family: 'Sansation', serif;
+        font-family: 'Roboto', serif;
         font-size: 56px;
         font-weight: 700;
         text-align: center;
         @include media-breakpoint-down(md) {
             font-size: 28px;
-            font-family: 'Inter', serif;
+            font-family: Roboto, serif;
         }
     }
     .bank-cards-list {
@@ -508,7 +508,7 @@
         font-size: 16px;
         line-height: 19.2px;
         font-weight: 700;
-        color: $ruby;
+        color: $blue;
         text-decoration: underline;
         border-radius: 5px;
         padding: 2.5px 5px;
@@ -516,7 +516,7 @@
 
         &.main-card {
             color: $white;
-            background-color: $ruby;
+            background-color: $blue;
             text-decoration: none;
         }
 
@@ -536,7 +536,7 @@
         &:hover {
             svg rect,
             svg path{
-                stroke: $ruby;
+                stroke: $blue;
             }
         }
     }
@@ -553,8 +553,8 @@
 }
 
 .add-card {
-    color: $ruby;
-    border: 2px dashed $ruby;
+    color: $blue;
+    border: 2px dashed $blue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -566,8 +566,8 @@
     height: 186.5px;
 
     &:hover {
-        border-color: $darkruby;
-        color: $darkruby;
+        border-color: $darkblue;
+        color: $darkblue;
     }
 
     &:nth-child(odd) {
@@ -612,7 +612,7 @@
                 line-height: 24px;
             }
             span {
-                color: $ruby;
+                color: $blue;
             }
         }
     
@@ -800,16 +800,16 @@
     }
     .add-file {
         border-radius: 10px;
-        color: $ruby;
-        border: 2px dashed $ruby;
+        color: $blue;
+        border: 2px dashed $blue;
         background: $white;
         box-shadow: 0px 4px 10px 0px rgba(204, 204, 204, 0.50);
         transition: all $transition_04;
         cursor: pointer;
 
         &:hover {
-            color: $darkruby;
-            border-color: $darkruby;
+            color: $darkblue;
+            border-color: $darkblue;
         }
 
         @include media-breakpoint-down(md) {
@@ -924,7 +924,7 @@
             flex-basis: calc(50% - 10px);
 
             .date {
-                color: $ruby;
+                color: $blue;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 600;
@@ -993,7 +993,7 @@
     box-shadow: 0px 4px 10px 0px rgba(204, 204, 204, 0.50);
     padding: 20px;
     background-color: $white;
-    background-image: url(../images/backgrounds/banner-background.svg);
+    background-image: url(../images/backgrounds/Group.png);
     background-position: center;
     background-size: 35%;
     overflow: hidden;
@@ -1020,7 +1020,7 @@
     &__btn {
         position: relative;
         z-index: 2;
-        font-family:'Inter', serif;
+        font-family:Roboto, serif;
         max-width: 353px;
         margin-left: auto;
         margin-right: auto;
@@ -1211,10 +1211,10 @@
             }
 
             &:hover {
-                color: $ruby;
+                color: $blue;
 
                 svg path {
-                    stroke: $ruby;
+                    stroke: $blue;
                 }
             }
         }
@@ -1405,7 +1405,7 @@
     }
     .resend {
         font-size: 20px;
-        color: $ruby;
+        color: $blue;
         text-decoration: underline;
         font-weight: 600;
         text-align: center;

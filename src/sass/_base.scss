@@ -1,24 +1,21 @@
+
+
 @font-face {
-  font-family: 'Inter';
-  src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Sansation';
-  src: url('../fonts/Sansation-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Sansation';
-  src: url('../fonts/Sansation-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Sansation';
-  src: url('../fonts/Sansation-Light.ttf') format('truetype');
-  font-weight: lighter;
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
 }
 
 
@@ -26,11 +23,10 @@
 
 html {
   height: fit-content;
-  overflow-x: hidden;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: $white;
   overflow-x: hidden;
   position: relative;
@@ -42,11 +38,11 @@ body {
 }
 
 h2 {
-  font-family: 'Sansation', serif;
+  font-family: 'Roboto', serif;
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  color: $darkruby;
+  color: $darkblue;
 
 }
 @media (max-width: 992px) {
@@ -85,8 +81,8 @@ h2 {
 
 
 // Цвет фона
-.bg-ruby {
-  background-color: $ruby;
+.bg-blue {
+  background-color: $blue;
 }
 .bg-green {
   background-color: $green;
@@ -100,11 +96,11 @@ h2 {
 
 // Цвет текста
 
-.text-darkruby {
-  color: $darkruby;
+.text-darkblue {
+  color: $darkblue;
 }
-.text-ruby {
-  color: $ruby;
+.text-blue {
+  color: $blue;
 }
 .text-grey {
   color: $grey;

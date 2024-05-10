@@ -4,7 +4,7 @@
         max-width: 960px;
     }
     &-title {
-        font-family: 'Sansation';
+        font-family: 'Roboto';
         font-size: 48px;
         font-weight: 700;
         line-height: normal;
@@ -21,11 +21,8 @@
         align-items: center;
         padding: 0 40px;
         border-radius: 10px;
-        border: 2px solid transparent;
-        background:
-            linear-gradient($lightgrey 0 0) padding-box,
-            /*this is your grey background*/
-            linear-gradient(to right, rgba(240, 21, 36, 1), rgba(252, 170, 117, 1)) border-box;
+        background-color: $lightgrey;
+        border: 2px solid $grey;
 
         @include media-breakpoint-down(sm) {
             padding: 0 15px;
@@ -72,7 +69,7 @@
             }
 
             h2 {
-                font-family: 'Inter';
+                font-family: Roboto;
                 font-size: 32px;
                 font-style: normal;
                 line-height: 32px;
@@ -85,7 +82,7 @@
         }
     
         &__steps {
-            font-family: 'Inter';
+            font-family: Roboto;
             font-size: 32px;
             font-style: normal;
             font-weight: 500;
@@ -205,7 +202,7 @@
             padding: 16px;
             border-radius: 5px;
             font-size: 14px;
-            font-family: 'Inter', serif;
+            font-family: Roboto, serif;
             background-color: $lightgrey;
             color: $darkgrey;
         }
@@ -217,7 +214,7 @@
         padding: 16px;
         border-radius: 5px !important;
         font-size: 14px;
-        font-family: 'Inter', serif;
+        font-family: Roboto, serif;
     }
 
     .calculator {
@@ -234,7 +231,7 @@
     margin-bottom: 40px;
 
     &__top {
-        color: $ruby;
+        color: $darkblue;
         font-size: 24px;
         font-weight: 600;
         display: flex;
@@ -260,7 +257,7 @@
             width: 40%;
             height: 100%;
             border-radius: 100px;
-            background-color: $ruby;
+            background-color: $darkblue;
         }
 
         @include media-breakpoint-down(sm) {
@@ -420,7 +417,7 @@
         max-width: 450px;
 
         .flow-card__data {
-            color: $ruby;
+            color: $blue;
             flex-basis: 30%;
             text-align: left;
         }
@@ -444,7 +441,7 @@
         }
     }
     &__data {
-        font-family: 'Sansation', serif;
+        font-family: 'Roboto', serif;
         font-weight: 600;
         text-align: right;
     }
@@ -478,5 +475,18 @@
 
     &__icon {
         width: 160px;
+    }
+}
+
+.flow-login {
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 20px;
     }
 }

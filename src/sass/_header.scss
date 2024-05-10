@@ -80,7 +80,7 @@
       left: 0;
       opacity: 0;
       background-color: $lightgrey;
-      color: $ruby;
+      color: $blue;
       font-weight: bold;
       z-index: 2000;
       display: flex;
@@ -193,7 +193,7 @@
   &__line {
     height: 2px;
     width: 20px;
-    background-color: $ruby;
+    background-color: $blue;
     transition: all $transition_04;
 
     &:not(:last-child) {
