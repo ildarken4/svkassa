@@ -80,28 +80,32 @@
                     
                     <button class="btn mb-20">Получить заём</button>
 
-                    <div class="d-flex mb-16">
-                        <label for="rules" class="">
-                            <input type="checkbox" id="rules" required>
-                            <span class="custom-checkbox"></span>
-                            <span>Я ознакомлен и согласен со&nbsp;<a class="show-rules text-blue underlined">следующим</a> </span>
-                        </label>
-                    </div>
+                    <div class="double-checkbox">
+                        <div class="d-flex mb-16">
+                            <label for="rules" class="">
+                                <input type="checkbox" id="rules" required checked>
+                                <span class="custom-checkbox"></span>
+                                <span>Я ознакомлен и согласен со </span>
+                                <a class="show-rules text-blue underlined">следующим</a>
+                            </label>
+                        </div>
 
-                    <div class="hidden-checkbox">
-                        <label for="agreement-personal" class="mb-10">
-                            <input type="checkbox" id="agreement-personal" checked>
-                            <span class="custom-checkbox"></span>
-                            <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных данных</a> </span>
-                        </label>
-                        
-                        <label for="agreement-sign">
-                            <input type="checkbox" id="agreement-sign" checked>
-                            <span class="custom-checkbox"></span>
-                            <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной подписи</a> </span>
-                        </label>
-                        <div class="hide-rules mt-20">Свернуть</div>
+                        <div class="hidden-checkbox">
+                            <label for="agreement-personal" class="mb-10">
+                                <input type="checkbox" id="agreement-personal" checked>
+                                <span class="custom-checkbox"></span>
+                                <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных данных</a> </span>
+                            </label>
+                            
+                            <label for="agreement-sign">
+                                <input type="checkbox" id="agreement-sign" checked>
+                                <span class="custom-checkbox"></span>
+                                <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной подписи</a> </span>
+                            </label>
+                            <div class="hide-rules mt-20">Свернуть</div>
+                        </div>
                     </div>
+                   
 
                 </form>
             </div>

@@ -31,7 +31,11 @@
         <header class="header header-account">
             <div class="container">
                 <div class="header-content"> <a href="index.html" class="logo">
-            <img src="images/Logo.svg" width="100%" alt="Логотип СверхКасса">
+            <picture>
+                <source media="(min-width: 992px)" srcset="images/Logo.svg">
+                <source media="(max-width: 991px)" srcset="/images/logo-mobile.png">
+                <img src="images/logo-mobile.png" alt="логотип">
+            </picture>
           </a>
 
                     <button class="btn btn-small btn-transparent logout-btn"> <span class="mr-10">Выйти</span>

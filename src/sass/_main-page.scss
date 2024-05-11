@@ -86,7 +86,7 @@
           height: 635.191px;
           transform: rotate(15deg);
           border-radius: 635.191px;
-          background: rgba(237, 183, 183, 0.40);
+          background: $blue_034;
           filter: blur(60px);
           z-index: 0;
           @include media-breakpoint-down(lg) {
@@ -137,7 +137,7 @@
     background-color: $white;
     padding: 40px;
     border-radius: 25px;
-    border: 4px solid #865966;
+    border: 4px solid $darkblue;
     max-width: 610px;
     position: relative;
     z-index: 1;
