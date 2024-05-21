@@ -160,7 +160,7 @@
           margin-bottom: 4px;
 
           @include media-breakpoint-down(md) {
-            font-size: 18px;
+            font-size: 14px;
           }
       }
       .data {
@@ -172,10 +172,16 @@
           line-height: 40px;
           font-weight: 500;
           margin-right: 8px;
+
+          @include media-breakpoint-down(md) {
+            font-size: 32px;
+            line-height: 28px;
+            margin-right: 4px;
+          }
         }
         @include media-breakpoint-down(md) {
-          font-size: 24px;
-          line-height: 24px;
+          font-size: 14px;
+          line-height: 14px;
         }
       }
     }
@@ -183,11 +189,10 @@
       margin-bottom: 40px;
 
       @include media-breakpoint-down(md) {
-        font-size: 12px;
-        font-family: "Inter", serif;
+        font-size: 14px;
         
         .result-head {
-          color: $grey;
+          color: $text-black;
         }
       }
       .result-item {

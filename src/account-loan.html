@@ -14,13 +14,13 @@
             <div class="mb-10 account-top__greeting">Добро пожаловать, <strong class="username text-black">Иванов Иван Иванович</strong></div>
             <div class="account-top__title mb-20">У вас есть активный заем</div>
             <div class="account-top__buttons">
-                <button class="btn btn-small bg-lightgrey" onclick="openModal('set-password-modal')">
+                <button class="btn btn-small" onclick="openModal('set-password-modal')">
                     Задайте пароль
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                         <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z" fill="#151515"/>
                     </svg>
                 </button>
-                <button class="btn btn-small bg-lightgrey" onclick="openModal('email-confirm-modal');startEmailTimer()">
+                <button class="btn btn-small" onclick="openModal('email-confirm-modal'); startEmailTimer()">
                     Подтвердите почту
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                         <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z" fill="#151515"/>
@@ -35,7 +35,7 @@
                 <div class="account-banner__text">
                     Активировать предложение по новому заему
                 </div>
-                <div class="account-banner__btn btn btn-transparent btn-rounded btn-black">
+                <div class="account-banner__btn btn btn-transparent btn-rounded">
                     Активировать
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 <div class="col-lg-6 col-md-6 pr-0 pl-md-10 pl-sm-0">
                     <div class="account-body__card d-flex flex-column align-items-center justify-content-center">
                         <form action="" class="payment-form">
-                            <input type="text" class="mb-10 account-pay" placeholder="Введите сумму">
+                            <input type="text" class="mb-10 account-pay" placeholder="Введите сумму" value="2100">
                             <button class="btn mb-30">Оплатить</button>
                             <div class="text-darkblue account-body__link schedule-btn">
                                 График платежей
@@ -112,7 +112,7 @@
                             <div class="show-password">
                                 <img src="images/icons/password-eye.svg" alt="">
                             </div>
-                            <div class="input-hint">
+                            <div class="input-hint text-black">
                                 <div class="input-hint__title">Пароль должен содержать</div>
                                 <div class="input-hint__text">
                                     - 8 символов латинского алфавита (A-z)
@@ -177,7 +177,7 @@
             <div class="popup__title">
                 Подтвердите почту
             </div>
-            <button class="modal-close" onclick="changeModal('email-confirm-modal', 'email-success-modal')">
+            <button class="modal-close" onclick="closeModal()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -193,7 +193,7 @@
                 подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
             </p>
             
-            <div class="user-email text-blue mb-40">
+            <div class="user-email text-darkblue mb-40">
                 V<span>*****</span>a@mail.ru
             </div>
             
@@ -209,32 +209,6 @@
     </div>
 </div>
 
-<div class="modal" id="email-success-modal">
-    <div class="popup popup-small bg-lightgrey">
-        <div class="popup__top">
-            <div class="popup__title">
-                Подтвердите почту
-            </div>
-            <button class="modal-close" onclick="closeModal()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-
-        <div class="popup__content">
-
-            <div class="popup-result-text success mb-40">
-                Почта успешно подтверждена
-            </div>
-            <div class="popup-result-image mb-80 mb-md-40">
-                <img src="images/icons/success-shield.png" alt="иконка результат">
-            </div>
-            
-        </div>
-    </div>
-</div>
 
 <partial src="footer.html"></partial>
 </body>

@@ -79,7 +79,7 @@ label {
 
   .show-password {
     position: absolute;
-    right: 60px;
+    right: 15px;
     cursor: pointer;
   }
 
@@ -320,13 +320,14 @@ input.error {
   width: 100%;
 
   &__head {
-    padding: 20px 40px;
-    font-size: 20px;
+    padding: 20px;
+    font-size: 17px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 17px;
     background-color: $lightgrey;
     border-radius: 10px;
     display: flex;
+    color: $grey;
     align-items: center;
     justify-content: space-between;
     border: 1px solid $lightgrey;
@@ -337,7 +338,6 @@ input.error {
     }
 
     @include media-breakpoint-down(lg) {
-      font-size: 18px;
       padding: 10px 20px;
     }
 
@@ -348,14 +348,14 @@ input.error {
 
   &__options {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 5px);
     left: 0;
     width: 100%;
     height: fit-content;
     max-height: 0;
-    border-radius: 0 0 10px 10px;
-    background-color: $white;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-color: $lightgrey;
+    box-shadow: 0px 4px 10px 0px rgba(204, 204, 204, 0.50);
     transition: max-height $transition_04;
     overflow: hidden;
     z-index: 200;
@@ -372,7 +372,7 @@ input.error {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding: 10px 40px;
+      padding: 10px 20px;
       transition: all $transition_04;
       break-inside: avoid;
       cursor: pointer;
@@ -407,9 +407,7 @@ input.error {
 
   &.active {
     .custom-select__head {
-      border-radius: 10px 10px 0 0;
-      border: 1px solid $darkgrey;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      border: 1px solid $darkblue;
 
       svg {
         transform: rotate(180deg);
@@ -417,7 +415,9 @@ input.error {
     }
 
     .custom-select__options {
+      border: 1px solid $darkblue;
       max-height: 500px;
+      padding: 20px 0;
     }
   }
 }
@@ -522,4 +522,25 @@ input[type="file"] {
       filter: grayscale(1);
     }
   }
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $grey;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: $grey;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: $grey;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: $grey;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: $grey;
+}
+::placeholder { /* Most modern browsers support this now. */
+   color: $grey;
 }

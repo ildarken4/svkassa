@@ -18,16 +18,18 @@
                         Вход в личный кабинет
                     </h1>
 
-                    <div class="flow-info">
+                    <div class="flow-forms">
 
-                        <div class="flow-card">
+                        <div class="flow-login">
                             <p class="flow-info__text text-grey mb-40 mt-20 mt-sm-0">Укажите ваш номер телефона.</p>
 
                             <form action="">
-                                <div class="form-item mb-40">
+                                <div class="form-item">
+                                    <div class="form-item__label">Ваш номер телефона</div>
                                     <div class="form-input">
-                                        <input type="tel" id="login-phone" placeholder="Ваш телефон">
+                                        <input type="tel" id="login-phone" placeholder="Введите номер" required>
                                     </div>
+                                    <div class="input-error">Обязательное поле</div>
                                 </div>
 
                                 <a href="login-sms.html" class="btn mb-20 mb-sm-0">Войти</a>

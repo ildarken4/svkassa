@@ -20,7 +20,7 @@
 
                     <div class="flow-greeting mb-40 mb-sm-20">
                         <div class="flow-greeting__text">
-                            Добро пожаловать!
+                            Добро пожаловать
                         </div>
                         <div class="flow-greeting__image">
                             <img src="images/icons/home-3D.png" width="100%" alt="приветствие">
@@ -109,7 +109,7 @@
                                 <div class="form-item">
                                     <div class="form-item__label">Дата рождения</div>
                                     <div class="form-input">
-                                        <input type="date" id="contact-pathronypic" placeholder="ДД.ММ.ГГ" required>
+                                        <input type="text" id="passport-date" class="input-date" placeholder="ДД.ММ.ГГГГ" required>
                                     </div>
                                     <div class="input-error">Обязательное поле</div>
                                 </div>
@@ -125,12 +125,12 @@
 
                             <div class="confirm-email mb-40">
                                 <div class="confirm-email__hint">
-                                    <div class="confirm-email__title">Подтвердите свою почту</div>
+                                    <div class="confirm-email__title mb-10">Подтвердите свою почту</div>
                                     <div>Мы будем использовать ваш адрес электронной почты для обеспечения
                                         безопасности вашего аккаунта</div>
                                 </div>
                                 <div class="confirm-email__button" onclick="openModal('email-confirm-modal');startEmailTimer()">
-                                    Подтвердить почту
+                                    Подтвердить
                                 </div>
                             </div>
 
@@ -139,7 +139,7 @@
                                 Почта подтверждена
                             </div>
 
-                            <a href="flow-passport.html" class="btn js-form-btn"> <span class="for-desktop">Перейти&nbsp;</span> к следующему шагу</a>
+                            <a href="flow-passport.html" class="btn js-form-btn"> Перейти к следующему шагу</a>
 
                         </form>
                     </div>
@@ -157,9 +157,9 @@
         <div class="popup popup-small">
             <div class="popup__top">
                 <div class="popup__title">
-                    Подтвердите почту
+                    Подтвердите свою почту
                 </div>
-                <button class="modal-close" onclick="changeModal('email-confirm-modal', 'email-success-modal')">
+                <button class="modal-close" onclick="closeModal()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -176,7 +176,7 @@
                     подтверждения. Если вы уже подтвердили свою почту, обновите страницу.
                 </p>
     
-                <div class="user-email text-blue mb-40">
+                <div class="user-email text-darkblue mb-40">
                     V<span>*****</span>a@mail.ru
                 </div>
     
@@ -191,33 +191,7 @@
             </div>
         </div>
     </div>
-    
-    <div class="modal" id="email-success-modal">
-        <div class="popup popup-small bg-lightgrey">
-            <div class="popup__top">
-                <div class="popup__title">
-                    Подтвердите почту
-                </div>
-                <button class="modal-close" onclick="closeModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-    
-            <div class="popup__content">
-    
-                <div class="popup-result-text success mb-40">
-                    Почта успешно подтверждена
-                </div>
-                <div class="popup-result-image mb-80 mb-md-40">
-                    <img src="images/icons/success-shield.png" alt="иконка результат">
-                </div>
-    
-            </div>
-        </div>
-    </div>
+
 
     <div class="notification error">
         <span>Не все поля заполнены</span>

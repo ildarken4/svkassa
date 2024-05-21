@@ -12,11 +12,11 @@
     <partial src="header-flow.html"></partial>
     <div class="wrapper pt-60 pt-sm-50">
         <div class="container">
+            <h1 class="flow-title mb-40 mb-sm-20">
+                Заполните анкету
+            </h1>
             <div class="d-flex justify-content-center">
                 <div class="flow-wrapper pb-150">
-                    <h1 class="flow-title mb-40 mb-sm-20">
-                        Займ предварительно одобрен!
-                    </h1>
 
                     <div class="flow-greeting mb-40 mb-sm-20">
                         <div class="flow-greeting__text">
@@ -74,7 +74,7 @@
                                 <div class="form-item">
                                     <div class="form-item__label">Дата выдачи</div>
                                     <div class="form-input">
-                                        <input type="date" id="passport-date" placeholder="ДД.ММ.ГГ" required>
+                                        <input type="text" id="passport-date" class="input-date" placeholder="ДД.ММ.ГГГГ" required>
                                     </div>
                                     <div class="input-error">Обязательное поле</div>
                                 </div>
@@ -110,7 +110,7 @@
                                 <span>Адрес регистрации совпадает с моим фактическим местом жительства</span>
                             </label>
                             
-                            <div class="form-item fact-address mt-10 mt-md-10 mb-40">
+                            <div class="form-item fact-address mt-10 mt-md-10 mb-20">
                                 <div class="form-item__label">Адрес фактического места жительства</div>
                                 <div class="form-input">
                                     <input type="text" id="fact-address" placeholder="Введите адрес фактического проживания" required>
@@ -118,7 +118,7 @@
                                 <div class="input-error">Обязательное поле</div>
                             </div>
 
-                            <a href="flow-photo.html" class="btn js-form-btn"> <span class="for-desktop">Перейти&nbsp;</span> к следующему шагу</a>
+                            <a href="flow-photo.html" class="btn js-form-btn mt-40">Перейти к следующему шагу</a>
 
                         </form>
                     </div>

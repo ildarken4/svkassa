@@ -27,7 +27,7 @@
         <title>СверхКасса – Вход в личный кабинет</title>
     </head>
     
-    <body>
+    <body onload="startEmailTimer()">
         <header class="header">
             <div class="container">
                 <div class="header-content"> <a href="index.html" class="logo">
@@ -109,15 +109,21 @@
                         Вход в личный кабинет
                     </h1>
 
-                        <div class="flow-info">
-                            <div class="flow-card">
+                        <div class="flow-forms">
+                            <div class="flow-login">
                                 <p class="flow-info__text text-grey mb-20 mt-20 mt-sm-0">SMS с кодом подтверждения отправлен на&nbsp;указанный номер.</p>
-                                <p class="flow-info__text text-blue mb-40">+7 (912)345-67-89</p>
+                                <p class="flow-info__text text-darkblue mb-40">+7 (912)345-67-89</p>
                                 <form action="">
                                     <div class="form-item mb-40">
+                                        <div class="form-item__label">Введите код</div>
                                         <div class="form-input">
                                             <input type="number" id="login-code" placeholder="Введите код">
                                         </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center flex-column">
+                                        <div class="popup-timer mb-">59</div> <a class="resend underlined text-darkblue btn-disabled popup-email-button text-600 mt-20 mb-40"
+                                        onclick="startEmailTimer()">Отправить ещё раз</a>
+
                                     </div> <a href="login-password.html" class="btn mb-20 mb-sm-0">Войти</a>
 
                                 </form>
@@ -156,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="footer__body text-grey pt-40 pb-20">
+                    <div class="footer__body text-grey pt-40 pb-20 pb-sm-0">
                         <div class="row">
                             <div class="col-lg-4 mb-md-20">
                                 <p class="mb-10">ИНН: <span>2310226690</span>
@@ -246,7 +252,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 offset-lg-1 mb-md-20">
+                            <div class="col-lg-3 offset-lg-1 mb-md-20 mb-sm-0">
                                 <div class="footer-menu mb-40">
                                     <div class="footer-menu__title">Финансовый уполномоченный</div>
                                     <div class="footer-menu__item"> <a href="" target="_blank">Порядок обращения к финансовому уполномоченному</a>
@@ -271,7 +277,7 @@
 
                                     </div>
                                 </div>
-                                <div class="footer-menu mb-40">
+                                <div class="footer-menu mb-40 mb-sm-0">
                                     <div class="footer-menu__title">Виды займов</div>
                                     <div class="footer-menu__item"> <a href="" target="_blank">Паспорт-Займ</a>
 
@@ -287,7 +293,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="container">
-                    <div class="footer-bottom__line mb-10"></div>
+                    <div class="footer-bottom__line ml-16 mb-10"></div>
                     <div class="row">
                         <div class="col-lg-9 mb-10">
                             <p>Общество с ограниченной ответственностью Микрокредитная компания «СверхЗайм»

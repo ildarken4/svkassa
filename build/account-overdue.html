@@ -60,14 +60,14 @@
                     <div class="account-top__title mb-20">У вас есть активный заем</div>
                     <div class="account-top__overdue mb-20">Платеж просрочен на <span>19</span> дней</div>
                     <div class="account-top__buttons">
-                        <button class="btn btn-small bg-lightgrey">Задайте пароль
+                        <button class="btn btn-small" onclick="openModal('set-password-modal')">Задайте пароль
                             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
                             viewBox="0 0 21 20" fill="none">
                                 <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z"
                                 fill="#151515" />
                             </svg>
                         </button>
-                        <button class="btn btn-small bg-lightgrey">Подтвердите почту
+                        <button class="btn btn-small" onclick="openModal('email-confirm-modal'); startEmailTimer()">Подтвердите почту
                             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
                             viewBox="0 0 21 20" fill="none">
                                 <path d="M10.9587 18L9.35714 16.3175L14.154 11.2289H2.5V8.77113H14.154L9.35714 3.69072L10.9587 2L18.5 10L10.9587 18Z"
@@ -105,7 +105,8 @@
                         <div class="col-lg-6 col-md-6 pr-0 pl-md-10 pl-sm-0">
                             <div class="account-body__card d-flex flex-column align-items-center justify-content-center">
                                 <form action="" class="payment-form">
-                                    <input type="text" class="mb-10 account-pay" placeholder="Введите сумму">
+                                    <input type="text" class="mb-10 account-pay" placeholder="Введите сумму"
+                                    value="2100">
                                     <button class="btn mb-30">Оплатить</button>
                                     <div class="text-darkblue account-body__link schedule-btn">График платежей
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
@@ -327,6 +328,50 @@
                                     <div class="schedule-row__data"><span>2500</span> руб.</div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="password-success-modal">
+                <div class="popup popup-small bg-lightgrey">
+                    <div class="popup__top">
+                        <div class="popup__title">Задайте пароль</div>
+                        <button class="modal-close" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="popup__content">
+                        <div class="popup-result-text success mb-40">Пароль успешно создан</div>
+                        <div class="popup-result-image mb-80 mb-md-40">
+                            <img src="images/icons/success-shield.png" alt="иконка результат">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="email-confirm-modal">
+                <div class="popup popup-small">
+                    <div class="popup__top">
+                        <div class="popup__title">Подтвердите почту</div>
+                        <button class="modal-close" onclick="closeModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                                <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="popup__content">
+                        <p class="mb-20 text-grey">Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите
+                            по ссылке в письме для завершения процесса подтверждения. Если вы уже подтвердили
+                            свою почту, обновите страницу.</p>
+                        <div class="user-email text-darkblue mb-40">V<span>*****</span>a@mail.ru</div>
+                        <div class="popup-timer mb-20">59 секунд</div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-disabled popup-email-button">Отправить ещё раз</button>
                         </div>
                     </div>
                 </div>

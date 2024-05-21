@@ -90,9 +90,18 @@ if (numberInput) {
 
 }
 
-let dateInputs = document.querySelectorAll('.masked-date');
+let dateInputs = document.getElementsByClassName('input-date');
 if (dateInputs) {
-    Inputmask({"mask": "99.99.9999"}).mask(dateInputs);
+    Inputmask(
+    {
+        alias: 'datetime',
+        rightAlign: false,
+        allowPlus: false,
+        allowMinus: false,
+        digits: 0,
+        placeholder: "__.__.____",
+        inputFormat: "dd.mm.yyyy"
+    }).mask(dateInputs);
 }
 
 let codeInput = document.getElementById('passport-code');
@@ -664,20 +673,30 @@ function startEmailTimer() {
     clearInterval(timer); // Остановка предыдущего таймера, если он существует
 
     let seconds = 59;
-    const button = document.querySelector('.popup-email-button');
-    button.classList.add('btn-disabled');
+    const buttons = document.querySelectorAll('.popup-email-button');
+
+    buttons.forEach(function(button) {
+        button.classList.add('btn-disabled');
+    }) 
+    
     // Функция обновления таймера
     function updateTimer() {
-        const timerElement = document.querySelector('.popup-timer');
+        const timerElements = document.querySelectorAll('.popup-timer');
         
 
         if (seconds >= 0) {
             const secondsText = getSecondsText(seconds);
-            timerElement.textContent = seconds + ' ' + secondsText;
+
+            timerElements.forEach(function (timerElement) {
+                timerElement.textContent = seconds + ' ' + secondsText;
+            })
             seconds--;
         } else {
             clearInterval(timer);
-            button.classList.remove('btn-disabled');
+            buttons.forEach(function(button) {
+                button.classList.remove('btn-disabled');
+            })
+            
         }
     }
 
@@ -700,15 +719,17 @@ function getSecondsText(seconds) {
 
 // Обработчик клика по кнопке
 
-const popupEmailButton = document.querySelector('.popup-email-button');
+const popupEmailButtons = document.querySelectorAll('.popup-email-button');
 
-if (popupEmailButton) {
-    popupEmailButton.addEventListener('click', function () {
-        if (!this.classList.contains('btn-disabled')) {
-            this.classList.add('btn-disabled');
-            startEmailTimer();
-        }
-    });
+if (popupEmailButtons) {
+    popupEmailButtons.forEach(function(popupEmailButton) {
+        popupEmailButton.addEventListener('click', function () {
+            if (!this.classList.contains('btn-disabled')) {
+                this.classList.add('btn-disabled');
+                startEmailTimer();
+            }
+        });
+    })
 }
 
 
@@ -736,19 +757,23 @@ if(hintedInputs) {
 const passwordField = document.querySelector('.show-password');
 
 if (passwordField) {
+    
     let formInputs = document.querySelectorAll('.form-input');
 
     formInputs.forEach(function(formInput) {
         var showPassword = formInput.querySelector('.show-password'); 
         var input = formInput.querySelector('input[type="password"]');
 
-        showPassword.addEventListener('click', function() {
-            if (input.type === 'password') {
-                input.type = 'text';
-            } else {
-                input.type = 'password';
-            }
-        });
+        if (showPassword) {
+            showPassword.addEventListener('click', function() {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                } else {
+                    input.type = 'password';
+                }
+            });
+        }
+        
     });
 }
 
@@ -1102,4 +1127,16 @@ if (doubleCheckbox) {
     doubleCheckbox.addEventListener('click', function () {
         doubleCheckbox.classList.add('active');
     })
+}
+
+// Шкала процентов вероятности одобрения flow 
+
+const probability = document.querySelector('.probability');
+
+if (probability) {
+    let probabilityValue = probability.querySelector('.probability__percent span').textContent;
+    let probabilityScale = probability.querySelector('.probability-scale__fill');
+
+    probabilityScale.setAttribute('style', 'width: '+ probabilityValue + '%')
+    
 }
