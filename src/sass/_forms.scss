@@ -66,6 +66,16 @@ label {
     }
   }
 
+  textarea {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: $lightgrey;
+    border: none;
+    outline: none;
+  }
+
   input[type="password"],
   input.password-input{
     width: 100%;
@@ -509,14 +519,7 @@ input[type="file"] {
 .double-checkbox {
   cursor: pointer;
 
-  label {
-    pointer-events: none;
-  }
-
   &.active {
-    label {
-      pointer-events: all;
-    }
 
     .custom-checkbox {
       filter: grayscale(1);
@@ -543,4 +546,48 @@ input[type="file"] {
 }
 ::placeholder { /* Most modern browsers support this now. */
    color: $grey;
+}
+
+.loaded-files {
+  flex-basis: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &.active {
+    margin-top: 30px;
+  }
+  
+  &__item {
+    background-color: $lightgrey;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $darkblue;
+    padding: 13px;
+    font-size: 20px;
+    flex-basis: calc(50% - 10px);
+    max-width: calc(50% - 10px);;
+    margin-bottom: 20px;
+
+    .appeal-file {
+      width: 80%;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-basis: 100%;
+      max-width: 100%;
+      font-size: 16px;
+    }
+  }
+  .delete-file {
+    cursor: pointer;
+  }
 }

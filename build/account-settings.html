@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <title>CreditBooster – Личный кабинет</title>
+    </head>
+    
+    <body>
+        <header class="header header-account">
+            <div class="container">
+                <div class="header-content"> <a href="index.html" class="logo">
+            <picture>
+                <source media="(min-width: 992px)" srcset="images/Logo.svg">
+                <source media="(max-width: 991px)" srcset="images/logo-mobile.png">
+                <img src="images/logo-mobile.png" alt="логотип">
+            </picture>
+          </a>
+
+                    <button class="btn btn-small btn-transparent logout-btn"> <span class="mr-10">Выйти</span>
+
+                        <svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="authorization">
+                                <path id="Vector" d="M17 15L20 12M20 12L17 9M20 12H9M20 7.24802V7.2002C20 6.08009 20 5.51962 19.782 5.0918C19.5903 4.71547 19.2845 4.40973 18.9082 4.21799C18.4804 4 17.9199 4 16.7998 4H7.1998C6.0797 4 5.52043 4 5.09261 4.21799C4.71628 4.40973 4.40952 4.71547 4.21777 5.0918C4 5.5192 4 6.07899 4 7.19691V16.8036C4 17.9215 4 18.4805 4.21777 18.9079C4.40952 19.2842 4.71628 19.5905 5.09261 19.7822C5.52001 20 6.079 20 7.19691 20H16.8031C17.921 20 18.4808 20 18.9082 19.7822C19.2845 19.5905 19.5903 19.2839 19.782 18.9076C20 18.4798 20 17.9201 20 16.8V16.75"
+                                stroke="#00CCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="wrapper account-wrapper">
+            <div class="container pt-60 pt-md-40">
+                <div class="account-content account-settings mb-60">
+                     <h1 class="mb-40 mb-md-20">Личный кабинет</h1>
+
+                    <div class="row align-items-center mb-40">
+                        <div class="col-lg-3">ФИО:</div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item">
+                                <div class="account-settings__name">Фамилия</div>
+                                <div class="account-settings__data">Иванов</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item">
+                                <div class="account-settings__name">Имя</div>
+                                <div class="account-settings__data">Иван</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item">
+                                <div class="account-settings__name">Отчество</div>
+                                <div class="account-settings__data">Иванович</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-40">
+                        <div class="col-lg-3">Контакты:</div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item">
+                                <div class="account-settings__name">Телефон</div>
+                                <div class="account-settings__data">
+                                    <div>8 (915) 422 65-56</div>
+                                    <div class="" onclick="openModal('change-phone-modal')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                            <path d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item">
+                                <div class="account-settings__name">Почта</div>
+                                <div class="account-settings__data">
+                                    <div>i***an@mail.ru</div>
+                                    <div onclick="openModal('change-phone-modal')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                            <path d="M12.5 20.6951H18.5M6.50736 19.6951H5C4.44772 19.6951 4 19.2474 4 18.6951V17.1877C4 16.3921 4.31607 15.629 4.87868 15.0664L14.75 5.19511C15.7855 4.15957 17.4645 4.15957 18.5 5.19511C19.5355 6.23064 19.5355 7.90957 18.5 8.94511L8.62868 18.8164C8.06607 19.379 7.30301 19.6951 6.50736 19.6951Z"
+                                            stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item account-settings__change" onclick="openModal('email-confirm-modal'); startEmailTimer()">
+                                <div class="">Подтвердить почту</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M2.57178 11.9999L21.428 11.9999M21.428 11.9999L11.9999 21.428M21.428 11.9999L11.9999 2.5718"
+                                    stroke="#00CCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                            <!-- После подтверждения вместо верхнего элемента __change появляется
+                            нижний элемент __success, сейчас скрыт классом d-none -->
+                            <div class="account-settings__item account-settings__success d-none">
+                                <div class="">Почта подтверждена</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">Редактирование данных:</div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item account-settings__change for-desktop"
+                            onclick="openModal('change-phone-modal')">
+                                <div class="">Изменить номер телефона</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M2.57178 11.9999L21.428 11.9999M21.428 11.9999L11.9999 21.428M21.428 11.9999L11.9999 2.5718"
+                                    stroke="#00CCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item account-settings__change for-desktop"
+                            onclick="openModal('change-email-modal')">
+                                <div class="">Изменить почту</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M2.57178 11.9999L21.428 11.9999M21.428 11.9999L11.9999 21.428M21.428 11.9999L11.9999 2.5718"
+                                    stroke="#00CCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="account-settings__item account-settings__change" onclick="openModal('set-password-modal')">
+                                <div class="">Изменить пароль</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M2.57178 11.9999L21.428 11.9999M21.428 11.9999L11.9999 21.428M21.428 11.9999L11.9999 2.5718"
+                                    stroke="#00CCFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="set-password-modal">
+            <div class="popup popup-small bg-lightgrey">
+                <div class="popup__top">
+                    <div class="popup__title">Изменить пароль</div>
+                    <button class="modal-close" onclick="closeModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <div class="d-flex justify-content-center">
+                        <form action="" class="popup-form password-form">
+                            <div class="new-password mb-30">
+                                <div class="mb-5">Придумайте пароль</div>
+                                <div class="form-input popup-input js-hinted-input">
+                                    <input type="password" class="password-input" id="new-password" placeholder="Введите пароль"
+                                    autocomplete="off">
+                                    <div class="show-password">
+                                        <img src="images/icons/password-eye.svg" alt="">
+                                    </div>
+                                    <div class="input-hint">
+                                        <div class="input-hint__title">Пароль должен содержать</div>
+                                        <div class="input-hint__text">- 8 символов латинского алфавита (A-z)</div>
+                                        <div class="input-hint__text">- цифры (0-9)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="confirm-password mb-40">
+                                <div class="mb-5">Повторите пароль</div>
+                                <div class="form-input popup-input">
+                                    <input type="password" class="password-input" id="confirm-password" placeholder="Введите пароль"
+                                    autocomplete="off">
+                                    <div class="show-password">
+                                        <img src="images/icons/password-eye.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="input-error">Пароли не совпадают</div>
+                            </div>
+                            <button class="btn btn-disabled popup-password-button">Подтвердить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="email-confirm-modal">
+            <div class="popup popup-small">
+                <div class="popup__top">
+                    <div class="popup__title">Подтвердите почту</div>
+                    <button class="modal-close" onclick="closeModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <p class="mb-20 text-grey">Мы отправили вам письмо с подтверждением на вашу почту. Пожалуйста, перейдите
+                        по ссылке в письме для завершения процесса подтверждения. Если вы уже подтвердили
+                        свою почту, обновите страницу.</p>
+                    <div class="user-email text-ruby mb-40">V<span>*****</span>a@mail.ru</div>
+                    <div class="popup-timer mb-20">59 секунд</div>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-disabled popup-email-button">Отправить ещё раз</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="change-phone-modal">
+            <div class="popup popup-small bg-lightgrey">
+                <div class="popup__top">
+                    <div class="popup__title">Изменить телефон</div>
+                    <button class="modal-close" onclick="closeModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <div class="d-flex justify-content-center">
+                        <form action="" class="popup-form">
+                            <div class="mb-40">
+                                <div class="mb-5">Новый номер телефона</div>
+                                <div class="form-input popup-input">
+                                    <input type="tel" class="password-input" id="change-phone" placeholder="Введите номер"
+                                    required autocomplete="off">
+                                </div>
+                            </div>
+                            <button class="btn">Подтвердить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="change-email-modal">
+            <div class="popup popup-small bg-lightgrey">
+                <div class="popup__top">
+                    <div class="popup__title">Изменить почту</div>
+                    <button class="modal-close" onclick="closeModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#151515"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <div class="d-flex justify-content-center">
+                        <form action="" class="popup-form">
+                            <div class="mb-40">
+                                <div class="mb-5">Новая почта</div>
+                                <div class="form-input popup-input">
+                                    <input type="email" class="password-input" id="change-email" placeholder="Введите почту"
+                                    required autocomplete="off">
+                                </div>
+                            </div>
+                            <button class="btn">Подтвердить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notification success"> <span>Изменения внесены</span>
+
+            <img src="images/buttons/account-menu-close.svg"
+            alt="закрыть">
+        </div>
+        <footer></footer>
+        <script src="./js/swiper-bundle.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/inputmask.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+
+</html>

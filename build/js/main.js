@@ -872,15 +872,56 @@ if (fileInputs) {
 
             if (this.files && this.files.length > 0) {
                 const fileName = this.files[0].name;
-                fileNameDisplay.textContent = fileName;
-                nextFileBtn.classList.remove('btn-disabled');
+                if (fileNameDisplay) {
+                    fileNameDisplay.textContent = fileName;
+                }
+                if (nextFileBtn) {
+                    nextFileBtn.classList.remove('btn-disabled');
+                }
                 if (nextStepBtn) {
                     if (!nextStepBtn.classList.contains('d-none')) {
                         nextStepBtn.classList.remove('btn-disabled');
                     }
                 }
             } else {
-                fileNameDisplay.textContent = '';
+                if (fileNameDisplay) {
+                    fileNameDisplay.textContent = '';
+                }
+            }
+
+            var filesContainer = document.querySelector('.loaded-files');
+
+            if(filesContainer) {
+                filesContainer.classList.add('active');
+                var files = fileInput.files;
+        
+                for (var i = 0; i < files.length; i++) {
+                    var file = files[i];
+                    let fileName = file.name;
+                    var fileItem = document.createElement('div');
+                    let deleteButton = document.createElement('img');
+                    deleteButton.src = '../images/icons/Menu/Close_MD.svg';
+                    deleteButton.classList.add('delete-file');
+                    fileItem.classList.add('loaded-files__item');
+
+                    let fileNameBlock = document.createElement('div');
+                    fileNameBlock.classList.add('appeal-file');
+                    fileNameBlock.textContent = fileName;
+                    fileItem.appendChild(fileNameBlock);
+                    fileItem.appendChild(deleteButton);
+                    filesContainer.appendChild(fileItem);
+
+                    deleteButton.addEventListener('click', function() {
+                        let fileItems = filesContainer.querySelectorAll('.loaded-files__item');
+
+                        if(fileItems.length == 1) {
+                            filesContainer.classList.remove('active');
+                        }
+
+                        this.parentNode.parentNode.removeChild(this.parentNode);
+                        
+                    })
+                }
             }
         });
     });
@@ -1119,15 +1160,41 @@ if (loansSlider) {
     });
 }
 
-// чекбокс грехопадения (на который нужно два раза нажать чтобы снять)
+// чекбокс на который нужно два раза нажать чтобы снять
+const checkboxes = document.querySelectorAll('.double-checkbox');
 
-const doubleCheckbox = document.querySelector('.double-checkbox');
+if(checkboxes) {
+    
 
-if (doubleCheckbox) {
-    doubleCheckbox.addEventListener('click', function () {
-        doubleCheckbox.classList.add('active');
+    checkboxes.forEach(function (checkbox) {
+        let doubleCheckbox = checkbox.querySelector('input[type="checkbox"]');
+
+        checkbox.addEventListener('click', function (event) {
+
+            if(!this.classList.contains('active')&& doubleCheckbox.checked) {
+                event.preventDefault();
+                this.classList.add('active');
+            } else if (this.classList.contains('active') && doubleCheckbox.checked) {
+                event.preventDefault();
+                this.classList.remove('active');
+                doubleCheckbox.removeAttribute('disabled');
+                doubleCheckbox.removeAttribute('checked');
+                if (doubleCheckbox.id === 'rules') {
+                    nextStepButton.classList.add('btn-disabled');
+                }
+                
+            } else if (!this.classList.contains('active')&& !doubleCheckbox.checked) {
+                event.preventDefault();
+                doubleCheckbox.setAttribute('checked', 'true');
+                if (doubleCheckbox.id === 'rules') {
+                    nextStepButton.classList.remove('btn-disabled');
+                }
+            }
+        });
     })
+    
 }
+      
 
 // Шкала процентов вероятности одобрения flow 
 
@@ -1139,4 +1206,39 @@ if (probability) {
 
     probabilityScale.setAttribute('style', 'width: '+ probabilityValue + '%')
     
+}
+
+// Показать/скрыть обращения на account-my-apepals
+
+const appeals = document.querySelectorAll('.appeals-row');
+
+if(appeals) {
+    function hideAppeals() {
+        for(let i = 0; i<= appeals.length-1 ; i++) {
+            if (i > 4) {
+                appeals[i].classList.add('d-none')
+            }
+        }
+    }
+
+    hideAppeals();
+    
+    
+    const showAppeals = document.querySelector('.show-appeals');
+
+    if(showAppeals) {
+        showAppeals.addEventListener('click', function () {
+            if(!this.classList.contains('active')) {
+                appeals.forEach(function(appeal) {
+                    appeal.classList.remove('d-none');
+                });
+                this.classList.add('active');
+                this.textContent = 'Свернуть';
+            } else {
+                hideAppeals();
+                this.classList.remove('active');
+                this.textContent = 'Показать все обращения';
+            }
+        })
+    }
 }

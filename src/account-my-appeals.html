@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>CreditBooster – Личный кабинет</title>
+</head>
+<body>
+
+<partial src="header-account.html"></partial>
+<div class="wrapper account-wrapper">
+    <div class="container pt-60 pt-md-40">
+         <div class="account-banner mb-40">
+            <div class="account-banner__content">
+                <div class="account-banner__bg"></div>
+                <div class="account-banner__text">
+                    Создать обращение
+                </div>
+                <a href="account-appeal.html" class="account-banner__btn btn btn-transparent btn-rounded">
+                    Создать
+                </a>
+            </div>
+        </div>
+        <div class="account-content mb-60 pb-80 pb-md-40">
+            <h1 class="mb-40 mb-md-20">Мои обращения</h1>
+
+            <!-- Если нет обращений (пока скрыто классом d-none) -->
+
+            <div class="d-flex justify-content-center d-none">
+                <p class="text-grey">Пусто</p>
+            </div>
+
+            <!-- Если есть обращения-->
+
+            <div class="appeals-list">
+                <div class="appeals-row appeals-head">
+                    <div class="appeals-row__item">Дата обращения</div>
+                    <div class="appeals-row__item">Тема обращения</div>
+                    <div class="appeals-row__item">Статус</div>
+                    <div class="appeals-row__item">Ответ</div>
+                </div>
+                <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">02.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Тема 1</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data waiting">Ожидает ответа</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">-</div>
+                    </div>
+                </div>
+
+                <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Кредитные каникулы</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Звонок кредитору</div>
+                    </div>
+                </div>
+
+                <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Кредитные каникулы</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Ответ пришел на вашу почту</div>
+                    </div>
+                </div>
+
+                <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Досрочное погашение займа</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Ответ пришел на вашу почту</div>
+                    </div>
+                </div>
+
+                <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Жалоба</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Звонок кредитору</div>
+                    </div>
+                </div>
+
+                 <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Жалоба</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Звонок кредитору</div>
+                    </div>
+                </div>
+
+                 <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Жалоба</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Звонок кредитору</div>
+                    </div>
+                </div>
+
+                 <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Жалоба</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Звонок кредитору</div>
+                    </div>
+                </div>
+
+                 <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Жалоба</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Звонок кредитору</div>
+                    </div>
+                </div>
+
+                 <div class="appeals-row">
+                    <div class="appeals-row__item date">
+                        <div class="appeals-row__name">
+                            Дата обращения
+                        </div>
+                        <div class="appeals-row__data">01.01.2024</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Тема обращения
+                        </div>
+                        <div class="appeals-row__data">Жалоба</div>
+
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Статус
+                        </div>
+                        <div class="appeals-row__data success">Ответ получен</div>
+                    </div>
+                    <div class="appeals-row__item">
+                        <div class="appeals-row__name">
+                            Ответ
+                        </div>
+                        <div class="appeals-row__data">Звонок кредитору</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-appeals">
+                Показать все обращения
+            </div>
+            
+        </div>
+
+        
+
+
+                
+        <partial src="account-menu.html"></partial>
+    </div>
+</div>
+
+
+<partial src="footer.html"></partial>
+</body>
+</html>

@@ -1,253 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <partial src="head.html"></partial>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>СверхКасса – Главная страница</title>
+  <partial src="head.html"></partial>
+  <title>Верстка</title>
 </head>
 <body>
 
-<partial src="header.html"></partial>
+<partial src="header-flow.html"></partial>
 <div class="wrapper">
-  <section class="hero">
-    <div class="container">
-        <div class="row">
-            <h1 class="text-darkblue uppercase">
-                Быстрые <br> займы онлайн
-            </h1>
-            <div class="hero__left col-lg-6 mb-md-60">
-                
-                <img src="images/hero__image.png" width="100%" alt="изображение главной страницы">
-                
-            </div>
-            
-            <div class="hero__right col-lg-6 col-md-12 p-sm-0">
-                <form class="calculator pt-sm-20" action="">
-                    <div class="calculator__card mb-12">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="title">Сумма</div>
-                            <div class="data"><span class="data__number result-sum">15 000</span></div>
-                        </div>
-                        
-                        <div class="range-slider sum-slider">
-                            
-                            <input type="range" class="styled-slider slider-progress" id="sum-input" min="1500" max="30000" value="10000" step="500"/>
-                            <div class="range-slider__values">
-                                <span class="minimum-scale">1 500 ₽</span>
-                                <span class="maximum-scale">30 000 ₽</span>
-                            </div>
-                        </div>
-                    </div>
+  
+  <div class="container pt-80 pb-80">
+    <ol>
+      <br>
+      <br>
+      <h4 class="mb-20">Личный кабинет</h4>
 
-                    <div class="calculator__card mb-20">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="title">Срок</div>
-                            <div class="data"><span class="data__number calc-days">20</span></div>
-                        </div>
-                        
-                        <div class="range-slider term-slider">
-                            
-                            <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21"/>
-                            <div class="range-slider__values">
-                                <span class="minimum-scale">5 дней</span>
-                                <span class="maximum-scale">30 дней</span>
-                            </div>
-                        </div>
-                    </div>
+      <li class="mb-20"><a href="account-loan.html" class="text-blue underlined ">С займом - аннуитетный</a></li>
+      <li class="mb-20"><a href="account-extend.html" class="text-blue underlined ">С займом pdn</a></li>
+      <li class="mb-20"><a href="account-overdue.html" class="text-blue underlined ">С займом (просрочка)</a></li>
+      <li class="mb-20"><a href="account-without-loan.html" class="text-blue underlined ">Без займа</a></li>
+      <li class="mb-20"><a href="account-my-cards.html" class="text-blue underlined ">Мои карты (1 карта)</a></li>
+      <li class="mb-20"><a href="account-my-cards-2.html" class="text-blue underlined ">Мои карты (2 карты)</a></li>
+      <li class="mb-20"><a href="account-history.html" class="text-blue underlined ">История займов</a></li>
+      <li class="mb-20"><a href="account-docs.html" class="text-blue underlined ">Документы</a></li>
+      <li class="mb-20"><a href="account-files.html" class="text-blue underlined ">Файлы</a></li>
+      <li class="mb-20"><a href="account-updating.html" class="text-blue underlined ">Актуализация данных</a></li>
+      <li class="mb-20"><a href="account-updating-email.html" class="text-blue underlined ">Актуализация Email</a></li>
+      <li class="mb-20"><a href="account-updating-job.html" class="text-blue underlined ">Актуализация занятости</a></li>
+      <li class="mb-20"><a href="account-updating-passport.html" class="text-blue underlined ">Актуализация паспортных данных</a></li>
+      <li class="mb-20"><a href="account-updating-photos.html" class="text-blue underlined ">Актуализация фото паспорта</a></li>
+      <li class="mb-20"><a href="account-considering.html" class="text-blue underlined ">Заявка рассматривается</a></li>
+      <li class="mb-20"><a href="account-denied.html" class="text-blue underlined ">Заявка - отказ</a></li>
+      <li class="mb-20"><a href="account-approved.html" class="text-blue underlined ">Заявка - одобрение</a></li>
+      <li class="mb-20"><a href="account-transfer.html" class="text-blue underlined ">Заявка - Перевод денег</a></li>
+      <li class="mb-20"><a href="account-file-error.html" class="text-blue underlined ">Заявка - Файл не прошел проверку</a></li>
+      <li class="mb-20"><a href="account-my-appeals.html" class="text-blue underlined ">Мои обращения</a></li>
+      <li class="mb-20"><a href="account-appeal.html" class="text-blue underlined ">Создать обращение</a></li>
+      <li class="mb-20"><a href="account-settings.html" class="text-blue underlined ">Настройки аккаунта</a></li>
 
-                    <div class="calculator-result d-flex justify-content-between mb-12">
-                        <div class="result-item">
-                            <div class="result-head mb-10">Сумма займа:</div>
-                            <div class="result-number result-sum">15 000 ₽</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-head mb-10">Срок займа до:</div>
-                            <div class="result-number result-date">12.09.23</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-head mb-10">К возврату:</div>
-                            <div class="result-number result-sum mr-8">15 000 ₽</div>
-                        </div>
-                    </div>
 
-                    <div class="calculator__phone mb-40">
-                        <div class="text-500 text-24 mb-15 mb-md-5">Ваш номер телефона:</div>
-                        <div class="form-input calculator-input">
-                            <input type="tel" id="calculator-phone" placeholder="Введите ваш номер" required>
-                        </div>
-                        <div class="input-error">Ошибка</div>
-                    </div>
-                    
-                    <button class="btn mb-20">Получить заём</button>
+      <br>
+      <br>
+      <h4 class="mb-20">Получить заём</h4>
 
-                    <div class="double-checkbox">
-                        <div class="d-flex mb-16">
-                            <label for="rules" class="">
-                                <input type="checkbox" id="rules" required checked>
-                                <span class="custom-checkbox"></span>
-                                <span>Я ознакомлен и согласен со </span>
-                                <a class="show-rules text-blue underlined">следующим</a>
-                            </label>
-                        </div>
+      <li class="mb-20"><a href="flow-login.html" class="text-blue underlined ">Шаг 0 - Регистрация</a></li>
+      <li class="mb-20"><a href="flow-contact.html" class="text-blue underlined ">Шаг 1 - Контактная информация</a></li>
+      <li class="mb-20"><a href="flow-passport.html" class="text-blue underlined ">Шаг 2 - Паспортные данные</a></li>
+      <li class="mb-20"><a href="flow-photo.html" class="text-blue underlined ">Шаг 3 - Фото документов</a></li>
+      <li class="mb-20"><a href="flow-job.html" class="text-blue underlined ">Шаг 4 - Место работы</a></li>
+      <li class="mb-20"><a href="flow-add-card.html" class="text-blue underlined ">Добавить карту</a></li>
+      <li class="mb-20"><a href="flow-card-added.html" class="text-blue underlined ">Карта добавлена</a></li>
+      <li class="mb-20"><a href="flow-card-photo.html" class="text-blue underlined ">Шаг 5 - Фото карты</a></li>
+      <li class="mb-20"><a href="flow-calculator.html" class="text-blue underlined ">Калькулятор</a></li>
+      <li class="mb-20"><a href="flow-considering.html" class="text-blue underlined ">Рассмотрение заявки</a></li>
+      <li class="mb-20"><a href="flow-file-error.html" class="text-blue underlined ">Файл не прошел проверку</a></li>
+      <li class="mb-20"><a href="flow-denied.html" class="text-blue underlined ">Отказ</a></li>
+      <li class="mb-20"><a href="flow-approved.html" class="text-blue underlined ">Одобрение</a></li>
+      <li class="mb-20"><a href="flow-transfer.html" class="text-blue underlined ">Перевод денег</a></li>
 
-                        <div class="hidden-checkbox">
-                            <label for="agreement-personal" class="mb-10">
-                                <input type="checkbox" id="agreement-personal" checked>
-                                <span class="custom-checkbox"></span>
-                                <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">обработку и передачу персональных данных</a> </span>
-                            </label>
-                            
-                            <label for="agreement-sign">
-                                <input type="checkbox" id="agreement-sign" checked>
-                                <span class="custom-checkbox"></span>
-                                <span>Даю свое согласие на&nbsp;<a href="#" class="text-black underlined">использование аналога собственноручной подписи</a> </span>
-                            </label>
-                            <div class="hide-rules mt-20">Свернуть</div>
-                        </div>
-                    </div>
-                   
+      <br>
+      <br>
+      <h4 class="mb-20">Внести платеж</h4>
 
-                </form>
-            </div>
-        </div>
-    </div>
-  </section>
+      <li class="mb-20"><a href="payment.html" class="text-blue underlined ">Выбрать способ</a></li>
+      <li class="mb-20"><a href="payment-form.html" class="text-blue underlined ">Форма для поиска договора</a></li>
+      <li class="mb-20"><a href="payment-registered-contract.html" class="text-blue underlined ">Платеж - Зарегистрированный пользователь с контрактом</a></li>
+      <li class="mb-20"><a href="payment-registered-no-contract.html" class="text-blue underlined ">Платеж - Зарегистрированный пользователь без контракта</a></li>
+      <li class="mb-20"><a href="payment-not-registered.html" class="text-blue underlined ">Платеж - Незарегистрированный пользователь</a></li>
 
-  <section class="learn pt-60 pt-md-0 pb-60 pb-md-25">
-    <div class="container tabs">
-        <ul class="nav nav-tabs" id="learn-tab">
-            <li class="nav-item mr-30 mr-md-0">
-                <button class="nav-link active" id="home-tab">Как получить займ</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="profile-tab">Как погасить займ</button>
-            </li>
-        </ul>
-        <div class="tab-content pt-48 pt-md-0" id="learn-tabs">
-            <div class="tab-pane fade active" id="home" aria-labelledby="home-tab">
-                
-                <div class="row justify-content-center learn__cards pl-100 pr-100 pl-md-0 pr-md-0">
-                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
-                        <h4 class="">Заполните заявку</h4>
-                        <div class="learn__text text-grey">Укажите нужную вам сумму и срок с&nbsp;помощью кредитного калькулятора. Затем нажмите кнопку «Получить заём»</div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
-                        <h4 class="">Дождитесь решения</h4>
-                        <div class="learn__text text-grey">Наши специалисты примут решение&nbsp;о&nbsp;выдаче займа в течение 15&nbsp;минут</div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
-                        <h4 class="">Получите деньги</h4>
-                        <div class="learn__text text-grey">Подтвердите договор с помощью SMS&nbsp;кода, и сразу же получите деньги&nbsp;на&nbsp;карту.</div>
-                    </div>
-                </div>
+      <br>
+      <br>
+      <h4 class="mb-20">Войти</h4>
 
-            </div>
-            <div class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-                
-                <div class="row justify-content-center learn__cards pl-100 pr-100 pl-md-0 pr-md-0">
-                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
-                        <h4 class="">Дождитесь решения</h4>
-                        <div class="learn__text text-grey">Наши специалисты примут решение&nbsp;о&nbsp;выдаче займа в течение 15&nbsp;минут</div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
-                        <h4 class="">Получите деньги</h4>
-                        <div class="learn__text text-grey">Подтвердите договор с помощью SMS&nbsp;кода, и сразу же получите деньги&nbsp;на&nbsp;карту.</div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 learn__card mb-md-20">
-                        <h4 class="">Заполните заявку</h4>
-                        <div class="learn__text text-grey">Укажите нужную вам сумму и срок с&nbsp;помощью кредитного калькулятора. Затем нажмите кнопку «Получить заём»</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </section>
+      <li class="mb-20"><a href="login.html" class="text-blue underlined ">Номер телефона</a></li>
+      <li class="mb-20"><a href="login-sms.html" class="text-blue underlined ">Смс-код</a></li>
+      <li class="mb-20"><a href="login-password.html" class="text-blue underlined ">Пароль</a></li>
+      <li class="mb-20"><a href="login-password-email.html" class="text-blue underlined ">Восстановить пароль через Email</a></li>
+      <li class="mb-20"><a href="login-new-password.html" class="text-blue underlined ">Восстановление пароля</a>
+      </li>
 
-  <section class="pt-75 pb-75">
-    <div class="container">
-        <div class="row">
-            <div class="about col-lg-6 offset-lg-3 text-center mb-50">
-                <h2 class="mb-20">О компании Легкозайм</h2>
-                <div class="text-grey text-500 mb-40">
-                    Онлайн-займы — это микрокредиты на сумму от 1000 до 30 000 сроком от 1 до 16 дней c процентной ставкой от 0% до 1% в день. Заёмщик получает деньги на свою карту сразу после одобрения заявки, поданной онлайн на сайте. 
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button class="btn btn-rounded btn-transparent" onclick="openModal('conditions-modal')">Условия займа</button>
-                </div>
-            </div>
-        </div>
-        
-        <partial src="main-info-desktop.html"></partial>
-        <partial src="main-info-mob.html"></partial>
-        
-        
-    </div>
-  </section>
+      <br>
+      <br>
+      <h4 class="mb-20">Получить заем</h4>
 
-  <section class="contacts pb-150">
-    <div class="container">
-        <h2 class="mb-20 text-center">Остались вопросы?</h2>
-        <div class="text-center text-grey mb-50 mb-md-20">Свяжитесь с нами</div>
-        <div class="d-flex justify-content-center">
-            <div class="custom-column-big d-flex">
-                <div class="contacts__card">
-                    <div class="d-flex justify-content-between">
-                        <div class="uppercase">Телефон</div>
-                        <div class="">
-                            <img src="images/icons/Communication/Phone.svg" alt="">
-                        </div>
-                    </div>
-                    <a href="tel:+79123456789" class="text-blue text-24">+7 (912) 345-67-89</a>
-                </div>
-                <div class="contacts__card">
-                    <div class="d-flex justify-content-between">
-                        <div class="uppercase">Почта</div>
-                        <div class="">
-                            <img src="images/icons/Communication/Mail.svg" alt="">
-                        </div>
-                    </div>
-                    <a href="mailto:info@creditboost.com" class="text-blue uppercase text-24">info@creditboost.com</a>
-                </div>
-            </div>
-        </div>
-    </div>
-  </section>
-</div>
+      <li class="mb-20"><a href="get-loan.html" class="text-blue underlined ">По номеру есть ЛК</a></li>
+      <li class="mb-20"><a href="get-loan-sms.html" class="text-blue underlined ">Смс-код</a></li>
+      <li class="mb-20"><a href="get-loan-password.html" class="text-blue underlined ">Создать пароль</a></li>
+    </ol>
+    
+    
+  </div>
 
-<div class="modal" id="conditions-modal">
-    <div class="popup">
-        <div class="popup__top mb-40 mb-md-20">
-            <div class="popup__title">
-                Условия займа
-            </div>
-            <div class="btn btn-rounded btn-transparent for-desktop" onclick="closeModal()">
-                Закрыть
-            </div>
-            <div class="close-popup for-devices" onclick="closeModal()">
-                <img src="images/icons/cross-mobile.svg" alt="">
-            </div>
-        </div>
-        
-        <div class="popup__content mb-100">
-            <ul>
-                <li class="d-flex mb-20">
-                    <span>1.&nbsp;</span>
-                    <span>Укажите нужную вам сумму и срок с помощью кредитного калькулятора. <br> Затем нажмите кнопку «Получить заём»</span>
-                </li>
-                <li class="d-flex mb-20">
-                    <span>2.&nbsp;</span>
-                    <span>Наши специалисты примут решение о выдаче займа в течение 15 минут</span>
-                </li>
-                <li class="d-flex ">
-                    <span>3.&nbsp;</span>
-                    <span>Подтвердите договор с помощью SMS кода, и сразу же получите деньги на карту</span>
-                </li>
-            </ul>
-            <button class="btn mb-20 mt-40 for-devices">Получить заём</button>
-        </div>
-    </div>
-</div>
-
-<partial src="main-footer.html"></partial>
+<partial src="footer.html"></partial>
 </body>
 </html>
