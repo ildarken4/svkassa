@@ -857,94 +857,94 @@ if (dateInput) {
 }
 
 
-// Вывод названия загруженного файла для input[type="file"] и переключение между загржаемыми фото
-const fileInputs = document.querySelectorAll('input[type="file"]');
-const nextStepBtn = document.querySelector('.next-step');
+// // Вывод названия загруженного файла для input[type="file"] и переключение между загржаемыми фото
+// const fileInputs = document.querySelectorAll('input[type="file"]');
+// const nextStepBtn = document.querySelector('.next-step');
 
-if (fileInputs) {
-    const nextFileBtn = document.querySelector('.next-file');
+// if (fileInputs) {
+//     const nextFileBtn = document.querySelector('.next-file');
 
-    fileInputs.forEach(function (fileInput) {
-        fileInput.addEventListener('change', function () {
-            const label = this.closest('label'); // Находим ближайший родительский элемент label
-            const fileNameDisplay = label.querySelector('.file-name'); // Находим элемент .file-name внутри label
+//     fileInputs.forEach(function (fileInput) {
+//         fileInput.addEventListener('change', function () {
+//             const label = this.closest('label'); // Находим ближайший родительский элемент label
+//             const fileNameDisplay = label.querySelector('.file-name'); // Находим элемент .file-name внутри label
 
 
-            if (this.files && this.files.length > 0) {
-                const fileName = this.files[0].name;
-                if (fileNameDisplay) {
-                    fileNameDisplay.textContent = fileName;
-                }
-                if (nextFileBtn) {
-                    nextFileBtn.classList.remove('btn-disabled');
-                }
-                if (nextStepBtn) {
-                    if (!nextStepBtn.classList.contains('d-none')) {
-                        nextStepBtn.classList.remove('btn-disabled');
-                    }
-                }
-            } else {
-                if (fileNameDisplay) {
-                    fileNameDisplay.textContent = '';
-                }
-            }
+//             if (this.files && this.files.length > 0) {
+//                 const fileName = this.files[0].name;
+//                 if (fileNameDisplay) {
+//                     fileNameDisplay.textContent = fileName;
+//                 }
+//                 if (nextFileBtn) {
+//                     nextFileBtn.classList.remove('btn-disabled');
+//                 }
+//                 if (nextStepBtn) {
+//                     if (!nextStepBtn.classList.contains('d-none')) {
+//                         nextStepBtn.classList.remove('btn-disabled');
+//                     }
+//                 }
+//             } else {
+//                 if (fileNameDisplay) {
+//                     fileNameDisplay.textContent = '';
+//                 }
+//             }
 
-            var filesContainer = document.querySelector('.loaded-files');
+//             var filesContainer = document.querySelector('.loaded-files');
 
-            if(filesContainer) {
-                filesContainer.classList.add('active');
-                var files = fileInput.files;
+//             if(filesContainer) {
+//                 filesContainer.classList.add('active');
+//                 var files = fileInput.files;
         
-                for (var i = 0; i < files.length; i++) {
-                    var file = files[i];
-                    let fileName = file.name;
-                    var fileItem = document.createElement('div');
-                    let deleteButton = document.createElement('img');
-                    deleteButton.src = '../images/icons/Menu/Close_MD.svg';
-                    deleteButton.classList.add('delete-file');
-                    fileItem.classList.add('loaded-files__item');
+//                 for (var i = 0; i < files.length; i++) {
+//                     var file = files[i];
+//                     let fileName = file.name;
+//                     var fileItem = document.createElement('div');
+//                     let deleteButton = document.createElement('img');
+//                     deleteButton.src = '../images/icons/Menu/Close_MD.svg';
+//                     deleteButton.classList.add('delete-file');
+//                     fileItem.classList.add('loaded-files__item');
 
-                    let fileNameBlock = document.createElement('div');
-                    fileNameBlock.classList.add('appeal-file');
-                    fileNameBlock.textContent = fileName;
-                    fileItem.appendChild(fileNameBlock);
-                    fileItem.appendChild(deleteButton);
-                    filesContainer.appendChild(fileItem);
+//                     let fileNameBlock = document.createElement('div');
+//                     fileNameBlock.classList.add('appeal-file');
+//                     fileNameBlock.textContent = fileName;
+//                     fileItem.appendChild(fileNameBlock);
+//                     fileItem.appendChild(deleteButton);
+//                     filesContainer.appendChild(fileItem);
 
-                    deleteButton.addEventListener('click', function() {
-                        let fileItems = filesContainer.querySelectorAll('.loaded-files__item');
+//                     deleteButton.addEventListener('click', function() {
+//                         let fileItems = filesContainer.querySelectorAll('.loaded-files__item');
 
-                        if(fileItems.length == 1) {
-                            filesContainer.classList.remove('active');
-                        }
+//                         if(fileItems.length == 1) {
+//                             filesContainer.classList.remove('active');
+//                         }
 
-                        this.parentNode.parentNode.removeChild(this.parentNode);
+//                         this.parentNode.parentNode.removeChild(this.parentNode);
                         
-                    })
-                }
-            }
-        });
-    });
+//                     })
+//                 }
+//             }
+//         });
+//     });
 
-    function nextFile() {
-        // Перебираем элементы с классами .flow-photo-1, .flow-photo-2 и .flow-photo-3
-        for (let i = 1; i <= 3; i++) {
-            const currentPhoto = document.querySelector(`.flow-photo-${i}`);
-            if (!currentPhoto.classList.contains('d-none')) {
-                currentPhoto.classList.add('d-none');
-                const nextPhoto = document.querySelector(`.flow-photo-${i % 3 + 1}`);
-                nextPhoto.classList.remove('d-none');
-                nextFileBtn.classList.add('btn-disabled');
+//     function nextFile() {
+//         // Перебираем элементы с классами .flow-photo-1, .flow-photo-2 и .flow-photo-3
+//         for (let i = 1; i <= 3; i++) {
+//             const currentPhoto = document.querySelector(`.flow-photo-${i}`);
+//             if (!currentPhoto.classList.contains('d-none')) {
+//                 currentPhoto.classList.add('d-none');
+//                 const nextPhoto = document.querySelector(`.flow-photo-${i % 3 + 1}`);
+//                 nextPhoto.classList.remove('d-none');
+//                 nextFileBtn.classList.add('btn-disabled');
 
-                if (i == 2) {
-                    nextFileBtn.classList.add('d-none');
-                    nextStepBtn.classList.remove('d-none');
-                }
-                break;
-            }
-        }
-    }
-}
+//                 if (i == 2) {
+//                     nextFileBtn.classList.add('d-none');
+//                     nextStepBtn.classList.remove('d-none');
+//                 }
+//                 break;
+//             }
+//         }
+//     }
+// }
 
 
 // скрытие лишних полей на странице Место работы если Пенсионер
