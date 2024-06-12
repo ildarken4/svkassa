@@ -24,7 +24,7 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/styles.css" />
-        <title>СверхКасса – Личный кабинет</title>
+        <title>CreditBooster – Личный кабинет</title>
     </head>
     
     <body>
@@ -55,13 +55,17 @@
         <div class="wrapper account-wrapper">
             <div class="container pt-60 pt-md-40">
                 <div class="account-content mb-60">
-                     <h1 class="mb-40 mb-md-20">Изменение паспортных данных</h1>
+                     <h1 class="mb-40 mb-md-20">Ваша заявка рассматривается</h1>
 
-                    <form action="" class="update-photos-form">
-                        <p class="text-center mb-40">Пожалуйста, загрузите следующие фото</p>
-                        <div class="flow-photos mb-40">
+                    <div class="flow-info flow-wrapper">
+                        <div class="flow-info__img">
+                            <img src="images/icons/clock-3d.png" width="100%" alt="часы">
+                        </div>
+                        <p class="flow-info__text text-grey">Файл не прошел проверку.</p>
+                        <p class="flow-info__text text-ruby mb-40">Загрузите новый.</p>
+                        <div class="flow-photos mb-40 flex-wrap ">
                             <div class="flow-photos__item">
-                                <div class="flow-photos__pic">
+                                <div class="flow-photos__pic uploaded-pic">
                                     <img src="images/passport-selfie.png" alt="селфи с паспортом">
                                 </div>
                                 <div class="flow-photos__right">
@@ -78,7 +82,7 @@
                                 </div>
                             </div>
                             <div class="flow-photos__item">
-                                <div class="flow-photos__pic">
+                                <div class="flow-photos__pic uploaded-pic">
                                     <img src="images/passport-photo.png" alt="первый разворот паспорта">
                                 </div>
                                 <div class="flow-photos__right">
@@ -95,7 +99,7 @@
                                 </div>
                             </div>
                             <div class="flow-photos__item">
-                                <div class="flow-photos__pic">
+                                <div class="flow-photos__pic uploaded-pic">
                                     <img src="images/passport-address.png" alt="фото прописки">
                                 </div>
                                 <div class="flow-photos__right">
@@ -111,22 +115,26 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="btn flow-photos__btn mb-40" onclick="openModal('upload-selfie')">Добавить</div>
-                        <div class="form-row gap-20 mt-20"> <a href="account-updating.html" class="btn btn-dashed mb-40 mb-sm-20">
-                            <img src="images/buttons/left-arrow.svg" alt="стрелка">
-                            Назад
-                        </a>
- <a href="account-updating-photos-waiting.html"
-                            class="btn js-form-btn">Сохранить</a>
+                            <div class="flow-photos__item">
+                                <div class="flow-photos__pic uploaded-pic">
+                                    <img src="images/passport-address.png" alt="фото прописки">
+                                </div>
+                                <div class="flow-photos__right">
+                                    <div class="flow-photos__description">Разворот с регистрацией</div>
+                                    <div class="edit-button" onclick="openModal('upload-passport-1')"> <span>Переснять</span>
 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                                            stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
-                </div>
-                <div class="notification error"> <span>Не все поля заполнены</span>
-
-                    <img src="images/buttons/account-menu-close.svg"
-                    alt="ошибка">
+                        <div class="btn mb-20" onclick="openModal('upload-selfie')">Заменить</div>
+                    </div>
                 </div>
             </div>
         </div>

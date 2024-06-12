@@ -591,3 +591,42 @@ input[type="file"] {
     cursor: pointer;
   }
 }
+
+label.upload-photo {
+  max-width: 655px;
+  height: 233px;
+  width: 100%;
+  border: 1px dashed $grey;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .mobile-upload-icon {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    bottom:40px;
+    height: 60px;
+    width: 60px;
+    border:none;
+    border-radius: 50%;
+    background-color: $blue;
+
+    .upload-description,
+    .upload-icon,
+    .upload-format {
+      display: none;
+    }
+    .mobile-upload-icon {
+      display: block;
+    }
+    
+  }
+}
+
+form.add-card-form {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 880px;
+}

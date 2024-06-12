@@ -4,61 +4,28 @@
 <head>
     <partial src="head.html"></partial>
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>СверхКасса – Получить заём</title>
+    <title>CreditBooster – Личный кабинет</title>
 </head>
 
 <body>
 
-    <partial src="header-flow.html"></partial>
-    <div class="wrapper pt-60 pt-sm-50">
-        <div class="container">
-            <div class="d-flex justify-content-center">
-                <div class="flow-wrapper pb-150">
-                    <h1 class="flow-title mb-40 mb-sm-20">
-                        Заполните анкету
-                    </h1>
+    <partial src="header-account.html"></partial>
+    <div class="wrapper account-wrapper">
+        <div class="container pt-60 pt-md-40">
 
-                    <div class="flow-greeting mb-40 mb-sm-20">
-                        <div class="flow-greeting__text">
-                            Ваши данные под надежной защитой!
-                        </div>
-                        <div class="flow-greeting__image">
-                            <img src="images/icons/lock-3d.png" width="100%" alt="защита">
-                        </div>
+            <div class="account-content mb-60">
+                <h1 class="mb-40 mb-md-20">Ваша заявка рассматривается</h1>
+
+               <div class="flow-info flow-wrapper">
+                    <div class="flow-info__img">
+                        <img src="images/icons/clock-3d.png" width="100%" alt="часы">
                     </div>
-
-                    <div class="flow-forms">
-
-                        <div class="probability">
-                            <div class="probability__top">
-                                <div class="">Вероятность одобрения</div>
-                                <div class="probability__percent"><span>65</span>%</div>
-                            </div>
-                            <div class="probability-scale">
-                                <div class="probability-scale__wrapper">
-                                    <div class="probability-scale__fill"></div>
-                                </div>
-                            </div>
-                            <div class="probability__hint">
-                                <img src="images/icons/warning.svg" width="32px" alt="предупреждение">
-                                <span>Пожалуйста, загрузите фото по образцу</span>
-                            </div>
-                        </div>
-
-                        <div class="flow-forms__title">
-                            <h2>Подтверждение личности</h2>
-                            <div class="flow-forms__steps">
-                                Шаг 3 из 5
-                            </div>
-                        </div>
-                        
-                        <p class="text-center mb-40">
-                            Пожалуйста, загрузите следующие фото
-                        </p>
-
-                        <div class="flow-photos mb-40">
+                    <p class="flow-info__text text-grey">Файл не прошел проверку.</p>
+                    <p class="flow-info__text text-ruby mb-40">Загрузите новый.</p>
+                    
+                    <div class="flow-photos mb-40 flex-wrap ">
                             <div class="flow-photos__item">
-                                <div class="flow-photos__pic">
+                                <div class="flow-photos__pic uploaded-pic">
                                     <img src="images/passport-selfie.png" alt="селфи с паспортом">
                                 </div>
                                 <div class="flow-photos__right">
@@ -78,14 +45,14 @@
                                 </div>
                             </div>
                             <div class="flow-photos__item">
-                                <div class="flow-photos__pic">
+                                <div class="flow-photos__pic uploaded-pic">
                                     <img src="images/passport-photo.png" alt="первый разворот паспорта">
                                 </div>
                                 <div class="flow-photos__right">
                                     <div class="flow-photos__description">
                                         Первый разворот паспорта
                                     </div>
-                                    <div class="edit-button">
+                                    <div class="edit-button" onclick="openModal('upload-passport-1')">
                                         <span>Переснять</span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -98,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="flow-photos__item">
-                                <div class="flow-photos__pic">
+                                <div class="flow-photos__pic uploaded-pic">
                                     <img src="images/passport-address.png" alt="фото прописки">
                                 </div>
                                 
@@ -106,7 +73,29 @@
                                     <div class="flow-photos__description">
                                         Разворот с регистрацией
                                     </div>
-                                    <div class="edit-button">
+                                    <div class="edit-button" onclick="openModal('upload-passport-2')">
+                                        <span>Переснять</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                            <path
+                                            d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                                            stroke="#151515" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="flow-photos__item">
+                                <div class="flow-photos__pic uploaded-pic">
+                                    <img src="images/passport-address.png" alt="фото прописки">
+                                </div>
+                                
+                                <div class="flow-photos__right">
+                                    <div class="flow-photos__description">
+                                        Разворот с регистрацией
+                                    </div>
+                                    <div class="edit-button" onclick="openModal('upload-passport-1')">
                                         <span>Переснять</span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none">
@@ -120,21 +109,14 @@
                                 
                             </div>
                         </div>
-
-
-                        <div class="btn flow-photos__btn mb-40" onclick="openModal('upload-selfie')">Добавить</div>
-
-
-                        <a href="flow-job.html" class="btn next-step btn-disabled"> Перейти к следующему шагу</a>
-
-                    </div>
+                        
+                        <div class="btn mb-20" onclick="openModal('upload-selfie')">Заменить</div>
 
                 </div>
+                
+
             </div>
-
         </div>
-
-
     </div>
 
     <div class="modal uploads-modal" id="upload-selfie">
@@ -323,7 +305,7 @@
         </div>
     </div>
 
-    <partial src="main-footer.html"></partial>
+    <partial src="footer.html"></partial>
 </body>
 
 </html>

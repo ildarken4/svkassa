@@ -72,22 +72,96 @@
 
                                 <div class="flow-forms__steps">Шаг 5 из 5</div>
                             </div>
-                            <div class="flow-photo flow-photo-1 mb-40">
-                                <div class="flow-photo__picture pt-75 pl-40 pb-75 pr-40">
-                                    <img src="images/card-photo.png" alt="изображение банковской карты">
-                                </div>
-                                <p class="flow-photo__description">Прикрепите фото привязанной карты</p>
-                                <label class="input-fil btn btn-rounded btn-transparent mb-20">
-                                    <input type="file" name="file"> <span class="file-name">Прикрепить фото</span>
+                            <div class="flow-add-card mb-40">
+                                <p class="mb-40">Добавьте карту, на которую хотите получить деньги</p>
+                                <div class="btn">Привязать карту</div>
+                            </div>
+                            <div class="flow-add-card mb-40"> <span class="d-block mb-40">Пожалуйста, загрузите следующие фотографии:</span>
 
-                                </label>
-                                <div class="btn btn-rounded btn-transparent">Сделать фото</div>
-                            </div> <a href="flow-calculator.html" class="btn next-file btn-disabled">Перейти к следующему шагу</a>
+                                <div
+                                class="flow-photos justify-content-center mb-40">
+                                    <div class="flow-photos__item">
+                                        <div class="flow-photos__pic bg-white">
+                                            <img src="images/card-photo.png" alt="Фото привязанной карты">
+                                        </div>
+                                        <div class="flow-photos__right">
+                                            <div class="flow-photos__description">Фото привязанной карты</div>
+                                            <div class="edit-button"> <span>Переснять</span>
 
-                        </div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M12.5 20.6946H18.5M6.50736 19.6946H5C4.44772 19.6946 4 19.2469 4 18.6946V17.1873C4 16.3916 4.31607 15.6285 4.87868 15.0659L14.75 5.19462C15.7855 4.15909 17.4645 4.15909 18.5 5.19462C19.5355 6.23015 19.5355 7.90909 18.5 8.94462L8.62868 18.8159C8.06607 19.3785 7.30301 19.6946 6.50736 19.6946Z"
+                                                    stroke="#151515" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="btn" onclick="openModal('upload-card')">Добавить</div>
+                        </div> <a href="flow-calculator.html" class="btn next-file btn-disabled">Далее</a>
+
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
+        <div class="modal uploads-modal" id="upload-card">
+            <div class="uploads-modal__controls mb-40">
+                <div class="uploads-steps">
+                    <div class="uploads-steps__item active">Шаг 1</div>
+                </div>
+                <div class="popup-close" onclick="closeModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                    fill="none">
+                        <path d="M18 18.5L12 12.5M12 12.5L6 6.5M12 12.5L18 6.5M12 12.5L6 18.5"
+                        stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        />
+                    </svg>
+                </div>
+            </div>
+            <div class="popup-title">Фото привязанной карты</div>
+            <div class="uploads-popup">
+                <div class="flow-photos__pic mb-20">
+                    <img src="images/card-photo.png" alt="Фото привязанной карты">
+                </div>
+                <p class="mb-40 mb-sm-0">Убедитесь, что данные с карты будет хорошо видно</p>
+                <label class="upload-photo">
+                    <input type="file" name="flow-photo">
+                    <div class="upload-icon mb-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                        fill="none">
+                            <path d="M26 6.00174C25.809 6 25.5946 6 25.3494 6H16.4004C14.1602 6 13.0392 6 12.1836 6.43597C11.4309 6.81947 10.8195 7.43095 10.436 8.18359C10 9.03924 10 10.1602 10 12.4004V35.6004C10 37.8406 10 38.9601 10.436 39.8158C10.8195 40.5684 11.4309 41.181 12.1836 41.5645C13.0384 42 14.158 42 16.3939 42L31.6062 42C33.842 42 34.96 42 35.8148 41.5645C36.5674 41.181 37.181 40.5684 37.5645 39.8158C38 38.961 38 37.843 38 35.6072V18.6514C38 18.4059 37.9999 18.1912 37.9981 18M26 6.00174C26.5713 6.00694 26.9327 6.02769 27.2777 6.11052C27.6858 6.20851 28.0757 6.37053 28.4336 6.58984C28.8371 6.83713 29.1836 7.18364 29.875 7.875L36.126 14.126C36.8178 14.8178 37.1617 15.1627 37.4091 15.5664C37.6284 15.9243 37.7907 16.3145 37.8887 16.7227C37.9715 17.0675 37.9927 17.429 37.9981 18M26 6.00174V11.6C26 13.8402 26 14.9595 26.436 15.8152C26.8195 16.5678 27.4309 17.181 28.1836 17.5645C29.0384 18 30.158 18 32.3938 18H37.9981M37.9981 18H38.0004"
+                            stroke="rgba(0,32,61,1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="mobile-upload-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none">
+                            <path d="M8 5.7777H5C3.34315 5.7777 2 7.12084 2 8.7777V16.9999C2 18.6568 3.34315 19.9999 5 19.9999H19C20.6569 19.9999 22 18.6568 22 16.9999V8.7777C22 7.12084 20.6569 5.7777 19 5.7777H16M8 5.7777L8.08797 4.65915C8.12212 4.22487 8.23322 3.78752 8.52463 3.46373C9.08674 2.83916 9.89408 2.4707 10.7545 2.4707H13.2455C14.1059 2.4707 14.9133 2.83916 15.4754 3.46373C15.7668 3.78752 15.8779 4.22487 15.912 4.65915L16 5.7777M8 5.7777H16M18.01 8.99992H18M15 12.9999C15 14.6568 13.6569 15.9999 12 15.9999C10.3431 15.9999 9 14.6568 9 12.9999C9 11.3431 10.3431 9.99992 12 9.99992C13.6569 9.99992 15 11.3431 15 12.9999Z"
+                            stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <p class="upload-description mb-5">Нажмите или перетащите фото, чтобы загрузить.</p>
+                    <p class="upload-format text-grey">PNG, JPG (Размером до 25MB)</p>
+                </label>
+                <div class="upload-buttons">
+                    <div class="btn mb-20">Заменить</div>
+                    <div class="btn">Использовать</div>
+                </div>
+            </div>
+        </div>
+        <div class="notification success"> <span>Карта привязана</span>
+
+            <img src="images/buttons/account-menu-close.svg"
+            alt="ошибка">
+        </div>
+        <div class="notification success"> <span>Не удалось привязать карту</span>
+
+            <img src="images/buttons/account-menu-close.svg"
+            alt="ошибка">
         </div>
         <footer class="footer">
             <div class="footer-wrapper">
