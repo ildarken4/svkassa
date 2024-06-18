@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <partial src="head.html"></partial>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+        html::-webkit-scrollbar, body::-webkit-scrollbar {
+        width: 15px;
+        height: 5px;
+        }
+
+        html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+        background-color: #F7F7F9;
+        }
+
+        html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+        width: 10px;
+        height: 10px;
+        background: #00CCFA;
+        }
+    </style>
+    <title>СверхКасса</title>
+</head>
+
+<body>
+
+    
+    <div class="wrapper home-wrapper">
+        <partial src="header-home.html"></partial>
+
+        <section class="offer" style="background-image: url(images/home/offer-bg.jpg);">
+            <div class="container container-home">
+                <div class="offer__in">
+                    <div class="offer-title title-h1 font-semi">
+                        Потребительские займы <br>
+                        <span>до 300 000 рублей!</span>
+                    </div>
+                    <span class="offer-subtitle">
+                        <svg  width="21" height="21">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Процентная ставка от 0,08 % в день</span>
+                    </span>
+                    <span class="offer-subtitle">
+                        <svg  width="21" height="21">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Честный % без скрытых комиссий</span>
+                    </span>
+                </div>
+
+            </div>
+        </section>
+        <section class="calc-section">
+            <div class="container container-home">
+                <div class="title-h4 font-semi tac color-darkPrimary mb-3 mb-lg-4">Рассчитайте сумму займа</div>
+                <div class="calc calculator">
+                    <div class="calculator__card w-100 mb-12">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="title">Выберите сумму</div>
+                            <div class="data"><span class="data__number result-sum">15 000</span> <span>руб.</span></div>
+                        </div>
+                
+                        <div class="range-slider sum-slider">
+                
+                            <input type="range" class="styled-slider slider-progress" id="sum-input" min="10000" max="300000"
+                                value="80000" step="1000" />
+                            <div class="range-slider__values">
+                                <span class="minimum-scale">10 000</span>
+                                <span class="maximum-scale">300 000</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="calculator__card w-100 mb-40">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="title">Выберите срок</div>
+                            <div class="data"><span class="data__number calc-days">20</span> <span>мес.</span></div>
+                        </div>
+                
+                        <div class="range-slider term-slider">
+                
+                            <input type="range" class="styled-slider slider-progress" id="term-input" min="5" max="30" value="21" />
+                            <div class="range-slider__values">
+                                <span class="minimum-scale">6 месяцев</span>
+                                <span class="maximum-scale">36 месяцев</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="calculator-result w-100">
+                        <div class="result-item">
+                            <div class="result-head mb-10">Ежемесячный платеж</div>
+                            <div class="result-number"> <span class="result-monthly">15 000 </span> руб.</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-head">Сумма займа</div>
+                            <div class="result-number mr-8"> <span class="result-sum">15 000 </span> руб.</div>
+                        </div>
+                    </div>
+                    <button class="button button-primary text3">Подать заявку</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container container-home container-small">
+                <div class="row row-gap-20">
+                    <div class="col-6 col-lg-3">
+                        <div class="advantage">
+                            <img class="advantage_picture" src="images/home/advantage-1.png" alt="advantage">
+                            <div class="advantage_title font-medium color-darkPrimary tac">Заполните анкету. <br class="d-none d-lg-inline">
+                                У Вас это займет не <br class="d-none d-lg-inline">
+                                более 10 минут</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="advantage">
+                            <img class="advantage_picture" src="images/home/advantage-2.png" alt="advantage">
+                            <div class="advantage_title font-medium color-darkPrimary tac">Дадим <br class="d-none d-lg-inline">
+                                предварительный ответ <br class="d-none d-lg-inline">
+                                в течение 15 минут</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="advantage">
+                            <img class="advantage_picture" src="images/home/advantage-3.png" alt="advantage">
+                            <div class="advantage_title font-medium color-darkPrimary tac">Назначим встречу <br class="d-none d-lg-inline">
+                                в удобном для Вас <br class="d-none d-lg-inline">
+                                месте</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="advantage">
+                            <img class="advantage_picture" src="images/home/advantage-4.png" alt="advantage">
+                            <div class="advantage_title font-medium color-darkPrimary tac">Перечислим на <br class="d-none d-lg-inline">
+                                карту любого <br class="d-none d-lg-inline">
+                                банка*</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container container-home container-small">
+                <div class="advantages-info">
+                    <img src="images/home/advantages-info.png" alt="advantages-info">
+                    <span>Займы — это деньги в долг в сумме от 15 000 до 300 000 рублей, на срок до трех лет, с процентной ставкой от 24,9%
+                        годовых.**  Деньги заемщик получает после одобрения заявки путем перечисления на карту.*  Займы выдает
+                        зарегистрированная в Центральном Банке ООО МКК «СверхЗайм», деятельность которой регулируется Федеральным
+                        законом от 02.07.2010 г. №151-ФЗ «О микрофинансовой деятельности и микрофинансовых организациях»</span>
+                </div>
+                <div class="advantages-info__additional">
+                    <span class="advantages-info__additional-main">* В случае отсутствия у Вас действующей карты любого банка рекомендуем предварительно обратится к нашему партнеру <a
+                            href="#" class="tink-link">АО «Тинькофф Банк»</a></span>
+                    <span class="advantages-info__additional-sup">** Ставка доступна при оплате услуги «Гарантия минимальной ставки». Стоимость услуги «Гарантия минимальной ставки» – 3,9% от суммы займа.</span>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container container-home container-small">
+                <div class="products-title title-h4 font-semi color-darkPrimary">ООО МКК «СверхЗайм» основной партнер <br class="d-none d-lg-inline">
+                    сервиса финансовых решений <span class="products-title__sup">«SverhKassa»</span> </div>
+
+                <div class="title-h4 font-semi color-darkPrimary products-subtitle">Наши продукты:</div>
+
+                <div class="products-list d-flex flex-column row-gap-40 row-gap-xs-20">
+                    <div class="product">
+                        <div class="row row-gap-30 align-items-center">
+                            <div class="col-lg-5 offset-lg-1 col-sm-6">
+                                <div class="product-info">
+                                    <div class="title-h3 font-semi">Паспорт-Займ</div>
+                                    <div class="title-h6 font-semi">15 000-300 000 руб.</div>
+                                    <div class="title-h6 font-semi">6-36 месяцев</div>
+                                    <div class="title-h6 font-semi">От 0,08% в день</div>
+                                    <a class="text4 product-info__sup">Подробные условия по продукту</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="product-button button button-primary button-icon">
+                                        <svg width="26" height="19">
+                                            <use xlink:href="#money-check"></use>
+                                        </svg>
+                                        <span>Получить деньги</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="row row-gap-30 align-items-center">
+                            <div class="col-lg-5 offset-lg-1 col-sm-6">
+                                <div class="product-info">
+                                    <div class="title-h3 font-semi">Заём «На ремонт»</div>
+                                    <div>Для владельцев жилья и опытных заемщиков</div>
+                                    <div class="title-h6 font-semi">15000 – 300 000 руб.</div>
+                                    <div class="title-h6 font-semi">От 0,06% в день.</div>
+                                    <a class="text4 product-info__sup">Подробные условия по продукту</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="product-button button button-primary button-icon">
+                                        <svg width="26" height="19">
+                                            <use xlink:href="#money-check"></use>
+                                        </svg>
+                                        <span>Получить деньги</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="infos">
+            <div class="container container-home container-small">
+                <div class="row row-gap-30">
+                    <div class="col-lg-6">
+                        <div class="info">
+                            <div class="text font-medium color-darkPrimary mb-3">Займы в OOO MКК «СверхЗайм»</div>
+                            <div class="info-text">Клиенты микрокредитной компании часто используют<br class="d-none d-lg-inline">
+                                деньги для оплаты текущих счетов, незапланированного<br class="d-none d-lg-inline">
+                                лечения, ремонта автомобиля, приобретения товаров<br class="d-none d-lg-inline">
+                                первой необходимости, внесения взноса по ипотечному<br class="d-none d-lg-inline">
+                                кредиту и на любые другие нужды.</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info">
+                            <div class="text font-medium color-darkPrimary mb-2 mb-lg-3">Преимущества займов в OOO MКК «СверхЗайм»</div>
+                            <div class="info-text">
+                                <span>Минимум документов. Быстрое рассмотрение. Среди других
+                                преимуществ сотрудничества с MКК «СверхЗайм»</span>
+                                <div class="info-list">
+                                    <div><span></span> <span>продление сроков займа, перенос даты платежа;</span></div>
+                                    <div><span></span> <span>бонусная программа для постоянных клиентов;</span></div>
+                                    <div><span></span> <span>отсутствие скрытых платежей и комиссий;</span></div>
+                                    <div><span></span> <span>возможность страхования займа.</span></div>
+                                    <div><span></span> <span>без справок о доходах;</span></div>
+                                    <div><span></span> <span>без поручителей;</span></div>
+                                    <div><span></span> <span>без залога.</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info">
+                            <div class="text font-medium color-darkPrimary mb-2 mb-lg-3">Как получить заём?</div>
+                            <div class="info-text">
+                                <span>
+                                    Наша микрокредитная компания позволяет очень быстро<br class="d-none d-lg-inline">
+                                    получить деньги удобным способом:
+                                </span>
+                                <div class="info-list mb-3">
+                                    <div><span></span> <span>переводом на банковскую карту VISA, MasterCard и платежной системы МИР любого банка*.</span></div>
+                                </div>
+                                <span>* В случае отсутствия у Вас действующей карты любого банка
+        рекомендуем предварительно обратится к нашему партнеру <a href="#" class="tink-link">АО
+        «Тинькофф Банк»</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners section-mb">
+            <div class="container container-home container-small">
+                <div class="title-h4 font-semi color-darkPrimary mb-3">Наши партнеры</div>
+                <div class="row row-gap-40 row-gap-xs-20">
+                    <div class="col-12">
+                        <div class="partners-top card">
+                            <div class="title-h3 font-semi color-darkPrimary mb-3">Не нашли подходящий вам продукт?</div>
+                            <div class="title-h6 font-semi color-darkPrimary">
+                                <span>Зайдите на сервис финансовых решений от нашего партнера</span>
+                                <a href="#" class="partners-top__info font-black">
+                                    <img src="images/home/sverh-link.png" alt="Sverhkassa">
+                                    <span>Sverhkassa.ru</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">АО Тинькофф банк</div>
+                                <img src="images/home/partner-logo-1.png" alt="partner-logo" class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2">
+                                <span>Он такой один </span>
+                                <svg width="16" height="16" class="partner-smile">
+                                    <use xlink:href="#blink"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">Страховая компания Росгосстрах</div>
+                                <img src="images/home/partner-logo-2.png" alt="partner-logo" class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2">
+                                Первые в новом веке страхования.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">Бест2пей</div>
+                                <img src="images/home/partner-logo-3.png" alt="partner-logo" class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2">
+                                Платежи во всех измерениях.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">ZaimQ</div>
+                                <img src="images/home/partner-logo-4.png" alt="partner-logo" class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2">
+                                Все микрозаймы в одном месте.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-mb">
+            <div class="container container-home container-small">
+                <div class="row row-gap-30">
+                    <div class="col-lg-6">
+                        <div class="title-h4  font-semi color-darkPrimary mb-1 tac">
+                            Как погасить заём?
+                        </div>
+                        <div class="text3 color-grayText2 tac mb-3 step-subtitle">Вы можете погасить задолженность <br class="d-sm-none"> тремя способами:</div>
+
+                        <div class="steps d-flex flex-column align-items-start row-gap-20">
+                            <div class="step">
+                                <div class="step-item">1</div>
+                                <div class="step-text">Сделать банковский перевод по реквизитам микрофинансовой
+                                    компании ООО МКК «СверхЗайм»</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-item">2</div>
+                                <div class="step-text">Погашение займа банковской картой онлайн на сайте. Заём можно
+                                    оплатить только за счет собственных средств</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-item">3</div>
+                                <div class="step-text">Внести наличными в кассу организации.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info mb-3 mb-lg-4">
+                            <div class="text font-medium color-darkPrimary mb-2 mb-lg-3">Что делать, если вы не успеваете погасить заём</div>
+                            <div class="info-text">
+                                <span>Во избежание штрафов рекомендуем использовать услугу продления
+        займа. При отсутствии продления к вам будут применяться штрафные
+        санкции: будет начисляться неустойка на сумму непогашенного
+        основного долга в размере 120% годовых, за каждый день просрочки.</span>
+                            </div>
+                        </div>
+                        <div class="step-card card">
+                            <img src="images/home/step-card.png" alt="Погасить займ онлайн">
+                            <div class="font-medium title-h6 mb-2 color-darkPrimary">Погасить займ онлайн</div>
+                            <div class="step-card__info text5 font-light">Перейдите на страницу оплаты займа. <br>
+                                Заполните форму и оплатите <a href="#" class="step-card__link">онлайн</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-mb">
+            <div class="container container-home container-small">
+                <div class="benefits-title title-h4 font-semi color-darkPrimary">
+                    Преимущества оформления займа
+                </div>
+                <div class="benefits-list">
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-1.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Соблюдаем требования
+                            Банка России</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-2.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Быстрое рассмотрение
+                            заявки</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-3.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Выдача на карту
+                            клиента</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-4.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Погашение онлайн
+                            круглосуточно</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-5.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Повторным клиентам
+                            скидки</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-mb-sm">
+            <div class="container container-home container-small">
+                <div class="card review">
+                    <div class="row row-gap-30 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="title-h3 font-semi color-darkPrimary mb-3">
+                                Отзывы клиентов
+                            </div>
+                            <div class="title-h6 color-darkPrimary lh14">
+                                Оставить свой отзыв и пообщаться с нашими
+                                заемщиками вы можете на нашей странице
+                                Вконтакте
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="button button-primary button-icon button-big">
+                                    <svg width="22" height="13">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                    <span>sverhkassa</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="map" id="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2ca8d6aea01e71da26cc5678fc0b2cb7227ffeb4f66f27c123022d37489e5b60&amp;source=constructor&amp;scroll=false&amp;controls=false" frameborder="0"></iframe>
+        </section>
+
+        <div id="popup-terms" class="popup__wrapper popup__wrapper-small">
+            <div class="popup__in">
+                <div class="popup-title__wrapper mb-4">
+                    <div class="title-h6 font-medium mb-3 color-darkPrimary">Условия займа</div>
+                </div>
+                <div class="color-grayText2 text5 lh13 mb-3">
+                    <p>Укажите нужную вам сумму и срок с помощью кредитного калькулятора. Затем нажмите кнопку «Получить заём»</p>
+                    <p>Наши специалисты примут решение о выдаче займа в течение 15 минут</p>
+                    <p>Подтвердите договор с помощью SMS кода, и сразу же получите деньги на карту.</p>
+                </div>
+
+                <button class="button button-primary w-100 text4 button-small-radius">Получить займ</button>
+            </div>
+        </div>
+
+        <div id="popup-signup" class="popup__wrapper popup__wrapper-small" style="display: none">
+            <div class="popup__in">
+                <div class="popup-title__wrapper mb-4">
+                    <div class="title-h6 font-medium mb-3 color-darkPrimary">Вход в личный кабинет</div>
+                </div>
+                <label class="field mb-3 w-100">
+                    <span class="text4 mb-1 color-darkPrimary mb-2 d-inline-block">Ваш номер телефона:</span>
+                    <input type="text" class="field__input js-tel" placeholder="Введите номер">
+                </label>
+
+                <button class="button button-primary w-100 text4 button-small-radius">Получить займ</button>
+            </div>
+        </div>
+
+        <partial src="svg.html"></partial>
+        <partial src="footer-home.html"></partial>
+    </div>
+
+</body>
+
+</html>

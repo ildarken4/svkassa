@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <style>
+            html::-webkit-scrollbar, body::-webkit-scrollbar {
+            width: 15px;
+            height: 5px;
+            }
+    
+            html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+            background-color: #F7F7F9;
+            }
+    
+            html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+            width: 10px;
+            height: 10px;
+            background: #00CCFA;
+            }
+        </style>
+        <title>СверхКасса</title>
+    </head>
+    
+    <body>
+        <div class="wrapper home-wrapper">
+            <header class="header-home">
+                <div class="header-home-desktop">
+                    <div class="container container-home">
+                        <div class="header-home-top"> <a href="#" class="header-home-logo">
+                    <span>СверхКасса</span>
+                    <img src="images/home/logo.png" alt="logo">
+                    <span>SverhKassa</span>
+                </a>
+
+                            <div class="header-home-address">
+                                <div class="header-home-address__top">350015, г. Краснодар, ул. Им. Хакурате, д. 12 офис 17</div>
+                                <div class="header-home-address__bottom">Пн-Пт с с 9:00 до 19:00, Сб-Вс: Выходной</div>
+                            </div>
+                            <button data-src="#popup-signup" data-fancybox class="button button-primary button-icon">
+                                <svg width="15" height="13">
+                                    <use xlink:href="#card2"></use>
+                                </svg> <span class="upp">Личный кабинет</span>
+
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header-home-bottom">
+                        <div class="container container-home">
+                            <div class="header-home-bottom__in">
+                                <div class="header-home-nav"> <a href="#" class="header-home-nav__item">Главная</a>
+ <a href="#" class="header-home-nav__item">Калькулятор</a>
+
+                                    <a
+                                    href="#" class="header-home-nav__item">Наши услуги</a> <a href="#popup-terms" data-fancybox class="button button-primary button-small">
+                            Онлайн заявка
+                        </a>
+ <a href="#" class="header-home-nav__item">Как погасить</a>
+
+                                        <a
+                                        href="#" class="header-home-nav__item">Партнёры</a> <a href="#" class="header-home-nav__item">Отзывы</a>
+ <a href="#"
+                                            class="header-home-nav__item">Контакты</a>
+ <a href="#" class="header-home-nav__item">Новости</a>
+
+                                </div> <a href="tel:88003008509" class="header-home-tel">8(800) 300-85-09</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-home-mobile">
+                    <div class="container container-home">
+                        <div class="header-home-mobile__in">
+                            <div class="header-home-mobile__info">
+                                <button class="burger js-show-menu">
+                                    <svg width="18" height="13">
+                                        <use xlink:href="#burger"></use>
+                                    </svg>
+                                </button> <a href="#" class="header-home-mobile__logo">
+                        <img src="images/home/logo.png" alt="logo">
+                    </a>
+ <a href="#" class="header-home-mobile__tel font-medium">8(800) 300-85-09</a>
+
+                            </div>
+                            <button class="button button-primary button-small-radius button-extra-small font-medium"
+                            data-src="#popup-signup" data-fancybox>Войти</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="menu" class="menu">
+                <div class="menu-overlay js-menu-overlay"></div>
+                <div class="menu-in">
+                    <div class="menu-top">
+                        <button class="menu-cross js-hide-menu">
+                            <svg width="20" height="20">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button> <a href="#" class="menu-logo">
+                <img src="images/home/logo.png" alt="logo">
+            </a>
+
+                    </div>
+                    <div class="menu-nav"> <a href="#" class="menu-nav__link">Как получить займ</a>
+ <a href="#" class="menu-nav__link">О компании</a>
+
+                        <a
+                        href="#popup-terms" data-fancybox class="menu-nav__link">Условия займа</a> <a href="#" class="menu-nav__link">Вопросы и ответы</a>
+
+                    </div>
+                    <div class="menu-contacts">
+                        <div class="menu-contacts__title color-primary font-medium mb-2">Контакты</div> <a class="menu-contacts__link mb-1" href="tel:79123456789">+7 (912) 345-67-89</a>
+
+                        <a
+                        class="menu-contacts__link" href="mailto:info@creditboost.com">info@creditboost.com</a>
+                    </div>
+                    <button class="button button-primary button-small-radius button-extra-small font-medium"
+                    data-src="#popup-signup" data-fancybox>Личный кабинет</button>
+                </div>
+            </div>
+            <section class="offer" style="background-image: url(images/home/offer-bg.jpg);">
+                <div class="container container-home">
+                    <div class="offer__in">
+                        <div class="offer-title title-h1 font-semi">Потребительские займы
+                            <br> <span>до 300 000 рублей!</span>
+
+                        </div> <span class="offer-subtitle">
+                        <svg  width="21" height="21">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                        <span>Процентная ставка от 0,08 % в день</span>
+</span>
+                        <span
+                        class="offer-subtitle">
+                            <svg width="21" height="21">
+                                <use xlink:href="#check"></use>
+                            </svg> <span>Честный % без скрытых комиссий</span>
+</span>
+                    </div>
+                </div>
+            </section>
+            <section class="calc-section">
+                <div class="container container-home">
+                    <div class="title-h4 font-semi tac color-darkPrimary mb-3 mb-lg-4">Рассчитайте сумму займа</div>
+                    <div class="calc calculator">
+                        <div class="calculator__card w-100 mb-12">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="title">Выберите сумму</div>
+                                <div class="data"><span class="data__number result-sum">15 000</span>  <span>руб.</span>
+                                </div>
+                            </div>
+                            <div class="range-slider sum-slider">
+                                <input type="range" class="styled-slider slider-progress" id="sum-input"
+                                min="10000" max="300000" value="80000" step="1000" />
+                                <div class="range-slider__values"> <span class="minimum-scale">10 000</span>
+ <span class="maximum-scale">300 000</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator__card w-100 mb-40">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="title">Выберите срок</div>
+                                <div class="data"><span class="data__number calc-days">20</span>  <span>мес.</span>
+                                </div>
+                            </div>
+                            <div class="range-slider term-slider">
+                                <input type="range" class="styled-slider slider-progress" id="term-input"
+                                min="5" max="30" value="21" />
+                                <div class="range-slider__values"> <span class="minimum-scale">6 месяцев</span>
+ <span class="maximum-scale">36 месяцев</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator-result w-100">
+                            <div class="result-item">
+                                <div class="result-head mb-10">Ежемесячный платеж</div>
+                                <div class="result-number"> <span class="result-monthly">15 000 </span> руб.</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-head">Сумма займа</div>
+                                <div class="result-number mr-8"> <span class="result-sum">15 000 </span> руб.</div>
+                            </div>
+                        </div>
+                        <button class="button button-primary text3">Подать заявку</button>
+                    </div>
+                </div>
+            </section>
+            <section class="advantages">
+                <div class="container container-home container-small">
+                    <div class="row row-gap-20">
+                        <div class="col-6 col-lg-3">
+                            <div class="advantage">
+                                <img class="advantage_picture" src="images/home/advantage-1.png" alt="advantage">
+                                <div class="advantage_title font-medium color-darkPrimary tac">Заполните анкету.
+                                    <br class="d-none d-lg-inline">У Вас это займет не
+                                    <br class="d-none d-lg-inline">более 10 минут</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="advantage">
+                                <img class="advantage_picture" src="images/home/advantage-2.png" alt="advantage">
+                                <div class="advantage_title font-medium color-darkPrimary tac">Дадим
+                                    <br class="d-none d-lg-inline">предварительный ответ
+                                    <br class="d-none d-lg-inline">в течение 15 минут</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="advantage">
+                                <img class="advantage_picture" src="images/home/advantage-3.png" alt="advantage">
+                                <div class="advantage_title font-medium color-darkPrimary tac">Назначим встречу
+                                    <br class="d-none d-lg-inline">в удобном для Вас
+                                    <br class="d-none d-lg-inline">месте</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="advantage">
+                                <img class="advantage_picture" src="images/home/advantage-4.png" alt="advantage">
+                                <div class="advantage_title font-medium color-darkPrimary tac">Перечислим на
+                                    <br class="d-none d-lg-inline">карту любого
+                                    <br class="d-none d-lg-inline">банка*</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container container-home container-small">
+                    <div class="advantages-info">
+                        <img src="images/home/advantages-info.png" alt="advantages-info"> <span>Займы — это деньги в долг в сумме от 15 000 до 300 000 рублей, на срок до трех лет, с процентной ставкой от 24,9%
+                        годовых.**  Деньги заемщик получает после одобрения заявки путем перечисления на карту.*  Займы выдает
+                        зарегистрированная в Центральном Банке ООО МКК «СверхЗайм», деятельность которой регулируется Федеральным
+                        законом от 02.07.2010 г. №151-ФЗ «О микрофинансовой деятельности и микрофинансовых организациях»</span>
+
+                    </div>
+                    <div class="advantages-info__additional"> <span class="advantages-info__additional-main">* В случае отсутствия у Вас действующей карты любого банка рекомендуем предварительно обратится к нашему партнеру <a
+                            href="#" class="tink-link">АО «Тинькофф Банк»</a></span>
+
+                        <span
+                        class="advantages-info__additional-sup">** Ставка доступна при оплате услуги «Гарантия минимальной ставки». Стоимость
+                            услуги «Гарантия минимальной ставки» – 3,9% от суммы займа.</span>
+                    </div>
+                </div>
+            </section>
+            <section class="products">
+                <div class="container container-home container-small">
+                    <div class="products-title title-h4 font-semi color-darkPrimary">ООО МКК «СверхЗайм» основной партнер
+                        <br class="d-none d-lg-inline">сервиса финансовых решений <span class="products-title__sup">«SverhKassa»</span> 
+                    </div>
+                    <div class="title-h4 font-semi color-darkPrimary products-subtitle">Наши продукты:</div>
+                    <div class="products-list d-flex flex-column row-gap-40 row-gap-xs-20">
+                        <div class="product">
+                            <div class="row row-gap-30 align-items-center">
+                                <div class="col-lg-5 offset-lg-1 col-sm-6">
+                                    <div class="product-info">
+                                        <div class="title-h3 font-semi">Паспорт-Займ</div>
+                                        <div class="title-h6 font-semi">15 000-300 000 руб.</div>
+                                        <div class="title-h6 font-semi">6-36 месяцев</div>
+                                        <div class="title-h6 font-semi">От 0,08% в день</div> <a class="text4 product-info__sup">Подробные условия по продукту</a>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="d-flex justify-content-center"> <a href="#" class="product-button button button-primary button-icon">
+                                        <svg width="26" height="19">
+                                            <use xlink:href="#money-check"></use>
+                                        </svg>
+                                        <span>Получить деньги</span>
+                                    </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="row row-gap-30 align-items-center">
+                                <div class="col-lg-5 offset-lg-1 col-sm-6">
+                                    <div class="product-info">
+                                        <div class="title-h3 font-semi">Заём «На ремонт»</div>
+                                        <div>Для владельцев жилья и опытных заемщиков</div>
+                                        <div class="title-h6 font-semi">15000 – 300 000 руб.</div>
+                                        <div class="title-h6 font-semi">От 0,06% в день.</div> <a class="text4 product-info__sup">Подробные условия по продукту</a>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="d-flex justify-content-center"> <a href="#" class="product-button button button-primary button-icon">
+                                        <svg width="26" height="19">
+                                            <use xlink:href="#money-check"></use>
+                                        </svg>
+                                        <span>Получить деньги</span>
+                                    </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="infos">
+                <div class="container container-home container-small">
+                    <div class="row row-gap-30">
+                        <div class="col-lg-6">
+                            <div class="info">
+                                <div class="text font-medium color-darkPrimary mb-3">Займы в OOO MКК «СверхЗайм»</div>
+                                <div class="info-text">Клиенты микрокредитной компании часто используют
+                                    <br class="d-none d-lg-inline">деньги для оплаты текущих счетов, незапланированного
+                                    <br class="d-none d-lg-inline">лечения, ремонта автомобиля, приобретения товаров
+                                    <br class="d-none d-lg-inline">первой необходимости, внесения взноса по ипотечному
+                                    <br class="d-none d-lg-inline">кредиту и на любые другие нужды.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="info">
+                                <div class="text font-medium color-darkPrimary mb-2 mb-lg-3">Преимущества займов в OOO MКК «СверхЗайм»</div>
+                                <div class="info-text"> <span>Минимум документов. Быстрое рассмотрение. Среди других
+                                преимуществ сотрудничества с MКК «СверхЗайм»</span>
+
+                                    <div
+                                    class="info-list">
+                                        <div><span></span>  <span>продление сроков займа, перенос даты платежа;</span>
+                                        </div>
+                                        <div><span></span>  <span>бонусная программа для постоянных клиентов;</span>
+                                        </div>
+                                        <div><span></span>  <span>отсутствие скрытых платежей и комиссий;</span>
+                                        </div>
+                                        <div><span></span>  <span>возможность страхования займа.</span>
+                                        </div>
+                                        <div><span></span>  <span>без справок о доходах;</span>
+                                        </div>
+                                        <div><span></span>  <span>без поручителей;</span>
+                                        </div>
+                                        <div><span></span>  <span>без залога.</span>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info">
+                            <div class="text font-medium color-darkPrimary mb-2 mb-lg-3">Как получить заём?</div>
+                            <div class="info-text"> <span>
+                                    Наша микрокредитная компания позволяет очень быстро<br class="d-none d-lg-inline">
+                                    получить деньги удобным способом:
+                                </span>
+
+                                <div class="info-list mb-3">
+                                    <div><span></span>  <span>переводом на банковскую карту VISA, MasterCard и платежной системы МИР любого банка*.</span>
+                                    </div>
+                                </div> <span>* В случае отсутствия у Вас действующей карты любого банка
+        рекомендуем предварительно обратится к нашему партнеру <a href="#" class="tink-link">АО
+        «Тинькофф Банк»</a></span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <section class="partners section-mb">
+            <div class="container container-home container-small">
+                <div class="title-h4 font-semi color-darkPrimary mb-3">Наши партнеры</div>
+                <div class="row row-gap-40 row-gap-xs-20">
+                    <div class="col-12">
+                        <div class="partners-top card">
+                            <div class="title-h3 font-semi color-darkPrimary mb-3">Не нашли подходящий вам продукт?</div>
+                            <div class="title-h6 font-semi color-darkPrimary"> <span>Зайдите на сервис финансовых решений от нашего партнера</span>
+
+                                <a
+                                href="#" class="partners-top__info font-black">
+                                    <img src="images/home/sverh-link.png" alt="Sverhkassa"> <span>Sverhkassa.ru</span>
+
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">АО Тинькофф банк</div>
+                                <img src="images/home/partner-logo-1.png" alt="partner-logo"
+                                class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2"> <span>Он такой один </span>
+
+                                <svg width="16" height="16" class="partner-smile">
+                                    <use xlink:href="#blink"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">Страховая компания Росгосстрах</div>
+                                <img src="images/home/partner-logo-2.png"
+                                alt="partner-logo" class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2">Первые в новом веке страхования.</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">Бест2пей</div>
+                                <img src="images/home/partner-logo-3.png" alt="partner-logo"
+                                class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2">Платежи во всех измерениях.</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 partner-wrapper">
+                        <div class="card partner">
+                            <div class="partner-top">
+                                <div class="text font-medium color-darkPrimary">ZaimQ</div>
+                                <img src="images/home/partner-logo-4.png" alt="partner-logo"
+                                class="partner-logo">
+                            </div>
+                            <hr>
+                            <div class="partner-info text3 color-grayText2">Все микрозаймы в одном месте.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-mb">
+            <div class="container container-home container-small">
+                <div class="row row-gap-30">
+                    <div class="col-lg-6">
+                        <div class="title-h4  font-semi color-darkPrimary mb-1 tac">Как погасить заём?</div>
+                        <div class="text3 color-grayText2 tac mb-3 step-subtitle">Вы можете погасить задолженность
+                            <br class="d-sm-none">тремя способами:</div>
+                        <div class="steps d-flex flex-column align-items-start row-gap-20">
+                            <div class="step">
+                                <div class="step-item">1</div>
+                                <div class="step-text">Сделать банковский перевод по реквизитам микрофинансовой компании ООО
+                                    МКК «СверхЗайм»</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-item">2</div>
+                                <div class="step-text">Погашение займа банковской картой онлайн на сайте. Заём можно оплатить
+                                    только за счет собственных средств</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-item">3</div>
+                                <div class="step-text">Внести наличными в кассу организации.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info mb-3 mb-lg-4">
+                            <div class="text font-medium color-darkPrimary mb-2 mb-lg-3">Что делать, если вы не успеваете погасить заём</div>
+                            <div class="info-text"> <span>Во избежание штрафов рекомендуем использовать услугу продления
+        займа. При отсутствии продления к вам будут применяться штрафные
+        санкции: будет начисляться неустойка на сумму непогашенного
+        основного долга в размере 120% годовых, за каждый день просрочки.</span>
+
+                            </div>
+                        </div>
+                        <div class="step-card card">
+                            <img src="images/home/step-card.png" alt="Погасить займ онлайн">
+                            <div class="font-medium title-h6 mb-2 color-darkPrimary">Погасить займ онлайн</div>
+                            <div class="step-card__info text5 font-light">Перейдите на страницу оплаты займа.
+                                <br>Заполните форму и оплатите <a href="#" class="step-card__link">онлайн</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-mb">
+            <div class="container container-home container-small">
+                <div class="benefits-title title-h4 font-semi color-darkPrimary">Преимущества оформления займа</div>
+                <div class="benefits-list">
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-1.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Соблюдаем требования Банка России</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-2.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Быстрое рассмотрение заявки</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-3.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Выдача на карту клиента</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-4.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Погашение онлайн круглосуточно</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-top">
+                            <img src="images/home/benefits-5.png" alt="benefit">
+                        </div>
+                        <div class="benefit-title">Повторным клиентам скидки</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-mb-sm">
+            <div class="container container-home container-small">
+                <div class="card review">
+                    <div class="row row-gap-30 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="title-h3 font-semi color-darkPrimary mb-3">Отзывы клиентов</div>
+                            <div class="title-h6 color-darkPrimary lh14">Оставить свой отзыв и пообщаться с нашими заемщиками вы можете на нашей
+                                странице Вконтакте</div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="d-flex justify-content-center"> <a href="#" class="button button-primary button-icon button-big">
+                                    <svg width="22" height="13">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                    <span>sverhkassa</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map" id="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2ca8d6aea01e71da26cc5678fc0b2cb7227ffeb4f66f27c123022d37489e5b60&amp;source=constructor&amp;scroll=false&amp;controls=false"
+            frameborder="0"></iframe>
+        </section>
+        <div id="popup-terms" class="popup__wrapper popup__wrapper-small">
+            <div class="popup__in">
+                <div class="popup-title__wrapper mb-4">
+                    <div class="title-h6 font-medium mb-3 color-darkPrimary">Условия займа</div>
+                </div>
+                <div class="color-grayText2 text5 lh13 mb-3">
+                    <p>Укажите нужную вам сумму и срок с помощью кредитного калькулятора. Затем
+                        нажмите кнопку «Получить заём»</p>
+                    <p>Наши специалисты примут решение о выдаче займа в течение 15 минут</p>
+                    <p>Подтвердите договор с помощью SMS кода, и сразу же получите деньги на
+                        карту.</p>
+                </div>
+                <button class="button button-primary w-100 text4 button-small-radius">Получить займ</button>
+            </div>
+        </div>
+        <div id="popup-signup" class="popup__wrapper popup__wrapper-small" style="display: none">
+            <div class="popup__in">
+                <div class="popup-title__wrapper mb-4">
+                    <div class="title-h6 font-medium mb-3 color-darkPrimary">Вход в личный кабинет</div>
+                </div>
+                <label class="field mb-3 w-100"> <span class="text4 mb-1 color-darkPrimary mb-2 d-inline-block">Ваш номер телефона:</span>
+
+                    <input
+                    type="text" class="field__input js-tel" placeholder="Введите номер">
+                </label>
+                <button class="button button-primary w-100 text4 button-small-radius">Получить займ</button>
+            </div>
+        </div>
+        <svg width="0" height="0" class="svg-sprite">
+            <symbol id="vk" viewBox="0 0 22 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.6462 1.35938C20.3337 2.6875 17.5212 6.67188 17.5212 6.67188C17.2868 7.0625 17.1696 7.25781 17.5212 7.6875C17.6774 7.88281 20.6071 10.6953 21.0368 12.0234C21.2321 12.6875 20.9196 13 20.2556 13H17.9509C17.0915 13 16.8181 12.3359 15.2556 10.7734C13.8884 9.44531 13.3024 9.25 12.9509 9.25C12.2478 9.25 12.3649 9.52344 12.3649 12.1406C12.3649 12.6875 12.1696 13 10.7243 13C8.30244 13 5.60713 11.5547 3.69307 8.82031C0.841504 4.79688 0.0602541 1.78906 0.0602541 1.16406C0.0602541 0.8125 0.216504 0.5 0.841504 0.5H3.14619C3.73213 0.5 3.9665 0.773438 4.20088 1.39844C5.33369 4.67969 7.20869 7.57031 7.98994 7.57031C8.30244 7.57031 8.41963 7.41406 8.41963 6.67188V3.27344C8.3415 1.71094 7.52119 1.59375 7.52119 1.04688C7.52119 0.773438 7.7165 0.5 8.10713 0.5H11.7009C12.2087 0.5 12.3649 0.773438 12.3649 1.35938V5.92969C12.3649 6.39844 12.5993 6.59375 12.7165 6.59375C13.029 6.59375 13.2634 6.39844 13.8103 5.89062C15.4509 4.01562 16.6228 1.16406 16.6228 1.16406C16.779 0.8125 17.0524 0.5 17.6384 0.5H19.9431C20.6462 0.5 20.7634 0.890625 20.6462 1.35938Z"
+                />
+            </symbol>
+            <symbol id="burger" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="1.5" rx="0.75" />
+                <rect y="5.5" width="11.7" height="1.5" rx="0.75" />
+                <rect y="11" width="18" height="1.5" rx="0.75" />
+            </symbol>
+            <symbol id="cross" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                />
+            </symbol>
+            <symbol id="card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"
+                />
+            </symbol>
+            <symbol id="money-check" viewBox="0 0 26 19" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.425 0.689941C25.0891 0.689941 25.675 1.27588 25.675 1.93994V16.9399C25.675 17.6431 25.0891 18.1899 24.425 18.1899H1.925C1.22188 18.1899 0.675 17.6431 0.675 16.9399V1.93994C0.675 1.27588 1.22188 0.689941 1.925 0.689941H24.425ZM7.55 12.2524C8.44844 12.2524 9.19063 11.4712 9.19063 10.4946C9.19063 9.71338 8.68281 9.01025 7.97969 8.81494L6.22188 8.26807C5.9875 8.229 5.87031 8.03369 5.87031 7.79932C5.87031 7.48682 6.06563 7.25244 6.33906 7.25244H7.43281C7.58906 7.25244 7.78438 7.33057 7.94063 7.40869C8.05781 7.48682 8.21406 7.48682 8.33125 7.36963L8.76094 6.93994C8.91719 6.82275 8.91719 6.58838 8.76094 6.47119C8.40938 6.19775 7.97969 6.0415 7.51094 6.0415V5.37744C7.51094 5.22119 7.39375 5.06494 7.19844 5.06494H6.57344C6.41719 5.06494 6.26094 5.22119 6.26094 5.37744V6.0415C5.3625 6.0415 4.62031 6.82275 4.62031 7.79932C4.62031 8.58057 5.12813 9.24463 5.83125 9.479L7.58906 10.0259C7.82344 10.0649 7.94063 10.2603 7.94063 10.4946C7.94063 10.8071 7.74531 11.0024 7.47188 11.0024H6.37813C6.22188 11.0024 6.02656 10.9634 5.87031 10.8853C5.75313 10.8071 5.59688 10.8071 5.47969 10.9243L5.05 11.354C4.89375 11.4712 4.89375 11.7056 5.05 11.8228C5.40156 12.0962 5.83125 12.2524 6.3 12.2524V12.8774C6.3 13.0728 6.41719 13.1899 6.6125 13.1899H7.2375C7.39375 13.1899 7.55 13.0728 7.55 12.8774V12.2524ZM16.925 11.6274V11.0024C16.925 10.8462 16.7688 10.6899 16.6125 10.6899H12.2375C12.0422 10.6899 11.925 10.8462 11.925 11.0024V11.6274C11.925 11.8228 12.0422 11.9399 12.2375 11.9399H16.6125C16.7688 11.9399 16.925 11.8228 16.925 11.6274ZM23.175 11.6274V11.0024C23.175 10.8462 23.0188 10.6899 22.8625 10.6899H19.7375C19.5422 10.6899 19.425 10.8462 19.425 11.0024V11.6274C19.425 11.8228 19.5422 11.9399 19.7375 11.9399H22.8625C23.0188 11.9399 23.175 11.8228 23.175 11.6274ZM23.175 7.87744V7.25244C23.175 7.09619 23.0188 6.93994 22.8625 6.93994H12.2375C12.0422 6.93994 11.925 7.09619 11.925 7.25244V7.87744C11.925 8.07275 12.0422 8.18994 12.2375 8.18994H22.8625C23.0188 8.18994 23.175 8.07275 23.175 7.87744Z"
+                />
+            </symbol>
+            <symbol id="card2" viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.7585 0.847412C14.444 0.847412 15.0026 1.40601 15.0026 2.06616V11.0037C15.0026 11.6892 14.444 12.2224 13.7585 12.2224H1.59638C0.910832 12.2224 0.377629 11.6892 0.377629 11.0037V2.06616C0.377629 1.40601 0.910832 0.847412 1.59638 0.847412H13.7585ZM1.74872 2.06616C1.64716 2.06616 1.59638 2.14233 1.59638 2.21851V3.28491H13.7585V2.21851C13.7585 2.14233 13.7077 2.06616 13.6061 2.06616H1.74872ZM13.6061 11.0037C13.7077 11.0037 13.7585 10.9529 13.7585 10.8513V6.53491H1.59638V10.8513C1.59638 10.9529 1.64716 11.0037 1.74872 11.0037H13.6061ZM5.25263 8.4646V9.48022C5.25263 9.65796 5.10029 9.78491 4.94794 9.78491H3.11982C2.94208 9.78491 2.81513 9.65796 2.81513 9.48022V8.4646C2.81513 8.31226 2.94208 8.15991 3.11982 8.15991H4.94794C5.10029 8.15991 5.25263 8.31226 5.25263 8.4646ZM10.1276 8.4646V9.48022C10.1276 9.65796 9.97529 9.78491 9.82294 9.78491H6.36982C6.19208 9.78491 6.06513 9.65796 6.06513 9.48022V8.4646C6.06513 8.31226 6.19208 8.15991 6.36982 8.15991H9.82294C9.97529 8.15991 10.1276 8.31226 10.1276 8.4646Z"
+                />
+            </symbol>
+            <symbol id="blink" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1613_3744)">
+                    <path d="M15.9502 8.31006C15.9502 12.4521 12.5923 15.8101 8.4502 15.8101C4.30853 15.8101 0.950195 12.4521 0.950195 8.31006C0.950195 4.16839 4.30853 0.810059 8.4502 0.810059C12.5923 0.810059 15.9502 4.16839 15.9502 8.31006Z"
+                    fill="#FFCC4D" />
+                    <path d="M5.74186 9.14323C6.31716 9.14323 6.78353 8.49031 6.78353 7.6849C6.78353 6.87948 6.31716 6.22656 5.74186 6.22656C5.16657 6.22656 4.7002 6.87948 4.7002 7.6849C4.7002 8.49031 5.16657 9.14323 5.74186 9.14323Z"
+                    fill="#664500" />
+                    <path d="M12.8074 8.22556C12.7824 8.16931 12.1828 6.85181 10.9503 6.85181C9.71825 6.85181 9.11825 8.16931 9.09325 8.22556C9.05492 8.31181 9.07992 8.41264 9.15367 8.47181C9.22659 8.53098 9.33117 8.53306 9.40784 8.47764C9.41284 8.47389 9.93367 8.10181 10.9503 8.10181C11.9612 8.10181 12.4812 8.46889 12.4928 8.47723C12.5295 8.50473 12.5737 8.51848 12.617 8.51848C12.6628 8.51848 12.7091 8.50306 12.747 8.47306C12.8208 8.41389 12.8462 8.31223 12.8074 8.22556ZM3.44992 6.00098C3.36325 6.00098 3.27534 5.97389 3.20034 5.91764C3.01617 5.77973 2.97909 5.51848 3.117 5.33431C4.47617 3.52181 6.29034 3.50098 6.367 3.50098C6.597 3.50098 6.78367 3.68764 6.78367 3.91764C6.78367 4.14723 6.59825 4.33348 6.36867 4.33431C6.30367 4.33514 4.88159 4.37014 3.78325 5.83431C3.702 5.94348 3.57659 6.00098 3.44992 6.00098ZM13.0341 6.88639C12.907 6.88639 12.7824 6.82889 12.7003 6.71973C11.6203 5.27931 9.79992 5.62514 9.782 5.62806C9.55409 5.67306 9.337 5.52681 9.29159 5.30139C9.24659 5.07556 9.39284 4.85639 9.61825 4.81098C9.7145 4.79139 11.9753 4.36431 13.3666 6.21931C13.5049 6.40348 13.4674 6.66473 13.2833 6.80264C13.2087 6.85973 13.1212 6.88639 13.0341 6.88639ZM10.6395 10.6339C10.5612 10.5881 10.4595 10.5976 10.3908 10.6589C10.3866 10.6622 9.96867 11.0185 8.45034 11.0185C6.93325 11.0185 6.5145 10.6626 6.5145 10.6626C6.44825 10.596 6.34617 10.5835 6.2645 10.6285C6.18325 10.6747 6.14242 10.7697 6.16534 10.8606C6.1695 10.8789 6.642 12.6851 8.45034 12.6851C10.2587 12.6851 10.7312 10.8789 10.7358 10.8606C10.7578 10.7718 10.7174 10.681 10.6395 10.6339Z"
+                    fill="#664500" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_1613_3744">
+                        <rect width="15" height="15" fill="white" transform="translate(0.950195 0.810059)"
+                        />
+                    </clipPath>
+                </defs>
+            </symbol>
+            <symbol id="link" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.186 9.58984C13.4204 9.58984 13.6548 9.82422 13.6548 10.0586V13.8086C13.6548 14.5996 13.0103 15.2148 12.2485 15.2148H1.93604C1.14502 15.2148 0.529785 14.5996 0.529785 13.8086V3.49609C0.529785 2.73438 1.14502 2.08984 1.93604 2.08984H6.62354C6.85791 2.08984 7.09229 2.32422 7.09229 2.55859V3.49609C7.09229 3.75977 6.85791 3.96484 6.62354 3.96484H2.40479V13.3398H11.7798V10.0586C11.7798 9.82422 11.9849 9.58984 12.2485 9.58984H13.186ZM14.8267 0.214844C15.2075 0.214844 15.5298 0.537109 15.5298 0.917969V4.66797C15.5298 5.3125 14.7681 5.60547 14.3286 5.16602L13.2739 4.14062L6.12549 11.2598C6.0083 11.4062 5.83252 11.4941 5.62744 11.4941C5.45166 11.4941 5.27588 11.4062 5.12939 11.2598L4.48486 10.6152C4.33838 10.498 4.25049 10.3223 4.25049 10.1172C4.25049 9.91211 4.33838 9.73633 4.48486 9.61914L11.604 2.4707L10.5786 1.41602C10.1099 0.976562 10.4321 0.214844 11.0767 0.214844H14.8267Z"
+                />
+            </symbol>
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="20" height="20" transform="translate(0.75 0.199951)" fill="url(#pattern0)"
+                />
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                    height="1">
+                        <use xlink:href="#image0_1613_3996" transform="scale(0.05)" />
+                    </pattern>
+                    <image id="image0_1613_3996" width="20" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAA2RJREFUOE91lEtvG1UUx3/nzng8ceLUaVIJYopciUcFQopEkyIkiPIJSBfsw7og2lUXXSRFQmyQWoHENv0GaT9BMBKidYKaDTQSEgkkThDpw0ptxx7P3IvuHdt5lbOYse7c8/P/PIWX2fLzAsOZOYyaRqsJESkZ0YBZA7WJmPu8P3D3Za5y8vD88t+zW0Nji4gUEAUGxEAKtOanL0k2i41/b1U/fv0Y+BiwWN65/Sybv3bgB4eORiP0YJavAOXOcnGLM9H+ws508VZPWB84Xt6d3xkcW8AqMamTsxPA/nmXYJUXG3t3qtOvXXfC7aO4vD33JHdmse2HOKAD9TzSkFOQRpTBaIOIh3aXNNkkYrTZuLIzM34vVVhpbaC8ksM7haky949ObRqqDdMzMZ4YjDFo5ZG4NNuHqrHfuCD8Wp/DZBYPkx2nYZqeJpU6CA6Wi5oEtkhKiEQ48H0S5adpMua6sNpcAm/WAQ14RKkKo9EoYgnQDqbJd5q8lTF8OjnKC+C7X57wIhMSi628A94XKu1HIkwYseFpwiQmNB1UcoD2M9S9IRdevtPiohcxf/kVhoAHwNc//0MjGCJStitcYjbFq7SNVWCBVsVg3OLqBwVGgHsrW/zZStP8Rla4OlXkTWAP+Gq1yu9xloaXI7Yhd01kpeNqaPPk65h83OTmhwWmgDbwfXkdUcIXH71NAfgD+OFhlXXt88zPoiXE2AHoAalEG4iUbA4sMNdp8l6QcHNylPPAbvfiq8A28E1ll8eJz34mJPJ8XHj9nmVNWG0tgcxiEjyEIIZ8VOedrOHzy+d4twv8zap9sMt6LNSCXApzo3moLi3KSvMacBtlEK1QiTBgx6rd4GJouDF1zrXltw/3eBx57AcBLQtznHTW+6b1Z8Kj5wXiYANRBTejtnWMJjAJfnzAcNJCRKirQVoqpKNU2sw9YX2g2eRSeMGVcHx5Y/Zp7uxS5GcxWoMc2Rm92TaC4PXF2K5IrTeq5kcmw5n+cbG8dac6dPbLQ/3dBeFG8EiejkR44meNS9mRY+trvPzXwtOB4fm2Fx6t3P8jTn5p69KpBVv8aXuumhubx3gld7+/WE9xaxizhsgEuBa1duUUsO9WieYQ+QS03ULWyY0WsIahTP3gLjMjNXdcqU+gMiWMrv0HJrJrzPI8uwgAAAAASUVORK5CYII="
+                    />
+                </defs>
+            </svg>
+            <symbol id="check" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="20" height="20" transform="translate(0.75 0.199951)" fill="url(#pattern0)"
+                />
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                    height="1">
+                        <use xlink:href="#image0_1613_3996" transform="scale(0.05)" />
+                    </pattern>
+                    <image id="image0_1613_3996" width="20" height="20" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAA2RJREFUOE91lEtvG1UUx3/nzng8ceLUaVIJYopciUcFQopEkyIkiPIJSBfsw7og2lUXXSRFQmyQWoHENv0GaT9BMBKidYKaDTQSEgkkThDpw0ptxx7P3IvuHdt5lbOYse7c8/P/PIWX2fLzAsOZOYyaRqsJESkZ0YBZA7WJmPu8P3D3Za5y8vD88t+zW0Nji4gUEAUGxEAKtOanL0k2i41/b1U/fv0Y+BiwWN65/Sybv3bgB4eORiP0YJavAOXOcnGLM9H+ws508VZPWB84Xt6d3xkcW8AqMamTsxPA/nmXYJUXG3t3qtOvXXfC7aO4vD33JHdmse2HOKAD9TzSkFOQRpTBaIOIh3aXNNkkYrTZuLIzM34vVVhpbaC8ksM7haky949ObRqqDdMzMZ4YjDFo5ZG4NNuHqrHfuCD8Wp/DZBYPkx2nYZqeJpU6CA6Wi5oEtkhKiEQ48H0S5adpMua6sNpcAm/WAQ14RKkKo9EoYgnQDqbJd5q8lTF8OjnKC+C7X57wIhMSi628A94XKu1HIkwYseFpwiQmNB1UcoD2M9S9IRdevtPiohcxf/kVhoAHwNc//0MjGCJStitcYjbFq7SNVWCBVsVg3OLqBwVGgHsrW/zZStP8Rla4OlXkTWAP+Gq1yu9xloaXI7Yhd01kpeNqaPPk65h83OTmhwWmgDbwfXkdUcIXH71NAfgD+OFhlXXt88zPoiXE2AHoAalEG4iUbA4sMNdp8l6QcHNylPPAbvfiq8A28E1ll8eJz34mJPJ8XHj9nmVNWG0tgcxiEjyEIIZ8VOedrOHzy+d4twv8zap9sMt6LNSCXApzo3moLi3KSvMacBtlEK1QiTBgx6rd4GJouDF1zrXltw/3eBx57AcBLQtznHTW+6b1Z8Kj5wXiYANRBTejtnWMJjAJfnzAcNJCRKirQVoqpKNU2sw9YX2g2eRSeMGVcHx5Y/Zp7uxS5GcxWoMc2Rm92TaC4PXF2K5IrTeq5kcmw5n+cbG8dac6dPbLQ/3dBeFG8EiejkR44meNS9mRY+trvPzXwtOB4fm2Fx6t3P8jTn5p69KpBVv8aXuumhubx3gld7+/WE9xaxizhsgEuBa1duUUsO9WieYQ+QS03ULWyY0WsIahTP3gLjMjNXdcqU+gMiWMrv0HJrJrzPI8uwgAAAAASUVORK5CYII="
+                    />
+                </defs>
+            </symbol>
+            <symbol id="cross" viewBox="0 0 14 15" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.16626" y="0.855713" width="18" height="1.5" rx="0.75" transform="rotate(45 1.16626 0.855713)"
+                />
+                <rect x="0.105713" y="13.5837" width="18" height="1.5" rx="0.75" transform="rotate(-45 0.105713 13.5837)"
+                />
+            </symbol>
+        </svg>
+        <footer class="footer-home">
+            <div class="footer-home-top">
+                <div class="footer-home-container container-small">
+                    <div class="row row-gap-30">
+                        <div class="col-lg-3"> <a href="#" class="footer-home-logo mb-1-5-rem">
+                        <img src="images/home/footer-logo.png" alt="footer-home-logo">
+                        <span class="footer-home-logo__info">
+                            <span class="footer-home-logo__title">OOO МКК «СверхЗайм»</span>
+                            <span class="footer-home-logo__subtitle">Микрокредиты / Потребительские займы</span>
+                        </span>
+                    </a>
+
+                            <div class="mb-1-5-rem mb-lg-3 mb-lg-5 text3 color-grayText4">
+                                <div class="mb-2">ИНН: 2310226690</div>
+                                <div class="mb-2">КПП: 231001001</div>
+                                <div>ОГРН: 1212300058321</div>
+                            </div>
+                            <div class="title-h5 font-bold mb-2 mb-lg-3">О компании</div>
+                            <div class="footer-home-list"> <a class="footer-home-link" href="#">Приняты в СРО «МиР» номер в реестре 001243 <svg width="16" height="16"><use xlink:href="#link"></use></svg></a>
+
+                                <a
+                                class="footer-home-link" href="#">В реестре Банка России под № 21-040-03-009763
+                                    <svg width="16" height="16">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                    </a> <a class="footer-home-link" href="#">Устав ООО МКК «СверхЗайм»</a>
+ <a class="footer-home-link"
+                                    href="#">Информация для получателей финансовых услуг</a>
+ <a class="footer-home-link"
+                                    href="#">Список участников ООО МКК «СверхЗайм»</a>
+ <a class="footer-home-link"
+                                    href="#">Информация о составе органов управления</a>
+ <a class="footer-home-link"
+                                    href="#">Интернет-приемная Банка России</a>
+ <a class="footer-home-link"
+                                    href="#">Выписка из реестра МФО</a>
+ <a class="footer-home-link" href="#">Лист записи ЕГРЮЛ</a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="title-h5 font-bold mb-3">Политика компании</div>
+                            <div class="footer-home-list mb-1-5-rem mb-lg-5"> <a class="footer-home-link" href="#">Положение о раскрытии неограниченному кругу лиц информации</a>
+
+                                <a
+                                class="footer-home-link" href="#">Политика в отношении обработки и защиты персональных данных</a> <a class="footer-home-link"
+                                    href="#">Информация об условиях и возврате займов</a>
+ <a class="footer-home-link"
+                                    href="#">Положение о рассмотрении обращений</a>
+ <a class="footer-home-link"
+                                    href="#">Положение о защите персональных данных</a>
+ <a class="footer-home-link"
+                                    href="#">Политика конфиденциальности</a>
+ <a class="footer-home-link" href="#">Политика безопасности</a>
+
+                            </div>
+                            <div class="title-h5 font-bold mb-3">Раскрытие информации</div>
+                            <div class="footer-home-list mb-1-5-rem mb-lg-5"> <a class="footer-home-link" href="#">Свидетельство о постановке на учет в налоговом органе</a>
+
+                                <a
+                                class="footer-home-link" href="#">Базовый стандарт защиты прав и интересов физических и юридических лиц</a>
+                                    <a
+                                    class="footer-home-link" href="#">Базовый стандарт по управлению рисками микрофинансовых организаций</a>
+                                        <a
+                                        class="footer-home-link" href="#">Базовый стандарт совершения микрофинансовой организацией операций на финансовом
+                                            рынке</a> <a class="footer-home-link" href="#">Стандарт о защите прав клиентов</a>
+
+                                            <a
+                                            class="footer-home-link footer-link-white" href="#">Перечень информации, раскрываемой микрофинансовой организацией Указания
+                                                Банка России от 28.06.2021 No 5830-У</a>
+                            </div>
+                            <div class="title-h5 font-bold mb-3">Виды займов</div>
+                            <div class="footer-home-list"> <a class="footer-home-link" href="#">Паспорт-Займ</a>
+ <a class="footer-home-link"
+                                href="#">Заём «На ремонт»</a>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="title-h5 font-bold mb-3">Финансовый уполномоченный</div>
+                            <div class="footer-home-list mb-1-5-rem mb-lg-5"> <a class="footer-home-link" href="#">Порядок обращения к финансовому уполномоченному</a>
+
+                                <a
+                                class="footer-home-link" href="#">Информация о праве потребителей финансовых услуг на направление обращения
+                                    финансовому уполномоченному</a> <a class="footer-home-link" href="#">Досудебное урегулирование споров финансовым уполномоченным</a>
+
+                            </div>
+                            <div class="title-h5 font-bold mb-3">Платежная информация</div>
+                            <div class="footer-home-list mb-1-5-rem mb-lg-5"> <a class="footer-home-link" href="#">Правила предоставления займов физическим лицам</a>
+
+                                <a
+                                class="footer-home-link" href="#">Информация о кредитных каникулах для участников специальной военной операции</a>
+                                    <a
+                                    class="footer-home-link" href="#">Информация о мерах поддержки военнослужащих и членов их семей</a>
+                            </div>
+                            <div class="title-h5 font-bold mb-3">Контактная информация</div>
+                            <div class="footer-home-list color-grayText4">
+                                <div class="footer-home-info">350015, Россия, Краснодарский край, г. Краснодар, ул. им. Хакурате, д.12,
+                                    1 этаж, офис 17.</div>
+                                <div> <span class="font-bold">Почта:</span>  <a class="footer-home-link" href="mailto:info@sverhkassa.ru">info@sverhkassa.ru</a>
+
+                                </div>
+                                <div> <span class="font-bold">Телефон:</span>  <a class="footer-home-link" href="tel:88003008509">8 (800) 300-85-09</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-home-bottom"> <span>Общество с ограниченной ответственностью Микрокредитная компания «СверхЗайм» © 2021-2023. Все права защищены</span>
+
+            </div>
+        </footer>
+        <script src="./js/inputmask.js"></script>
+        <script src="./js/main.js"></script>
+        </div>
+    </body>
+
+</html>
